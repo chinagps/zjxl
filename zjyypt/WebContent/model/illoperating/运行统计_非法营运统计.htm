@@ -26,7 +26,7 @@
            </div>
          <div id="iORightCenterMainArea">
  		       <div class="righFormArea" id="illOperatingFormArea">
-                 <form id="searchFormForIllOperating" name="searchFormForIllOperating" action="##" method="POST" style="margin-top:10px;height:50px;">
+                 <form id="searchFormForIllOperating" name="searchFormForIllOperating" action="##" method="post" style="margin-top:10px;height:50px;">
                     <!-- <input type="hidden"  id="iOCorpIds" name="requestParam.equal.corpIds"/>-->
                  	<input type="hidden"  id="iOTeamIds" name="requestParam.equal.teamIds"/> 
                  	<input type="hidden"  id="iOVids" name="requestParam.equal.vids"/>
