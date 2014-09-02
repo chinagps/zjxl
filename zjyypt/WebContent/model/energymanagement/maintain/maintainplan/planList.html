@@ -1,0 +1,64 @@
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>运营管理--维保计划设置</title>
+<script type="text/javascript" src="script/energymanagement/maintain/maintainplan/planlist.js"></script>
+<link href="css/maintainClass/topTags.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div id="planListContent">
+		<div id="planListManagementMainArea" class="content">
+			<div id="planListManagementRightArea" class="right_c">
+				<div class="right_cs" style="border:none;">
+					<form id="planListForm">
+						<div class="planright_ct" style="border:#c0d7eb 1px solid;">
+							<ul class="MaintainPlanQueryListTitle">
+								<li style="margin-left: 30px;">
+									<div>
+										维保项目：<select id="queryPlanMainTainId" style="width: 90px;height:23px;" name="requestParam.equal.maintainId">
+										</select>
+									</div>
+								</li>
+								<li style="margin-left: 30px;">
+									<div>
+										执行频率： <select id="queryExeFrequency"
+											name="requestParam.equal.exeFrequency" style="width: 80px;height:23px;">
+											<option value="">请选择</option>
+											<option value="0">循环执行</option>
+											<option value="1">单次执行</option>
+										</select>
+									</div>
+								</li>
+								<li style="margin-left: 30px;">
+									<div>
+										创建时间： <input type="text" id="maintainPlanStartDate" readonly="readonly" size="15" name="requestParam.equal.startDate" class="Wdate" onClick="WdatePicker();" />至 
+										<input type="text" id="maintainPlanEndDate" readonly="readonly" size="15" name="requestParam.equal.endDate" class="Wdate" onClick="WdatePicker();" />
+									</div>
+								</li>
+								<li style="margin-left: 30px;">
+									<div>
+								         <input name="querybut" type="submit" class="btn_inquires" onmouseover="this.style.backgroundPosition='0px -200px'" onmouseout="this.style.backgroundPosition='0px -150px'" value="" />
+								    </div>
+								</li>
+								<li>
+									<div id="maintainPlanAddButton">
+								        <input type="button" style="float:right;" value="新增" id="addRecord" class="btn_blue" onmouseover="this.style.backgroundPosition='0px -50px'" onmouseout="this.style.backgroundPosition='0px 0px'"/>
+								    </div>
+								</li>
+							</ul>
+						</div>
+					</form>
+					<div class="right_cc" style="margin-top: 5px;">
+						<!-- 列表显示 -->
+						<div id="planListTable"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="planListEditArea" class="content" style="display: none;"></div>
+</body>
+</html>
+

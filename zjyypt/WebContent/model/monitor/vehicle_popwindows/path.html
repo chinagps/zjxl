@@ -1,0 +1,160 @@
+        <div class="vehicle_details_main_2_inquires">
+            <div class="vehicle_details_main_2_inquires_1">
+                <input type="text" id="pathStartTime" name="pathStartTime" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm'});" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm',maxDate:'#F{$dp.$D(\'pathEndTime\')||\'%y-%M-%d\'}',onpicked:function(){pathEndTime.focus();}});" value="" title="开始时间" class="longWdate" readonly=true/>
+				<!--<img class="vehicle_details_main_2_inquires_2_calendar" src="images/vehicle_popwindows/calendar.png">-->
+            </div>
+            <div class="vehicle_details_main_2_inquires_2">
+                <input type="text" id="pathEndTime" name="pathEndTime" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm'});" onFocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm',minDate:'#F{$dp.$D(\'pathStartTime\')}'});" value="" title="结束时间" class="longWdate" readonly=true/>
+				<!--<img class="vehicle_details_main_2_inquires_2_calendar" src="images/vehicle_popwindows/calendar.png">-->
+            </div>
+			<div class="vehicle_details_main_2_inquires_day">
+				<select style="width:80px;" name="preDays">
+					<option value="1">前一天</option>
+					<option value="2">前两天</option>
+					<option value="3">前三天</option>
+				</select>
+			</div>
+            <div class="vehicle_details_main_2_inquires_button queryPath">
+                <a href="javascript:void(0);" onfocus="javascript:this.blur();">&nbsp;</a>
+            </div>
+        </div>
+        <div class="pathReplayMap" id="pathReplayMap">
+        
+    	</div>
+		<div class="pathEventsDivOuter" style="z-index: 65536;">
+			<div class="udShrinkForPath">
+		    	<img src="images/global/upshrink.png" title="展开事件点列表" /><img src="images/global/downshrink.png" title="隐藏事件点列表" /> 
+		    </div>
+			<div class="pathEventsDiv L hidden">
+				 <table width="498" cellspacing="1" cellpadding="0">
+		            <tr class="gridHead">
+		                <td>&nbsp;</td>
+		                <td>事件类型</td>
+		                <td>速度</td>
+		                <td>事件时间</td>
+		                <td>定位</td>
+		            </tr>
+		            <tr class="z hidden">
+		                <td>
+		                    <img src="images/map/dangeroranger.png" />
+		                </td>
+		                <td>疲劳驾驶</td>
+		                <td>&nbsp;</td>
+		                <td>98</td>
+		                <td>2011-09-09 14：50：55</td>
+		                <td>未处理</td>
+		                <td><a href="javascript:void(0);">定位</a></td>
+		            </tr>
+		        </table>
+			</div>
+		</div>
+        <div class="pathStatistics">
+            
+			<div class="pathReplayModel L">
+	            <table class="pathReplayAction" width="100%" cellspacing="0" cellpadding="0">
+		            <tr>
+		                <td>
+		                	<a href="javascript:void(0);" class="startReplayGray" title="播放/暂停"><img src="images/vehicle_popwindows/newPathReplay/playGray.png"/></a><!--<img src="images/vehicle_popwindows/play.png" title="播放"/>-->
+		                </td>
+		                <td>
+		                    <a href="javascript:void(0);" class="stopReplayGray" title="停止播放"><img src="images/vehicle_popwindows/newPathReplay/stopGray.png" /></a><!--<img src="images/vehicle_popwindows/stop.png" title="停止播放"/>-->
+		                </td>
+		                <td>
+		                    <a href="javascript:void(0);" class="slowDownGray" title="减速"><img class="playPath" src="images/vehicle_popwindows/newPathReplay/slowDownGray.png" /></a><!--<img class="playPath" src="images/vehicle_popwindows/slowDown.png" title="减速"/>-->
+		                </td>
+						<td>
+							<img class="replaySpeed" src="images/vehicle_popwindows/newPathReplay/speed_1.png" title="播放速度" />
+						</td>
+		                <td>
+		                    <a href="javascript:void(0);" class="hurryUpGray" title="加速"><img src="images/vehicle_popwindows/newPathReplay/hurryUpGray.png" /></a><!--<img src="images/vehicle_popwindows/hurryUp.png" title="加速"/>-->
+		                </td>
+		            </tr>
+		            <tr>
+		                <td colspan="5">
+		                    <div class="pathSlider" style="margin-top: 10px;">
+								<div id="pathSlider"></div>
+							</div>
+		                </td>
+		            </tr>
+		        </table>
+			</div>
+			<div class="L"><label class="pathCounts">轨迹点: 0个</label></div> 
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<br/>
+			<div class="L" style="margin-top:10px;">轨迹里程数:<label class="pathCountsMiles"> 0</label>公里</div>
+        
+        	<div style="margin-left:200px;heigth:30px">
+	            <div class="exportExcelPath" style="float:left;width:30px;height:100%;margin:5px 5px 0px 10px;">
+					<a href="javascript:void(0);" style="cursor:hand;" ><img title="导出信息" src="images/global/xiahao.png" /> </a>
+	            </div>
+	        	<div style="float:left;">
+	        		<input type="button" id="btnSpeedCurve" class="btn_blue" style="margin:2px 0px 0px 0px;" onmouseover="this.style.backgroundPosition='0px -50px'" onmouseout="this.style.backgroundPosition='0px 0px'" value="速度曲线"/>
+	        	</div>
+       		</div>
+        </div>
+        <div class="pathInfo">
+            <!--<ul>
+            	<li>
+					时间: <label></label>
+		        </li>
+		        <li>
+					车速: <label></label> 公里/小时
+		        </li>
+				<li>
+					瞬时油耗: <label></label> 升/小时
+		        </li>
+				<li>
+					方向: <label></label>
+		        </li>
+				<li>
+					转速: <label></label> 转/分钟
+		        </li>
+				<li>
+					位置: <label></label>
+		        </li>
+            </ul>-->
+			<table align="center" cellpadding="5" width="100%" cellspacing="0" border="0" height="50">
+                <tr>
+                    <td style="width: 9%">
+                        时间:
+                    </td>
+                    <td style="width: 27%">
+                        <label></label>
+                    </td>
+                    <td style="width: 10%">
+                        车速:
+                    </td>
+                    <td style="width: 20%">
+                        <label>0公里/小时</label>
+                    </td>
+                    <td style="width: 14%">
+                        瞬时油耗:
+                    </td>
+                    <td style="width: 20%">
+                        <label>0升/小时</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        方向:
+                    </td>
+                    <td>
+                        <label></label>
+                    </td>
+                    <td>
+                        转速:
+                    </td>
+                    <td>
+                        <label>0转/分钟</label>
+                    </td>					
+                    <td>
+                        位置:
+                    </td>
+                    <td>
+                        <div class="detail_label"></div>
+                    </td>
+					
+                </tr>
+            </table>
+        </div>
+

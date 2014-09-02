@@ -1,0 +1,543 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="shortcut icon" type="image/x-icon"
+	href="img/favicon.ico" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="author" content="http://www.sinotranspo.com" />
+<meta name="copyright" content="http://www.sinotranspo.com" />
+<meta name="url" content="http://www.sinotranspo.com" />
+<meta name="description" content="中交兴路供应链以货运车辆监管平台为基础，依托高速公路网，利用车机、手机等终端设备将GPS监控技术融入到物流服务中，通过车载GPS与智能调度系统相结合，整合社会车辆、货运代理等资源，逐步建立完整、畅通、高效的国内城际干线运输快速通道 " />
+<meta name="keywords" content="智能物流,供应链,中交兴路供应链,中交供应链"/>
+
+
+<title>北京中交兴路车联网科技有限公司供应链中心（北京中交兴路供应链管理有限公司）</title>
+
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript" src="js/ddsmoothmenu.js" ></script>
+<script language="javascript" type="text/javascript" src="js/jquery.colorbox.js"></script>
+<link title="Main stylesheet" rel=stylesheet type=text/css href="css/menu.css" media=all></link>
+<link title="Main stylesheet" rel=stylesheet type=text/css href="css/header.css" media=all>
+<link title="Main stylesheet" rel=stylesheet type=text/css href="css/index.css" media=all></link>
+<link title="Main stylesheet" rel=stylesheet type=text/css href="css/channel.css" media=all></link>
+<link title="Main stylesheet" rel=stylesheet type=text/css href="css/colorbox.css" media=all>
+
+
+<script charset="UTF-8">
+
+/**
+ * 智能物流平台访问地址
+ */
+ 
+var contextPath = "/lmis-portal/";
+
+$(document).ready(function() {
+	var scrollTopVal = GetQueryString("scrollTopVal");
+	if (scrollTopVal != null && scrollTopVal !='') {
+		$("html,body").animate({scrollTop:scrollTopVal},0);
+	};
+	
+	//发布信息协议
+	$(".treaty").colorbox({iframe:true, width:"90%", height:"90%"});
+	//法律声明
+	$(".lawexplain").colorbox({iframe:true, width:"90%", height:"90%"});
+	
+	//Initialize Menu instance(s):
+	ddsmoothmenu.init({
+		mainmenuid: "menu", //menu DIV id
+		customtheme: [], //override default menu CSS background values? Uncomment: ["normal_background", "hover_background"]
+		contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+	});
+	
+	
+	initializeMenu("productsMenu", "productsActuator");    
+	initializeMenuSub("newPhonesMenu", "newPhonesActuator");
+	initializeMenuSub("compareMenu", "compareActuator");
+	
+});
+
+//跳转到链接页面
+function redirectUrl(obj) {
+	var y = $(document).scrollTop(); 
+	var clickNode = obj.name;
+	if (clickNode == null || clickNode == '') {
+		obj.href = obj.href + "?scrollTopVal=" + y;
+	} else {
+		obj.href = obj.href + "?scrollTopVal=" + y + "&clickNode=" + clickNode;
+	}
+}
+
+String.prototype.trim = function() 
+{ 
+	return this.replace(/(^\s*)|(\s*$)/g, ""); 
+} 
+
+// 获得http请求参数
+function GetQueryString(name) 
+{ 
+	var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); 
+	var r = window.location.search.substr(1).match(reg); 
+	if (r!=null) return unescape(r[2]); return null; 
+}
+
+var menus=new Array();
+var menusubs=new Array();
+
+if (!document.getElementById)
+     document.getElementById = function() { return null; }
+
+//栏目页面 2级菜单点击显示
+function initializeMenu(menuId, actuatorId) {
+     var menu = document.getElementById(menuId);
+     var actuator = document.getElementById(actuatorId);
+     if (menu == null || actuator == null) return;
+    
+     menus.push(menu);
+
+     actuator.parentNode.style.backgroundImage = "";
+     actuator.onclick = function() {
+         for(var i=0;i<menus.length;i++)if(menus[i]!=menu)menus[i].style.display="none";
+         var display = menu.style.display;
+         this.parentNode.style.backgroundImage =
+             (display == "block") ? "" : "";
+         menu.style.display = (display == "block") ? "none" : "block";
+
+         return false;
+     }
+}
+
+function initializeMenuSub(menuId, actuatorId) {
+     var menusub = document.getElementById(menuId);
+     var actuatorsub = document.getElementById(actuatorId);
+     if (menusub == null || actuatorsub == null) return;
+    
+     menusubs.push(menusub);
+
+     actuatorsub.parentNode.style.backgroundImage = "";
+     actuatorsub.onclick = function() {
+         for(var i=0;i<menusubs.length;i++)if(menusubs[i]!=menusub)menusubs[i].style.display="none";
+         var display = menusub.style.display;
+         this.parentNode.style.backgroundImage =
+             (display == "block") ? "" : "";
+         menusub.style.display = (display == "block") ? "none" : "block";
+         return false;
+     }
+}
+
+</script>
+</head>
+<body>
+	<!--headerStart-->
+	<div class="header">
+           <div  class="logo">
+           		<img src="img/logo.png" alt="中交兴路供应链" width="319" height="57"/>
+           	</div>
+           <div class="member">
+                <div class="memberFont">
+                	  <a href="http://www.sinotranspo.com"> 供应链中心</a>&nbsp;|&nbsp;
+					  <a href="http://www.4000966666.com"  target="_blank"> 油品中心</a>&nbsp;|&nbsp;
+					  <a href="http://www.sinoiov.com/dwjk/"  target="_blank"> 定位与监控中心</a>
+				</div>
+                <div class="phone">
+					<img src="img/supply_11.gif" alt="呼叫中心" width="278" height="27"/>
+				</div>
+           </div>
+	</div>
+	<div class="caidan">
+		<div class="menu">
+           <div class="menuleft" id="menu">
+                <ul class="menu_ul">
+				  <li>
+					<!-- 一级栏目 -->
+					<a href="index.html"><span>首页</span></a>
+				</li>
+				  <li>
+					<!-- 一级栏目 -->
+					<a href="gywm.html"><span>关于我们</span></a>
+					<ul>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="qyjs.html"><span>企业介绍</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="qiyewenhua.html"><span>中交理念</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="zizhirongyu.html"><span>资质荣誉</span></a>
+						</li>
+					</ul>
+				</li>
+				  <li>
+					<!-- 一级栏目 -->
+					<a href="hexinyewu.html"><span>核心业务</span></a>
+					<ul>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="gyljjfa.html"><span>供应链解决方案</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="ldbc.html"><span>零担班车</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="zcky.html"><span>整车运输</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="xmwl.html"><span>项目物流</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="ccfw.html"><span>仓储服务</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="zzfw.html"><span>增值服务</span></a>
+						</li>
+					</ul>
+				</li>
+				  <li>
+					<!-- 一级栏目 -->
+					<a href="fwpt.html"><span>服务平台</span></a>
+					<ul>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="ddcx.html"><span>订单查询</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="fwwl.html"><span>服务网络</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="fbcy.html"><span>发布车源</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="fbhy.html"><span>发布货源</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="http://www.sinotrucker.com" target="_blank"><span>登陆智能物流</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="zxts.html"><span>在线投诉</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="cjwtjd.html"><span>常见问题解答</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="wlxts.html"><span>物流小贴士</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="yhhd.html"><span>优惠活动</span></a>
+						</li>
+					</ul>
+				</li>
+				  <li>
+					<!-- 一级栏目 -->
+					<a href="xwzx.html"><span>新闻中心</span></a>
+					<ul>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="hydt.html"><span>行业动态</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="hyxw.html"><span>企业新闻</span></a>
+						</li>
+					</ul>
+				</li>
+				  <li>
+					<!-- 一级栏目 -->
+					<a href="lmzx.html"><span>联盟中心</span></a>
+					<ul>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="wycy.html"><span>我要创业</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="wylm.html" class="parent">
+										<span>我要联盟</span>
+									</a>
+							<ul>
+								<!-- 三级栏目 -->
+								<li>
+									<a href="lmxz.html"><span>联盟须知</span></a>
+								</li>
+								<li>
+									<a href="lxwm.html"><span>联系我们</span></a>
+								</li>
+								<li>
+									<a href="lmsq.html"><span>联盟申请</span></a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="sjtd.html"><span>司机通道</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="cdtd.html"><span>车队通道</span></a>
+						</li>
+					</ul>
+				</li>
+				</ul>
+           </div>
+		   <div class="menuright">
+		   		<a href="http://www.sinoiov.com" target="_blank">
+		   			<img src="img/supply_182.jpg" alt="中交兴路车联网" border="0" />
+		   		</a>
+		   	</div>
+        </div>
+	</div>
+<div class="bannergyl">
+	<img src="img/lmzx.jpg" width="960" height="194"/>
+</div>
+<div class="gylMain">
+	
+<div class="gylMainLeft">
+	<div class="gylBj">
+		<div class="gylTop">
+							联盟中心
+		</div>
+		<div class="subnav">
+			<ul>
+						<li>
+							<a href="wycy.html">我要创业</a>
+						</li>
+						<li class="menubar">
+							<A href="#" id="wylm">我要联盟</A> 
+							<ul id="wylm_sub" class="submenu">
+		         				<li>
+		         					<a href="lmxz.html" name="wylm" id="wylm" >
+		         					<samp><img src="img/scm_icon03.png"/></samp>
+		         					联盟须知
+		         					</a>
+		         				</li>
+		         				<li>
+		         					<a href="lxwm.html" name="wylm" id="wylm" >
+		         					<samp><img src="img/scm_icon03.png"/></samp>
+		         					联系我们
+		         					</a>
+		         				</li>
+		         				<li>
+		         					<a href="lmsq.html" name="wylm" id="wylm" >
+		         					<samp><img src="img/scm_icon03.png"/></samp>
+		         					联盟申请
+		         					</a>
+		         				</li>
+	   						</ul>
+						</li>
+						<li>
+							<a href="sjtd.html">司机通道</a>
+						</li>
+						<li>
+							<a href="cdtd.html">车队通道</a>
+						</li>
+			</ul>
+		</div>
+	</div>
+	<div class="gylBottom"><img src="img/icon06.png"/></div>
+</div>
+
+<script>
+window.onload = function() {
+        	  	  	initializeMenu("wylm_sub", "wylm");
+        
+        var clickNode = GetQueryString("clickNode");
+		if (clickNode != null || clickNode != '') {
+			$("#"+clickNode).click();
+		}
+}
+</script>
+    <div class="gylMainRight">
+		<div class="MainRight">
+			<div class="navTop">
+				<div class="ntLeft">
+					当前位置：<a href="index.html">首页</a> >  
+						关于我们
+					> 我要创业
+				</div>
+				<div class="ntRight">
+					<div class="ntIcon"></div>
+					<div class="ntFont"></div>
+				</div>
+			</div>
+			<div class="neirong">
+						<div class="paragraph">
+							<p>
+	<span style="font-size: 18px;"><strong><span style="color: rgb(0, 0, 0);">1.&nbsp;创业支持</span></strong></span></p>
+<p>
+	<span style="color: rgb(0, 0, 0);"><span style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>品牌支持：</strong>统一授权公司商标及企业形象 。</span></span></p>
+<p>
+	<span style="color: rgb(0, 0, 0);"><span style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>培训支持：</strong>经营中的持续指导和知识拓展培训。</span></span></p>
+<p>
+	<span style="color: rgb(0, 0, 0);"><span style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>系统支持：</strong>免费拥有一套完善的物流管理及车辆GPS系统 资源支持：授权</span></span></p>
+<p>
+	<span style="color: rgb(0, 0, 0);"><span style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;使用公司全国百万级货车资源 。</span></span></p>
+<p>
+	<span style="color: rgb(0, 0, 0);"><span style="font-size: 14px;">&nbsp;&nbsp;&nbsp;<strong>&nbsp;&nbsp;网络支持：</strong>授权使用公司网络实体。</span></span></p>
+<p>
+	<span style="color: rgb(0, 0, 0);"><span style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>资金支持：</strong>我们为您提供运营资金。</span></span></p>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="font-size: 18px;"><strong><span style="color: rgb(0, 0, 0);">2.&nbsp;创业条件</span></strong></span></p>
+<p>
+	<span style="color: rgb(0, 0, 0);"><span style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1）提供真实有效的身份证明材料（户口本首页、户口本本人页、第二代身</span></span></p>
+<p>
+	<span style="color: rgb(0, 0, 0);"><span style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 份证及复印件），与公司签订联盟合作协议。</span></span></p>
+<p>
+	<span style="color: rgb(0, 0, 0);"><span style="font-size: 14px;">&nbsp; &nbsp; &nbsp; 2）接受公司的统一管理并严格使用中交兴路物流信息系统。</span></span></p>
+<p>
+	<span style="color: rgb(0, 0, 0);"><span style="font-size: 14px;">&nbsp; &nbsp; &nbsp; 3）接受公司结算规则或经双方协议约定的结算方式。</span></span></p>
+<p>
+	<span style="color: rgb(0, 0, 0);"><span style="font-size: 14px;">&nbsp; &nbsp; &nbsp; 4）按公司规定交纳费用及保证金。</span></span></p>
+<p>
+	<span style="color: rgb(0, 0, 0);"><span style="font-size: 14px;">&nbsp; &nbsp; &nbsp; 5）拥有稳定的货源资源。</span></span></p>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="font-size: 18px;"><strong><span style="color: rgb(0, 0, 0);">3.&nbsp;申请流程</span></strong></span></p>
+<p>
+	<span style="color: rgb(0, 0, 0);"><span style="font-size: 14px;">&nbsp; &nbsp; &nbsp;&nbsp;</span><img alt="" src="http://www.sinotranspo.com:80/lmis-portal//userfiles/files/admin/2342342.jpg" style="width: 607px; height: 710px;" /></span></p>
+<p>
+	&nbsp;</p>
+<p>
+	<span style="font-size: 18px;"><strong><span style="color: rgb(0, 0, 0);">4.&nbsp;联系我们</span></strong></span></p>
+<p>
+	&nbsp;</p>
+<table border="0" cellpadding="1" cellspacing="5" style="border-collapse: collapse" width: 486px bordercolor="#D4F5C5" >
+  <tr style="border:1px solid #D4F5C5;">
+    <td class="xl83" width="73" style="border-top: none; border-right: .5pt solid #D4F5C5;"> </td>
+    <td class="xl83" width="72" style="border-top: none; border-right: .5pt solid #D4F5C5;">区域 </td>
+    <td class="xl83" width="72" style="border-top: none; border-right: .5pt solid #D4F5C5;">地区 </td>
+    <td class="xl84" width="72" style="border-top: none; border-right: .5pt solid #D4F5C5;">姓名 </td>
+    <td class="xl84" width="116">手机 </td>
+  </tr>  <tr style="border:1px solid #D4F5C5;">
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">1 </td>
+    <td class="xl86" rowspan="2" width="72" style="border-top: none; border-right: .5pt solid #D4F5C5;">华北 </td>
+    <td class="xl86" width="72" style="border-top: none; border-right: .5pt solid #D4F5C5;">北京 </td>
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">张朋双 </td>
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">13661285537 </td>
+  </tr>  <tr style="border:1px solid #D4F5C5;">
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">2 </td>
+    <td class="xl86" width="72" style="border-top: none; border-right: .5pt solid #D4F5C5;">天津 </td>
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">辛硕 </td>
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">13821851237 </td>
+  </tr>  <tr style="border:1px solid #D4F5C5;">
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">3 </td>
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;" rowspan="4">华东 </td>
+    <td class="xl87">上海 </td>
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">戴祝平 </td>
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">13816927659 </td>
+  </tr>  <tr style="border:1px solid #D4F5C5;">
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">4 </td>
+    <td class="xl88" width="72" style="border-top: none; border-right: .5pt solid #D4F5C5;">济南 </td>
+    <td class="xl79" style="border-top: none; border-right: .5pt solid #D4F5C5;">左良玉 </td>
+    <td class="xl79">18953141215 </td>
+  </tr>  <tr style="border:1px solid #D4F5C5;">
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">5 </td>
+    <td class="xl89" width="72" style="border-top: none; border-right: .5pt solid #D4F5C5;">合肥 </td>
+    <td class="xl81" style="border-top: none; border-right: .5pt solid #D4F5C5;">熊志敏 </td>
+    <td class="xl79">18656007738 </td>
+  </tr>  <tr style="border:1px solid #D4F5C5;">
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">6 </td>
+    <td class="xl88" width="72" style="border-top: none; border-right: .5pt solid #D4F5C5;">杭州 </td>
+    <td class="xl81" style="border-top: none; border-right: .5pt solid #D4F5C5;">赵家良 </td>
+    <td class="xl79">13567103676 </td>
+  </tr>  <tr style="border:1px solid #D4F5C5;">
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">7 </td>
+    <td class="xl90" rowspan="2">华中 </td>
+    <td class="xl88" width="72" style="border-top: none; border-right: .5pt solid #D4F5C5;">长沙 </td>
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">甘荣 </td>
+    <td class="xl81">15574374768 </td>
+  </tr>  <tr style="border:1px solid #D4F5C5;">
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">8 </td>
+    <td class="xl88" width="72" style="border-top: none; border-right: .5pt solid #D4F5C5;">郑州 </td>
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">张钊 </td>
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">18639447092 </td>
+  </tr>  <tr style="border:1px solid #D4F5C5;">
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">9 </td>
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">西北 </td>
+    <td class="xl88" width="72" style="border-top: none; border-right: .5pt solid #D4F5C5;">西安 </td>
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">胡宏 </td>
+    <td class="xl79">18602972351 </td>
+  </tr>  <tr style="border:1px solid #D4F5C5;">
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">10 </td>
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;" rowspan="3">西南 </td>
+    <td class="xl81" rowspan="2" style="border-top: none; border-right: .5pt solid #D4F5C5;">成都 </td>
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">李波 </td>
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">18982297027 </td>
+  </tr>  <tr style="border:1px solid #D4F5C5;">
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">11 </td>
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">何俊材 </td>
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">13908062712 </td>
+  </tr>  <tr style="border:1px solid #D4F5C5;">
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">12 </td>
+    <td class="xl88" width="72" style="border-top: none; border-right: .5pt solid #D4F5C5;">重庆 </td>
+    <td class="xl81" style="border-top: none; border-right: .5pt solid #D4F5C5;">刘全喜 </td>
+    <td class="xl79">13368397661 </td>
+  </tr>  <tr style="border:1px solid #D4F5C5;">
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">13 </td>
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;" rowspan="2">华南 </td>
+    <td class="xl81" rowspan="2" style="border-top: none; border-right: .5pt solid #D4F5C5;">广州 </td>
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">王礼 </td>
+    <td class="xl82" width="116"> 13503040908 18928150908 </td>
+  </tr>  <tr style="border:1px solid #D4F5C5;">
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">14 </td>
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">王庆国 </td>
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">13822291889 </td>
+  </tr>  <tr style="border:1px solid #D4F5C5;">
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">15 </td>
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;" rowspan="2">东北 </td>
+    <td class="xl88" rowspan="2" width="72" style="border-top: none; border-right: .5pt solid #D4F5C5;">沈阳 </td>
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">贾俊英 </td>
+    <td class="xl81">13940554026 </td>
+  </tr>  <tr style="border:1px solid #D4F5C5;">
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">16 </td>
+    <td style="border-top: none; border-right: .5pt solid #D4F5C5;">王鹏 </td>
+    <td class="xl88" width="116">18624040657 </td>
+  </tr>
+</table><p>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 0, 0);"><span style="font-size: 14px;"> </span></span></p>
+<p>
+	&nbsp;</p>
+						</div>
+						
+						<!--downloadStart-->
+			</div>
+<!-- 		<div class="nrImg"> -->
+<!-- 			<img src="img/img08.jpg" /> -->
+<!-- 		</div> -->
+	</div>
+    	<div class="mrBj"><img src="img/right.png"/></div>
+	</div>
+</div>
+
+<div class="footer">
+	<div class="copyright">
+		<ul>
+			<li>免费服务热线400-096-6666　货车人QQ群:296722632 　
+				<a target="_blank" href="http://weibo.com/sinoiov">新浪微博@中交兴路车联网</a>
+			</li>
+			<li>版权所有 中交兴路车联网供应链中心　京ICP备12002390号-9</li>
+		</ul>
+	</div>
+</div>
+
+</body>
+</html>
+

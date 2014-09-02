@@ -1,0 +1,303 @@
+@CHARSET "UTF-8";
+/*栏目页，信息页*/
+
+.gylMain{
+	width:960px;
+	min-height:530px;
+	margin:0 auto;
+	margin-top:10px;
+	display:block;
+	clear:both;
+}
+
+.gylBj{
+	width:190px;
+	min-height:450px;
+	background:#f5f5f5;
+}
+.gylBottom{
+	height:8px;
+}
+.gylTop{
+	width:150px;
+	line-height:25px;
+	font-size:14px;
+	color:#285587;
+	font-weight:bold;
+	margin:20px 0px 0px 30px;
+	overflow:hidden;
+}
+
+/*channel menu*/
+.subnav{
+	width:182px;
+	margin:0 auto;
+}
+.subnav ul{
+	list-style-type:none;
+}
+.subnav ul li a{
+	height:34px;
+	line-height:34px;
+	color:#6f6f6f;
+	text-decoration:none;
+	text-align:center;
+	border-bottom:1px solid #d8d8d8;
+	display:block;
+}
+.subnav ul li a:hover{
+	color:#fff;
+	border:none;
+	background:url(../img/icon08.png) no-repeat;
+}
+
+.submenu 
+{
+   display: none;
+   padding: 0px;
+}
+.submenu li {
+	overflow:hidden;
+}
+.submenu li a{
+	display: block;
+	padding-left: 40px;
+}
+
+/*channel menu end*/
+
+.gylMainLeft{
+	width:190px;
+	background:#f5f5f5;
+	float:left;
+	height: auto;
+}
+
+.subnav{
+	width:182px;
+	margin:0 auto;
+}
+.subnav ul{
+	list-style-type:none;
+}
+.subnav ul li a{
+	height:34px;
+	line-height:34px;
+	color:#6f6f6f;
+	text-decoration:none;
+	text-align:center;
+	border-bottom:1px solid #d8d8d8;
+	display:block;
+}
+.subnav ul li a:hover{
+	color:#fff;
+	border:none;
+	background:url(../img/icon08.png) no-repeat;
+}
+.bannergyl{
+	width:960px;
+	height:197px;
+	float:center;
+	margin:0 auto;
+	margin-top:10px;
+}
+
+.gylMainRight{
+	margin-left:10px;
+	float:left;
+}
+.MainRight{
+	min-height:530px;
+	border:1px solid #ebebeb;
+	border-bottom:none;
+	
+}
+.mrBj{
+	width:754px;
+	height:15px;
+}
+.navTop{
+	height:43px;
+	background:url(../img/43.png) repeat-x;
+	clear:both;
+}
+.ntLeft{
+	width:300px;
+	height:25px;
+	line-height:23px;
+	font-size:12px;
+	color:#6f6f6f;
+
+	float:left;
+	margin:10px 10px 0px 10px;
+}
+.ntRight{
+	width:240px;
+	height:25px;
+	float:right;
+	margin-top:10px;
+}
+.ntIcon{
+	width:19px;
+	height:19px;
+	float:left;
+}
+.ntFont{
+	line-height:23px;
+	color:#6f6f6f;
+	float:left;
+}
+.title{
+	color:#000;
+	line-height:25px;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	margin-top:30px;
+	margin-bottom:20px;
+}
+.neirong{
+	width:712px;
+	margin:0 auto;
+	color:#333333;
+	line-height:28px;
+	text-indent:5px;
+	height: auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.nrImg{
+	width:615px;
+	min-height:120px;
+	margin:0 auto;
+	margin-top:20px;
+}
+
+
+
+/* form css */
+.ipContent{
+	height:30px;
+	width: auto;
+}
+.ipContentFont{
+	width:150px;
+	height:30px;
+	line-height:30px;
+	text-align:right;
+	float:left;
+}
+.ipContentRight{
+	width:auto;
+	overflow:hidden;
+	height:30px;
+	line-height:30px;
+	vertical-align:middle;
+	float:left;
+}
+.ipContentRightRadio{
+	height:25px;
+	vertical-align:middle;
+}
+/*end form css*/
+
+/*新闻中心start*/
+.newsCenter{
+	width:650px;
+	margin:0 auto;
+	margin-top:10px;
+}
+.newsCenter li{
+	width:650px;
+	height:30px;
+	border-bottom:1px solid #ececec;
+}
+.newsCenter li samp{
+	width:3px;
+	height:3px;
+	margin:8px 10px 0px 15px;
+	float:left;
+}
+.newsCenterDate{
+	line-height:30px;
+	float:right;
+}
+
+.newsCenter li a{
+	line-height:30px;
+	list-style-type:none;
+	text-align:left;
+	color:#848298;
+	float:left;
+}
+.newsCenter li a:link{
+	color:#848298;
+}
+.newsCenter li a:visited{
+	color:#848298;
+}
+.newsCenter li a:hover{
+	color:#f9801d;
+}
+.scmPage{
+	width:auto;
+	margin:0 auto;
+	margin-top:20px;
+	clear:both;
+}
+.scmPageLeft{
+	line-height:30px;
+	float:left;
+}
+.scmPageRight{
+	line-height:30px;
+	float:right;
+}
+.scmPageLeft p{
+	width:40px;
+	margin-right:10px;
+	float:left;
+}
+/*新闻中心End*/
+
+.wanCheng {
+    background: url("../img/btn_sub.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    cursor: pointer;
+    height: 24px;
+    width: 85px;
+    margin-bottom: 10px;
+}
+
+.asteriskRed{
+	height:30px;
+	line-height:30px;
+	font-size:16px;
+	vertical-align:middle;
+	color:#d91818;
+	margin-left:3px;
+	padding: 0;
+}
+
+.return{
+	padding-left: 600px;
+}
+
+.download{
+	width:720px;
+	height:25px;
+	line-height:25px;
+	text-align:center;
+	background:url(../img/scm_icon04.png) no-repeat;
+	margin:0 auto;
+	margin-top:50px;
+}
+
+.adFont a{
+	float: right;
+}
+
+#verifyCodeImg{
+	cursor: pointer;
+}

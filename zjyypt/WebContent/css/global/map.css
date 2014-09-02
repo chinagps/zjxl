@@ -1,0 +1,415 @@
+@charset "utf-8";
+
+/* CSS Document */
+.map {
+	width: 360px;
+	height: 164px;
+	background: #fff;
+	clear: both;
+}
+
+.map .maptop {
+	background: url(../../images/map/maptop1.png) repeat-x;
+	padding: 10px 10px 0 10px;
+	height: 30px;
+	width: 360px;
+}
+
+.mapdown {
+	background: url(../../images/map/mapdown1.png) no-repeat;
+	height: 17px;
+	width: 360px;
+}
+
+/*通用工具条*/
+.universallyToolDiv {
+	position: absolute;
+	left: 350px;
+	top: 160px;
+	width: 100px;
+	height: 35px;
+}
+
+.universallyToolDivLeft,.universallyToolDivRight {
+	float: left;
+	width: 8px;
+	height: 35px;
+}
+
+.universallyToolDivContent {
+	float: left;
+	background: url(../../images/map/universallyTool/jhbg.png) repeat-x;
+	height: 35px;
+}
+
+.jh_icon {
+	float: left;
+	padding-top: 4px;
+	height: 26px;
+	width: 30px;
+	cursor: pointer;
+}
+
+.clusterTop {
+	background: url(../../images/map/cluster_list_bg.png) repeat-x;
+	height: 30px;
+	width: 360px;
+}
+
+.clusterListClose {
+	width: 20px;
+	height: 30px;
+	padding-top: 10px;
+	float: right;
+	cursor: pointer;
+}
+
+.clusterListHead {
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	font-weight: bold;
+	color: #FFFFFF;
+	margin-left: 5px;
+	float: left;
+}
+
+.searchClusterDiv {
+	width: 360px;
+	height: 30px;
+	border: 2px solid #014d88;
+	border-top: none;
+	border-bottom: none;
+	clear: both;
+	padding: 4px 0 0 4px;
+}
+
+.searchClusterDiv label,.searchClusterDiv input {
+	float: left;
+}
+
+.searchClusterDiv label {
+	margin-top: 8px;
+	color: #333;
+}
+
+.clusterList_bt1 {
+	background: url(../../images/global/middlegreen.png) no-repeat;
+	width: 100px;
+	height: 30px;
+	color: #fff;
+	border: 0;
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+.clusterInputText {
+	width: 120px;
+	height: 20px;
+	border: 1px solid #abadb3;
+	margin-top: 4px;
+}
+
+.clusterList {
+	background: #fff;
+	padding: 2px 2px;
+	border: 2px solid #014d88;
+	border-top: none;
+	border-bottom: none;
+	clear: both;
+}
+
+.clusterList ul {
+	width: 352px;
+	height: 102px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	border: 1px solid #abadb3;
+	cursor: pointer;
+}
+
+.clusterList ul li {
+	float: left;
+	width: 80px;
+	text-align: center;
+	line-height: 24px;
+	color: #333;
+	border-right: 1px solid #abadb3;
+	border-bottom: 1px solid #abadb3;
+}
+
+.clusterListPage {
+	line-height: 30px;
+	border: 2px solid #014d88;
+	border-top: none;
+	border-bottom: none;
+	padding: 6px 0 4px 4px;
+	color: #333;
+}
+
+.clusterListPage a {
+	margin-right: 8px;
+}
+
+.map_ssy {
+	border: 3px solid #004C86;
+	border-top: 0;
+	border-bottom: 0;
+}
+
+.mapclose {
+	padding-top: 4px;
+	cursor: pointer;
+}
+
+.mapswitch {
+	width: 220px;
+	height: 30px;
+}
+
+.mapswitch li {
+	height: 30px;
+	line-height: 30px;
+	text-indent: 14px;
+	float: left;
+	display: inline-block;
+}
+
+.mapswitch li a {
+	width: 90px;
+	height: 30px;
+	display: block;
+	font-size: 14px;
+	color: #333;
+	text-decoration: none;
+	background: #fff;
+	margin-right: 10px;
+}
+
+.mapswitch li.h a {
+	background: url(../../images/map/mapDark.png) no-repeat 0 0;
+	color: #FFF;
+}
+
+.maptext {
+	padding: 10px 10px;
+	width: 354px;
+	height: 88px;
+	line-height: 21px;
+	background: #fff;
+}
+
+.maptiptext {
+	font: 40px;
+	width: 220px;
+	height: 50px;
+	background: #fff;
+}
+
+.maptext table {
+	font-size: 12px;
+	height: 80px;
+}
+
+.grayText {
+	color: gray;
+}
+
+.maptext table td {
+	line-height: 16px;
+}
+
+.mapicon {
+	background: #F1F7FD;
+	border-top: #D1E3F4 1px solid;
+	width: 354px;
+	padding: 7px 0 7px 24px;
+	overflow: hidden;
+}
+
+.mapicon li {
+	width: 27px;
+	text-align: center;
+	float: left;
+	padding-left: 15px;
+	cursor: pointer;
+}
+
+.mapPoint {
+	width: 58px;
+	height: 16px;
+	padding: 42px 0 0 2px;
+	background: url(../../images/map/mapPoint.png) no-repeat;
+}
+
+/*2012.2.29新改tip样式*/
+.vehicle_information_tip {
+	width: 381px;
+	height: 220px;
+	background: url(../../images/map/new/tip-bg.png) no-repeat;
+}
+
+.tableUL {
+	width: 348px;
+	color: #333;
+	margin-left: 20px;
+}
+
+.tableUL li {
+	float: left;
+	margin: 3px 0;
+	height: 17px;
+}
+
+.tableUL li.tip_label {
+	width: 61px;
+}
+
+.tableUL li.tip_value,.tableUL li.tip_value_long,.tableUL li.tip_value_short
+	{
+	width: 131px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.tableUL li.tip_value_long {
+	width: 283px;
+}
+
+.tableUL li.tip_value_short {
+	width: 91px;
+}
+
+.tipTable {
+	display: table;
+	border-collapse: separate;
+	border-spacing: 2px;
+	border-color: gray;
+}
+
+.vehicle_information_tip_top {
+	color: white;
+	height: 31px;
+	line-height: 31px;
+	padding-left: 50px;
+}
+
+.vehicle_information_tip_top label {
+	float: left;
+}
+
+.tip-close {
+	width: 31px;
+	height: 31px;
+	float: right;
+	overflow: hidden;
+}
+
+.tip-close-hover {
+	background: url(../../images/map/new/tip-close-2.png) no-repeat;
+}
+
+.vehicle_information_tip_box_2 {
+	height: 76px;
+	margin-top: 2px;
+}
+
+.vehicle_information_tip_box_1 {
+	height: 45px;
+	padding-top: 6px;
+}
+
+.vehicle_information_tip_bottom {
+	padding-top: 5px;
+	height: 32px;
+}
+
+.vehicle_information_tip_bottom ul li {
+	float: left;
+	margin-left: 9px;
+	cursor: pointer;
+	width: 32px;
+	height: 32px;
+}
+
+.vehicle_information_tip_bottom ul li a {
+	display:block;
+	width: 32px;
+	height: 32px;
+}
+
+.detailButton a {
+	background: url(../../images/map/new/car_info.png) 0 0 no-repeat;
+}
+
+.detailButton a:hover {
+	background: url(../../images/map/new/car_info.png) -50px 0 no-repeat;
+}
+
+
+.pathButton a {
+	background: url(../../images/map/new/mapbig.png) 0 0 no-repeat;
+}
+
+.pathButton a:hover {
+	background: url(../../images/map/new/mapbig.png) -50px 0 no-repeat;
+}
+
+.photoButton a {
+	background: url(../../images/map/new/photo.png) 0 0 no-repeat;
+}
+
+.photoButton a:hover {
+	background: url(../../images/map/new/photo.png) -50px 0 no-repeat;
+}
+
+.cameraButton a {
+	background: url(../../images/map/new/video.png) 0 0 no-repeat;
+}
+
+.cameraButton a:hover {
+	background: url(../../images/map/new/video.png) -50px 0 no-repeat;
+}
+
+.searchAroundButton a {
+	background: url(../../images/map/new/searchAround.png) 0 0 no-repeat;
+}
+
+.searchAroundButton a:hover {
+	background: url(../../images/map/new/searchAround.png) -50px 0 no-repeat;
+}
+
+.searchBaiduMapButton a {
+	background: url(../../images/map/new/searchBaiduMapPoint.png) 0 0 no-repeat;
+}
+
+.searchBaiduMapButton a:hover {
+	background: url(../../images/map/new/searchBaiduMapPoint.png) -50px 0 no-repeat;
+}
+
+
+
+.stressMonitorButton a {
+	background: url(../../images/map/new/key_monitoring.png) 0 0 no-repeat;
+}
+
+.stressMonitorButton a:hover {
+	background: url(../../images/map/new/key_monitoring.png) -50px 0 no-repeat;
+}
+
+.normalMonitorButton a {
+	background: url(../../images/map/new/monitor.png) 0 0 no-repeat;
+}
+
+.normalMonitorButton a:hover {
+	background: url(../../images/map/new/monitor.png) -50px 0 no-repeat;
+}
+
+.scheduleButton a {
+	background: url(../../images/map/new/updown.png) 0 0 no-repeat;
+}
+
+.scheduleButton a:hover {
+	background: url(../../images/map/new/updown.png) -50 0 no-repeat;
+}

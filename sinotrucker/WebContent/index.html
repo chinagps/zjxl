@@ -1,0 +1,270 @@
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>智能物流管理系统</title>
+<link rel="shortcut icon" type="image/x-icon"
+	href="/images/common/favicon.ico" />
+<link rel="stylesheet" type="text/css"
+	href="/css/login.css" />
+<script type="text/javascript"
+	src="/scripts/plugins/jquery/jquery-1.4.2.min.js"></script>
+<script type="text/javascript"
+	src="/scripts/plugins/jquery/jquerycookie.js"></script>
+<script language="javascript">
+	//得到文档宽高值并赋给con这个元素
+	function conWidHeig() {
+		$(".login_content").css({
+			"width" : $(window).width(),
+			"height" : $(window).height()
+		});
+	};
+	//按钮鼠标滑过效果
+	function mouseOver() {
+		$(".but01_hover,.but02_hover").css('opacity', 0).hover(function() {
+			$(this).stop().fadeTo(650, 1);
+		}, function() {
+			$(this).stop().fadeTo(650, 0);
+		});
+	};
+	
+	var COOKIE_NAME = 'userName';  
+	var COOKIE_PASSWORD = 'userPass';  
+	var COOKIE_USER_KEY = 'userKey';  
+	
+	$(document).ready(function() {
+		//登录系统后超时返回的首页
+		if(document.getElementById('main-body-div')){
+			location.href ="/index!logout.action";
+			return false;
+		}
+		conWidHeig();
+		$(window).resize(function() {
+			conWidHeig();
+		});
+		mouseOver();
+		var loginErrorCode = "";
+		if (loginErrorCode && loginErrorCode == 501) {
+			$("#loginErrorCode").html("验证码错误");
+		} else if (loginErrorCode && loginErrorCode == 502) {
+			$("#loginErrorCode").html("用户名或密码错误");
+		} else if (loginErrorCode && loginErrorCode == 503) {
+			$("#loginErrorCode").html("该用户已经被停用");
+		} else if (loginErrorCode && loginErrorCode == 504) {
+			$("#loginErrorCode").html("所属组织不存在或已被停用");
+		} else if (loginErrorCode && loginErrorCode == 505) {
+			$("#loginErrorCode").html("该用户所属组织没有建立货代");
+		} else if (loginErrorCode && loginErrorCode == 506) {
+			$("#loginErrorCode").html("该用户组织建立货代未审核");
+		}else if (loginErrorCode && loginErrorCode == 507) {
+			$("#loginErrorCode").html("该用户没有分配功能权限");
+		}
+		//用户名取cookie
+		if ($.cookie(COOKIE_NAME)) {
+			$("#userName").val($.cookie(COOKIE_NAME));
+		}
+		//用户密码取cookie
+		if ($.cookie(COOKIE_PASSWORD)) {
+			// $("#userPass").val($.cookie(COOKIE_PASSWORD) );  
+		}
+		//浏览器版本判断
+		// 	    var bro=$.browser;
+		// 	    var binfo="";
+		// 	    if(!bro.msie&&!bro.mozilla&&!bro.chrome) {
+		// 	    	alert('请选择主流浏览器:ie、Firefox、chrome');
+		// 	    	return;
+		// 	    }
+		// 	    if(bro.msie) { if(parseInt(bro.version)<8){
+		// 	    	alert('请选择ie8或ie9');
+		// 	    	return;
+		// 	    }}
+		
+		getUserIdentity();
+		
+	});
+
+	/**
+	 * 表单提交
+	 */
+	function submits() {
+		var userName = $.trim($("#userName").val());
+		if ($("#userName").val() == "") {
+			$("#loginErrorCode").html("请输入用户名");
+			return false;
+		}
+		$("#userName").val(userName);
+		if ($("#userPass").val() == "") {
+			$("#loginErrorCode").html("请输入密码");
+			return false;
+		}
+		
+		var userRelatedId = $.trim($("#userRelatedId").val());
+		if (!userRelatedId) {
+			$("#loginErrorCode").html("请选择所属角色");
+			return false;
+		}
+		$("#userRelatedId").val(userRelatedId);
+		
+		var validateCode = $.trim($("#validateCode").val());
+		if ($("#validateCode").val() == "") {
+			$("#loginErrorCode").html("请输入验证码");
+			return false;
+		}
+		$("#validateCode").val(validateCode);
+		//if ($("#remember-userName-checkbox").attr("checked")) {
+			$.cookie(COOKIE_NAME, $("#userName").val(), {
+				path : '/',
+				expires : 365 * 10
+			});
+			$.cookie(COOKIE_USER_KEY, $("#userIdentityId").val(), {
+				path : '/',
+				expires : 365 * 10
+			});
+		//} else {
+// 			$.cookie(COOKIE_NAME, null, {
+// 				path : '/'
+// 			});
+		//}
+		$('#loginForm').submit();
+	};
+
+	/**
+	 * 回车键提交
+	 */
+	document.onkeydown = function(event) {
+		e = event ? event : (window.event ? window.event : null);
+		if (e.keyCode == 13) {
+			submits();
+		}
+	};
+
+	$(window).resize(function() {
+		var height = $(window).height();
+		var width = $(window).width();
+		var bodyDiv = $("#login-body-div");
+		//自适应设置
+		if (width < 1024) {
+			bodyDiv.css({
+				width : '1024px'
+			});
+		} else {
+			bodyDiv.css({
+				width : '100%'
+			});
+		}
+		if (height < 635) {
+			bodyDiv.css({
+				height : '635px'
+			});
+		} else {
+			bodyDiv.css({
+				height : 'auto'
+			});
+		}
+	});
+	
+	var userKey = "" || $.cookie(COOKIE_USER_KEY);
+	
+	function getUserIdentity(){
+		var userName =  $.trim($("#userName").val());
+		var userPass =  $.trim($("#userPass").val());
+		if(!userName || !userPass){
+			$("#userRelatedId").html("");
+			return ;
+		}
+		$.ajax({
+            type: 'post',
+            url: "/index!findIdentitys.action",
+            cache: false,
+            data:{
+            	"loginName":userName,
+            	"userPass": userPass
+            	},
+            dataType: 'json',
+            success: function (data)
+            {
+            	var str = "";
+            	if(data && data.length > 0){
+            		for(var i =0; i < data.length ; i++){
+            			str +='<option value="'+data[i].id+'">'+data[i].orgName+'-'+data[i].departmentName+'-'+data[i].roleName+'</option>';
+            		}
+            	}
+            	$("#userRelatedId").html(str);
+            	
+            	if(userKey){
+        			$("#userRelatedId").val(userKey);
+        		}
+            }
+        });
+	};
+</script>
+</head>
+
+<body>
+	<!--login_contentStart-->
+	<div class="login_content" id="login-body-div">
+		<!--loginMainStart-->
+		<div class="loginMain">
+			<div class="logo"></div>
+			<div class="login_box">
+				<!--loginMainOneStart-->
+				<form action="/index.action" method="post"
+					id="loginForm" name="loginForm">
+					<div class="loginTextInput">
+						<div class="loginText">
+							<span>用户名：</span><input id="userName" name="userName" type="text" onblur="getUserIdentity();"
+								 maxlength="40" value="" class="loginInput" />
+						</div>
+						<div class="loginText">
+							<div class="loginMima">
+								<span>密&nbsp;&nbsp;&nbsp;&nbsp;码：</span><input id="userPass"
+								name="userPass" type="password" maxlength="40" onblur="getUserIdentity();" value="" 
+								class="loginInput" />
+							</div>
+						</div>
+						<div class="loginText">
+<!-- 							<div class="loginMima"> -->
+								<span>选择角色：</span>
+								 <select name="userKey" id="userRelatedId" class="loginInput">
+								</select>
+<!-- 							</div> -->
+						</div>
+						<div class="loginText">
+							<div class="loginMimaYzm">
+								<span>验证码：</span><input id="validateCode" name="validateCode"
+									type="text" class="loginInputOne" />
+							</div>
+							<div class="loginWjmm">
+								<img src="/captcha.jpg" height="22"
+									width="100"
+									onclick="this.src='/captcha.jpg?' + Math.random()"
+									title="看不清，请点击换一张" />
+							</div>
+
+						</div>
+
+<!-- 						<div class="loginRemeberText fl"> -->
+<!-- 							<input id="remember-userName-checkbox" -->
+<!-- 								name="remember-userName-checkbox" type="checkbox" /> -->
+<!-- 							记住用户名&nbsp; -->
+<!-- 						</div> -->
+
+						<div id="loginErrorCode" class="loginErrorCode fl"></div>
+					</div>
+					<div class="loginBtn" onclick="submits();"></div>
+				</form>
+				<!--loginMainOneEnd-->
+			</div>
+		</div>
+		<!--loginMainEnd-->
+	</div>
+	<!--login_contentEnd-->
+	<!-- 预加载javascript  css -->
+	<iframe src="/pages/common/preload.html"
+		style="display: none;" id="loadJsCss"></iframe>
+</body>
+</html>

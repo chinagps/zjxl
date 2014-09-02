@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>中交兴路车联网 中国领先的商用车车联网服务商</title>
+<meta name="keywords" content="卡车，物流平台，加油卡，客车公共服务平台，北斗，gps，定位监控" />
+<meta name="description" content="中交兴路车联网科技有限公司是以卫星定位为基础，以运输安全为主题，以金融服务为手段，以物流服务为核心，大物流、大服务、大金融为品牌发展战略，致力于为运输企业提供运营服务与管理及卫星定位监控服务，协助政府部门提升对行业的监管能力和监管效率，全面推动行业规范建设和有序发展，推动中国物流改革和产业升级，引领中国车联网产业发展。" />
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<script type="text/javascript" src="js/c_top.js"></script>
+</head>
+
+<body>
+<!--headerStart-->
+
+<div class="header">
+           <div class="headerMain">
+
+                      <div class="headerRight">
+                                  <p><a href="http://weibo.com/sinoiov" target="_blank">官方微博</a></p><span>|</span><p><a href="contact.html">联系方式</a></p>
+                      </div>
+           </div>
+</div>
+<!--headerEnd-->
+<!--logoStart-->
+<div class="logo">
+           <div class="logoMain">
+                      <div class="logoLeft"><img src="images/2014_03.gif" width="310" height="49"/></div>
+                      <div class="logoRight"><img src="images/2014_06.gif" width="283" height="41"/></div>
+           </div>
+</div>
+<!--logoEnd-->
+<!--bannerStart-->
+
+<div id="topImg" class="banner">
+            <div class="bannerMain">
+
+              <div id="Layer1">
+                          <div class="menu">
+                                      <ul>
+                                      <li><a href="index.html"  class="navBj" id="selected">首页</a></li>
+                                      <li><a href="about.html">了解SINOIOV</a></li>
+                                      <li><a href="news.html">新闻动态</a></li>
+                                      <li><a href="business.html">业务概览</a></li>
+                                      <li><a href="media.html">媒体中心</a></li>
+                                      <li><a href="fwwl.html">服务专区</a></li>
+                                      <li><a href="e-card.html">卡行E家</a></li>
+                                      <li><a href="responsibility.html">社会责任</a></li>
+                                      <li><a href="careers.html">加入我们</a></li>
+                                      </ul>
+                          </div>
+              </div>
+
+            <div id="YSlide">
+								   <p class="YSample"><a href="about.html"><img src="images/sinoiov.jpg" alt="中交兴路车联网    中国领先的商用车车联网服务商" border="0" ></a></p>
+								   <p class="YSample"><a href="business.html"><img src="images/focus1.jpg" alt="车联网综合应用服务平台  最全面、最便捷、最高效" border="0"/></a></p>
+								   <p class="YSample"><a href="http://www.sinotranspo.com/" target="_blank"><img src="images/focus2.jpg" alt="物流联盟网络平台   助力中小物流企业货代发展" border="0"/></a></p>
+								   <p class="YSample"><a href="e-card.html"><img src="images/focus3.jpg" alt="卡车E家  一卡惠天下"/></a></p>
+								   <p class="YSample"><a href="ptfw.html"><img src="images/focus4.jpg" alt="定位监控平台  一流的智能化公共服务" border="0" ></a></p>
+								   <p id="YSIndex"><a href="#1" class="current"></a><a href="#1"></a><a href="#1"></a><a href="#1"></a><a href="#1"></a></p>
+						</div>
+<script language="javascript" type="text/javascript" src="js/yao.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+YAO.YTabs({
+		tabs: YAO.getEl('YSIndex').getElementsByTagName('a'),
+		contents: YAO.getElByClassName('YSample', 'p', 'YSlide'),
+		defaultIndex:0,
+		auto: true,
+		fadeUp: true
+});
+//-->
+</script>
+            </div>
+</div><br>
+<!--bannerEnd-->
+<!--mainStart-->
+<div class="main">
+            <!--contentStart-->
+            <div class="content">
+                       <div class="video"></div>
+                       <div class="companyDynamic">
+                                  <div class="cdLeft">
+                                             <div class="cd">
+                                                        <div class="cdFont"></div>
+                                                        <div class="cdGengxinjilu"><a href="news.html"><img src="images/flish_49.gif" width="78" height="27" border="0"/></a></div>
+                                             </div>
+                                             <div class="cdContent">
+                                             </div>
+                                  </div>
+                                  <div class="cdRight">
+                                             <div class="zhinengwuliu"><a href="http://www.sinotrucker.com/index.action" target="_blank"><img src="images/flish_53.gif" width="210" height="63" border="0" onmouseover="this.src='images/flishover_53.gif'" onmouseout="this.src='images/flish_53.gif'"/></a></div>
+                                             <div class="chehou"><a href="http://www.4000966666.com/portal/front/toRegSelect.action" target="_blank"><img src="images/flish_60.gif" width="210" height="64" border="0" onmouseover="this.src='images/flishover_60.gif'" onmouseout="this.src='images/flish_60.gif'"/></a></div>
+											 <div class="kechepingtai"><a href="http://www.kypt.cn/" target="_blank"><img src="images/flish_61.gif" width="210" height="65" border="0" onmouseover="this.src='images/flishover_61.gif'" onmouseout="this.src='images/flish_61.gif'"/></a></div>
+                                             <div class="yunyingpingtai"><a href="http://www.zjyypt.net" target="_blank"><img src="images/flish_62.gif" width="210" height="64" border="0" onmouseover="this.src='images/flishover_62.gif'" onmouseout="this.src='images/flish_62.gif'"/></a></div>
+                                  </div>
+                       </div>
+            </div><br><br>
+            <!--contentEnd-->
+            <!--serviceStart-->
+            <div class="service">
+                       <!--1start-->
+                       <div class="serviceBj">
+
+                                  <div class="gongyinglian"><a href="http://www.sinotranspo.com" target="_blank"><img src="images/flish_78.gif" alt="供应链中心" width="231" height="73" border="0" onmouseover="this.src='images/flishover_78.gif'" onmouseout="this.src='images/flish_78.gif'"/></a></div>
+                                  <div class="gyl"><a href="http://www.sinotranspo.com/lmis-portal/site/lmis/ddcx/index.html" target="_blank"><img src="images/flish_80.gif" width="232" height="61" border="0" onmouseover="this.src='images/flishover_80.gif'" onmouseout="this.src='images/flish_80.gif'"/></a></div>
+                                  <div class="huodai"><a href="http://www.sinotranspo.com/lmis-portal/site/lmis/lmzx/index.html" target="_blank"><img src="images/flish_82.gif" width="232" height="61" border="0" onmouseover="this.src='images/flishover_82.gif'" onmouseout="this.src='images/flish_82.gif'"/></a></div>
+                                  <div class="wuliukuaiche"><a href="http://www.sinotranspo.com/lmis-portal/download/logisticsApp_signed.apk"><img src="images/flish_84.gif" width="211" height="61" onmouseover="this.src='images/flishover_84.gif'" onmouseout="this.src='images/flish_84.gif'"/></a></div>
+                       </div>
+                       <!--1end-->
+                       <!--2start-->
+                       <div class="serviceBj">
+                                  <div class="gongyinglian"><a href="http://www.4000966666.com" target="_blank"><img src="images/flish_102.gif" alt="油品中心" width="231" height="73" border="0" onmouseover="this.src='images/flishover_102.gif'" onmouseout="this.src='images/flish_102.gif'"/></a></div>
+                                  <div class="gyl"><a href="http://www.4000966666.com/portal/front/homeMenuCommonPage.action?type=3101&title=全国合作加油站" target="_blank"><img src="images/flish_104.gif" width="232" height="61" border="0" onmouseover="this.src='images/flishover_104.gif'" onmouseout="this.src='images/flish_104.gif'"/></a></div>
+                                  <div class="huodai"><a href="http://www.4000966666.com/pages/portal/front/clsm_map.jsp" target="_blank"><img src="images/flish_106.gif" width="232" height="61" border="0" onmouseover="this.src='images/flishover_106.gif'" onmouseout="this.src='images/flish_106.gif'"/></a></div>
+                                  <div class="wuliukuaiche"><a href="http://www.4000966666.com/portal/front/homeMenuCommonPage.action?type=9001&title=掌上车联"  target="_blank"><img src="images/flish_108.jpg" width="211" height="61" border="0" onmouseover="this.src='images/flishover_108.jpg'" onmouseout="this.src='images/flish_108.jpg'"/></a></div>
+                       </div>
+                       <!--2end-->
+                       <!--3start-->
+                       <div class="serviceBj">
+                                  <!-- <div class="gongyinglian"><a href="ptfw.html"><img src="images/flish_126.gif" alt="定位与监控中心" width="231" height="73" border="0" onmouseover="this.src='images/flishover_126.gif'" onmouseout="this.src='images/flish_126.gif'"/></a></div> -->
+                                  <div class="gongyinglian"><a href="dwjk/index.html"><img src="images/flish_126.gif" alt="定位与监控中心" width="231" height="73" border="0" onmouseover="this.src='images/flishover_126.gif'" onmouseout="this.src='images/flish_126.gif'"/></a></div>
+                                  <div class="gyl"><a href="zjys.html"><img src="images/flish_128.gif" width="232" height="61" border="0" onmouseover="this.src='images/flishover_128.gif'" onmouseout="this.src='images/flish_128.gif'"/></a></div>
+                                  <div class="huodai"><a href="http://www.kypt.cn/download/MobileClient.apk"><img src="images/flish_130.gif" width="232" height="61" border="0" onmouseover="this.src='images/flishover_130.gif'" onmouseout="this.src='images/flish_130.gif'"/></a></div>
+                                  <div class="wuliukuaiche"><a href="http://file.4000966666.com/file/zjyypt_V1_1.apk" target="_blank"><img src="images/flish_132.gif" width="211" height="61" border="0" onmouseover="this.src='images/flishover_132.gif'" onmouseout="this.src='images/flish_132.gif'"/></a></div>
+                       </div>
+                       <!--3end-->
+            </div>
+            <!--serviceEnd-->
+            <!--lineStart-->
+            <div class="line"></div>
+             <!--lineEnd-->
+                        </div><!--mainEnd-->
+            <!--lineStart-->
+			<table width="100%" height="300"  border="0" cellpadding="0" cellspacing="0" bgcolor="a6a6a6">
+              <tr>
+                <td colspan="2" valign="middle"><div align="center">
+                    <table width="980" border="0" cellspacing="7" cellpadding="0">
+                      <tr>
+                        <td colspan="10"><div align="center"></div>                          <div align="center"></div>                          </td>
+                      </tr>
+                      <tr>
+                        <td width="230" rowspan="2"><div align="center"><img src="images/2014_31.gif" width="183" height="102" /></div></td>
+                        <td width="30" rowspan="2" ><div align="center"><img src="images/2014_28.gif" width="11" height="200" /></div></td>
+                        <td width="30" >&nbsp;</td>
+                        <td width="180" ><div align="left" class="rtCopy">供应链中心</div></td>
+                        <td width="30" rowspan="2" ><img src="images/2014_28.gif" width="11" height="200" /></td>
+                        <td width="10" >&nbsp;</td>
+                        <td width="180" ><div align="left" class="rtCopy">油品中心</div></td>
+                        <td width="30" rowspan="2" ><img src="images/2014_28.gif" width="11" height="200" /></td>
+                        <td width="10" >&nbsp;</td>
+                        <td width="230" ><div align="left" class="rtCopy">定位监控中心</div></td>
+                      </tr>
+                      <tr>
+                        <td width="10" >&nbsp;</td>
+                        <td><span class="ff1"><p class="flishfont">&nbsp;</p>
+                            <p class="flishfont"><a href="gyl.html">供应链解决方案</a> </p>
+                            <p class="flishfont"><a href="ldbc.html">零担运输</a></p>
+							<p class="flishfont"><a href="zcys.html">整车运输</a></p>
+                            <p class="flishfont"><a href="xmwl.html">项目物流</a></p>
+                            <p class="flishfont"><a href="ccfw.html">仓储服务</a></p>
+                            <p class="flishfont"><a href="zzfu.html">增值服务</a></p></span></td>
+                        <td width="10" >&nbsp;</td>
+                        <td><span class="ff1"><p class="flishfont"><a href="ywsh.html">油为实惠</a> </p>
+                            <p class="flishfont"><a href="ztb.html">在途保</a></p>
+                            <p class="flishfont"><a href="hcws.html">货车卫士</a></p>
+                            <p class="flishfont"><a href="yjq.html">违章e缴清</a></p>                            <p class="flishfont"><a href="cgj.html">车管家</a></p></span></td>
+                        <td width="10" >&nbsp;</td>
+                        <td><span class="ff1"><p class="flishfont"><a href="ptfw.html">车联网平台解决方案</a></p>
+                                                <p class="flishfont"><a href="zjys.html">我们的优势和特色</a></p>
+                                                <p class="flishfont"><a href="jzl.html">核心竞争力</a> </p>
+                                                <p class="flishfont">&nbsp;</p>
+												<p class="flishfont">&nbsp;</p></span></td>
+                      </tr>
+                      <tr>
+                        <td colspan="10"><img src="images/2014_35.gif" width="948" height="10" /></td>
+                      </tr>
+                      <tr>
+                        <td colspan="10"><span class="ff">
+                          <div align="left"><a href="about.html">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="job.html">诚聘英才</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="contact.html">联系我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="sitemap.html">网站地图</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="legal.html">法律声明</a></div>
+                          <br />
+&copy;版权所有 中交兴路车联网　京ICP备12002390号 增值电信业务许可证B2-20110244</span></td>
+                      </tr>
+                    </table>
+                  </div>
+                    <div class="ff">
+                      <div align="left"></div>
+                  </div></td>
+              </tr>
+              <tr>
+                <td width="261" valign="middle">&nbsp;</td>
+                <td width="1073" height="30">&nbsp;</td>
+              </tr>
+            </table>
+</body>
+</html>

@@ -1,0 +1,60 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>业务支撑-编辑用户</title>
+<script type="text/javascript" src="script/publishInfo/addPublish.js" ></script> 
+</head>
+<body>
+<div>
+<div class="content">
+  <div class="right_c">
+    <div class="right_cs" >
+       <div id="warn" class="right_ct4">资讯信息-添加(<span class="red">*</span>号为必填项)</div>
+       <div id="form_div">
+       <form  id="addPublishForm" >
+       <div class="text2"><h1>所属企业：<span id="parentOrgNameAddOper"></span>
+       <input id="parentOrgIdAddOper" name="tbPublishInfo.entId" type="hidden" class="{required:true}"/></h1>
+       </div>
+        <ul class="frame2" style="width: 90%;">
+        	<li>
+	        	<span class="L">资讯主题：<input id="infoTheme" name="tbPublishInfo.infoTheme" type="text" class="{required:true,specialchars: true,maxlength:20}" /><span class="red">*</span></span>
+        	</li>
+        	
+        	<li>
+	        	<span class="L">资讯类型：<select id="infoType" name="tbPublishInfo.infoType" class="srkjl4 w_yy_3 {required:true}" style="width:155px;">
+		        	                          <option value="">请选择</option>
+							                  <option value="002">企业公告</option>
+							                  <option value="005">企业资讯</option>
+	        	                          </select>
+	        	<span class="red">*</span></span>
+        	</li>
+        	
+        	<li>
+	        	<span class="L">失效时间：<input id="enddate" name="tbPublishInfo.enddate" type="text" style="height: 21px;vertical-align: middle;" class="{required:true,maxlength:20}" class="Wdate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',isShowClear:true,minDate:new Date(),maxDate:'2099-12-31 23:59:59'})"/><span class="red">*</span></span>
+        	</li>
+        	
+        	 
+        	<li>
+        	      企业资讯内容：<div id="editor_iframe"></div>
+        	</li>
+        	<li>
+        	<div class="button4">        	
+        	    <input id="infoId" name="tbPublishInfo.infoId" type="hidden"/>
+        	    <input id="createBy" name="tbPublishInfo.createBy" value="0" type="hidden"/>
+        	    <input id="tbPublishInfoInfoContent" name="editContent" type="hidden"/>
+	        	<span class="L"><input id="addPublishFormsubmit" type="submit" value="确定" class="bt4" /></span>
+	        	<span class="L">&nbsp;&nbsp;&nbsp;<input id="close" name="" type="button" id="close" value="取消" class="bt5" /></span>
+        	</div>
+        	</li>
+        </ul>
+    </form>
+    </div>
+    </div>
+    </div>
+   </div>
+   </div>
+</body>
+</html>

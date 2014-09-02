@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>客车公共服务平台-登录中心</title>
+  <link rel="shortcut icon" href="img/logo.ico" />
+  <link rel="Bookmark" href="img/logo.ico"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css?v=20140322071857" />
+  <link rel="stylesheet" type="text/css" href="css/login.css?v=20140322071857" />
+  <link rel="stylesheet" type="text/css" href="css/built.css?v=20140322071857" />
+	<script type="text/javascript" src="script/plugin/jquery/jquery-puppet.js?v=20140322071857"></script>
+    <script type="text/javascript" src="dist/i18n/i18n.js?v=20140322071857"></script>
+	<script type="text/javascript" src="dist/plugin/jquery/jquery.cookie.js?v=20140322071857"></script>
+	<script type="text/javascript" src="dist/plugin/jquery/jquery_loadmask/jquery.loadmask.js?v=20140322071857"></script>
+	<script type="text/javascript" src="dist/plugin/sha1.js?v=20140322071857"></script>
+	<script type="text/javascript" src="dist/plugin/json2.js?v=20140322071857"></script>
+	<script type="text/javascript" src="dist/plugin/jquery/jquery_validation/jquery.validate.js?v=20140322071857"></script>
+	<script type="text/javascript" src="dist/plugin/ligerui/js/core/base.js?v=20140322071857"></script>
+	<script type="text/javascript" src="dist/plugin/ligerui/js/plugins/ligerDialog.js?v=20140322071857"></script>
+	<script type="text/javascript" src="dist/control/ctfo.config.js?v=20140322071857"></script>
+	<script type="text/javascript" src="dist/control/ctfo.util.js?v=20140322071857"></script>
+</head>
+<body>
+<!--<div class="Browser"><span title="关闭">关闭</span><div class="fr ml10 f12 hand remind mr10">不再提醒</div><div class=" ml20 mr20">尊敬的用户您好！欢迎使用客车公共服务平台，如需获得更快的浏览速度，推荐您使用谷歌浏览器。<font><a href="model/help/ChromeSetup.exe">点击此处下载</a></font></div></div> -->
+  <!--主体内容堆栈-->
+  <div class="login_wrap">
+    <div class="box">
+      <div class="login_content">
+      	<!--下载 begin-->
+        <div class="fr">
+         <div class="pa">
+          <div class="pa down" style="padding-top:160px;left:30px;">
+          <div class="fr h280 "  >
+            <div class="small hand pic phone2 mb10"></div>
+            <div class="small hand cs2"></div>
+          </div>
+          <div  class="pa" style="left:-135px;" >
+             <a target="_self" href="cs.html"><div class="big cs none"></div></a>
+            <a target="_self" href="mobile.html"><div class="big phone none"></div></a>
+          </div>
+        </div>
+        </div>
+        </div>
+        <!--下载 end-->
+        <div class="login_box">
+          <!--form-->
+          <form name="loginForm">
+            <ul class=" pt20">
+
+              <li class="h35 pb15">
+                <!--<div class=" fl w60 tr lh25 h25">用户名：</div>
+              -->
+              <input class="w250" type="text" name="userName" value="用户名" title="用户名" />
+            </li>
+
+            <li class="h35 pb15 pr password">
+              <div class="abs_left lh35 h25 pl3">密 码</div>
+              <input class="w250" type="password" name="password" value="" title="密码" />
+            </li>
+
+            <li class="h35 pb15">
+              <!--<div class=" fl w60 tr lh25 h25">企业编码：</div>
+            -->
+            <input class="w250" type="text" name="corpCode" value="组织编码" title="组织编码" />
+          </li>
+
+          <li class="h35 pb15">
+            <!--<div class=" fl w60 tr lh25 h25">验证码：</div>
+          -->
+          <input class="fl w140" name="imgCode" type="text" value="验证码" title="验证码" />
+          <img class=" fr w100 imgCode h35 lineS" src="img/bata/1.png" alt="验证码，如看不清请点击刷新" />
+        </li>
+        <li class="lh25 h35  pb5">
+          <div class="fl w100">
+            <div class=" h25 lh25 checkbox">
+              <input class="w20" name="userStorage" type="checkbox" />
+              记住用户名
+            </div>
+          </div>
+          <div class=" h25 lh25 fr w40 tc cBlue hand saveFavorite">收藏</div>
+        </li>
+
+        <li class="h50 lh25 ">
+          <a class="login_submit tnone" href="javascript:void(0);">登录</a>
+          <div class=" cF00 overh errorTip w200 h20 tc mauto"></div>
+        </li>
+
+      </ul>
+    </form>
+
+  </div>
+
+
+ 
+</div>
+
+
+</div>
+</div>
+
+
+</body>
+</html>
+
+
+	<script type="text/javascript" src="dist/control/ctfo.login.js?v=20140322071857"></script>

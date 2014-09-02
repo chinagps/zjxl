@@ -1,0 +1,59 @@
+.right_cs_classline {
+	width:280px;
+	border: 1px solid #c0d7eb;
+	}
+.trend_cs_classline{width:800px;
+	clear: both;
+	overflow: hidden;
+}
+.trend_cs_classline .topblue {
+	background: url(../../images/global/bbg_4.png) repeat-x;
+	padding: 8px 10px 0 10px;
+	height: 22px;
+	width: 480px;
+}
+
+.sevenbg2_cs_classline {
+	border: 3px #014d88 solid;
+	height:408;
+}
+.Add_cs_classline{padding:60px 5px; width:100px;height:300px}
+.button8_cs_classline{height:75px; line-height:50px; width:845px; margin-top:5px; hight:800px; text-align:center; background:#f1f7fd; border-top:1px solid #ccdbe7;}
+.xzclzz_cs_classline {
+	width: 680px;
+	height:320px;
+	float:left;
+}
+.xzclzz_cs_classline_r{
+float:right;width:140px;
+margin-top:10px;
+line-height:25px;
+}
+.paddingthree_cs_classline {
+	padding: 2px;
+	padding-bottom: 2;
+}
+.right_cdt4_cs_classline {
+	margin: 0 auto 10px;
+}
+
+.overscroll2_cs_classline {
+	overflow-x: hidden;
+	width: 255px;
+	height: 210px;
+}
+.overscroll2_cs_classline_right {
+	overflow: scroll;
+	overflow-x: hidden;
+	width: 280px;
+	height: 340px;
+}
+.addright_cs_classline {
+	padding-top:80px;
+	padding-left:0px;
+}
+.delright_cs_classline {
+	padding-top:10px;
+	padding-bottom: 80px;
+	padding-left:0px;
+}

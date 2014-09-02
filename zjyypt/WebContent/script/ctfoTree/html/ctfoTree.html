@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>左侧属性结构HTML</title>
+
+<script type="text/javascript">
+	
+</script>
+</head>
+<body>
+<div id="ctfoTree">
+<div>
+<div id="powerm_tab" class="powerm_tab">
+<ul>
+	<li id="powerm_tab_one" class="h"><a href="javascript:void(0)">组织</a></li>
+	<!-- <li id="powerm_tab_two"><a href="javascript:void(0)">线路</a></li> -->
+	<li id="powerm_tab_three"><a href="javascript:void(0)">搜索</a></li>
+</ul>
+</div>
+<div id="tabDiv">
+<div id="powerm_con0" class="powerm_con">
+<div class="powerm_search">
+	<form class="form">
+		<div class="validate" style="width:250px;float:left">
+			<input name="" type="text" value="组织名称" id="searchInput" class="{specialchars:true,maxlength:20}" style="width:234px;margin-left:5px;margin-bottom :5px;"/>
+		</div>
+		<div style="width:250px;text-align: center; margin-bottom :5px;">
+			<input type="button" id="leftRefreshBtn" class="btn_green" onmouseout="this.style.backgroundPosition='-100px 0px'" onmouseover="this.style.backgroundPosition='-100px -50px'" value="刷  新" />
+			<input type="button" id="serachButton" class="btn_inquires" onmouseover="this.style.backgroundPosition='0px -200px'" onmouseout="this.style.backgroundPosition='0px -150px'" value="" />
+		</div>
+		<!--<input name="" type="submit" value="查询" class="monitorButton"  id="serachButton" />-->
+	</form> 
+	<div class="powerm_tree" id="powerm_tree"></div>
+</div>
+</div>
+<!-- <div id="powerm_con1" class="powerm_con" style="display: none;">
+<div class="powerm_search">
+	<form class="form">
+		<div class="validate" style="width:160px;float:left">
+			<input name="" type="text" value="线路名称" id="searchLineInput" class="{specialchars:true,maxlength:20}" style="width:160px;margin-left:5px;margin-bottom :5px;" />
+		</div>
+		<input type="submit" id="secondTabtreeSearchButton" class="btn_inquires" onmouseover="this.style.backgroundPosition='0px -200px'" onmouseout="this.style.backgroundPosition='0px -150px'" value="&nbsp;" />
+		<input name="" type="submit" value="查询" class="monitorButton" id="secondTabtreeSearchButton" />
+	</form>
+</div>
+<div class="powerm_tree" id="tree2"></div>
+</div> -->
+<div id="powerm_con2" class="powerm_con" style="display: none; overflow:auto">
+<div class="powerm_search" style="height: 200px;">
+<form action="" id="searchFormTree">
+<div class="validate">
+<table width="240" cellspacing="0" cellpadding="0" style="font-size:12px; " >
+	<tr>
+		<td width="60">车牌号:</td>
+		<td style="font-size:9px;width:180px;text-align:left;" ><input name="requestParam.like.vehicleNo" type="text" value=""  class="{specialchars:true,maxlength:20}"/></td>
+	</tr>
+	<tr>
+		<td width="60">SIM卡号:</td>
+		<td style="font-size:9px;width:180px;text-align:left;"><input name="requestParam.like.commaddr" type="text" value=""  class="{specialchars:true,maxlength:20}"/></td>
+	</tr>
+<!--	<tr>-->
+<!--		<td width="60">驾驶员:</td>-->
+<!--		<td style="font-size:9px;width:180px;text-align:left;"><input name="requestParam.like.staffName" type="text" value=""  class="{specialchars:true,maxlength:20}"/></td>-->
+<!--	</tr>-->
+<!--	<tr>-->
+<!--		<td width="60">企业名称:</td>-->
+<!--		<td style="font-size:9px;width:180px;text-align:left;"><input name="requestParam.like.pentName" type="text" value=""  class="{specialchars:true,maxlength:20}"/></td>-->
+<!--	</tr>-->
+<!--	<tr>-->
+<!--		<td width="60">车队名称:</td>-->
+<!--		<td style="font-size:9px;width:180px;text-align:left;"><input name="requestParam.like.entName" type="text" value=""  class="{specialchars:true,maxlength:20}"/></td>-->
+<!--	</tr>-->
+	<tr>
+		<td width="60">内部编号:</td>
+		<td style="font-size:9px;width:180px;text-align:left;"><input name="requestParam.like.innerCode" type="text" value=""  class="{specialchars:true,maxlength:20}"/></td>
+	</tr>
+<!-- 	<tr> -->
+<!-- 		<td width="60">车辆品牌:</td> -->
+<!-- 		<td style="width:180px;text-align:left;"><select name="requestParam.equal.vbrandCode" class="tfield3"  id="vponevbrandCode"> -->
+<!-- 			<option value="">请选择</option> -->
+<!-- 		</select></td> -->
+<!-- 	</tr> -->
+<!-- 	<tr> -->
+<!-- 		<td width="60">车辆车型:</td> -->
+<!-- 		<td style="width:180px;text-align:left;"><select name="requestParam.equal.prodCode" class="tfield3" id="vchieltypevehicleType"> -->
+<!-- 			<option value="">请选择</option> -->
+<!-- 		</select></td> -->
+<!-- 	</tr> -->
+	<tr>
+		<td width="60">车辆类型:</td>
+		<td style="width:180px;text-align:left;"><select name="requestParam.equal.vehicleType" class="tfield3" id="vehicleType">
+			<option value="">请选择</option>
+		</select></td>
+	</tr>
+	</table>
+</div>
+	<table width="240" cellspacing="0" cellpadding="0" style="font-size: 13px;">
+	<tr>
+		<td></td>
+		<td><input type="button" id="advanceSearchButton" style="margin-top:10px;" class="btn_inquires" onmouseover="this.style.backgroundPosition='0px -200px'" onmouseout="this.style.backgroundPosition='0px -150px'" value="" />
+		<!--<input name="" id="advanceSearchButton" type="button" value="查询" class="bt1" />--></td>
+	</tr>
+	</table>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="leftTreeCTFOgrid" class=""></div>
+</div>
+</body>
+</html>

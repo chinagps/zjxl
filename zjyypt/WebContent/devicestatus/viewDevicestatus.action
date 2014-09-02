@@ -1,0 +1,521 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>设备状态详情</title>
+<script type="text/javascript" src="script/devicestatus/showDetailPop.js"></script>
+</head>
+
+<body>
+<div class="kcptWindow" style="width:600px;">
+	<div class="kcptWindow_top">
+		<div class="kcptWindow_top_img"><img src="images/kcptWindow_top_img/equipment_information.png" /></div>
+		<div class="kcptWindow_top_close" id="dvcstaClose"><img src="images/global/topRightClose.png" onmouseover="this.src='images/global/topRightCloseHover.png'" onmouseout="this.src='images/global/topRightClose.png'" /></div>
+		<div class="kcptWindow_top_text">设备状态详细信息：&#33487;EC8710</div>
+    </div>
+<div class="kcptWindow_main_sbzt">
+
+<table width="578" border="1" bordercolor="#7abae2" cellspacing="0" cellpadding="0" style="text-align: center;">
+	<tr class="t">
+		<td nowrap>序号</td>
+		<td nowrap>状态分类</td>
+		<td nowrap>状态名称</td>
+		<td nowrap>状态标识</td>
+		<td nowrap>实际值</td>
+		<td nowrap>最小值</td>
+		<td nowrap>最大值</td>
+		<td nowrap>计量单位</td>
+	</tr>
+	<tr>
+        <td align="center">1</td>
+        
+        <td rowspan="8">终端状态</td>
+        <td>导航系统故障</td>
+        <td align="center">
+            
+            <img src="/images/global/ls.png"/>
+            
+            
+        </td>
+        <td>
+            
+            正常
+            
+            
+        </td>
+        <td>--</td>
+        <td>--</td>
+        <td>--</td>
+    </tr>
+    <tr>
+        <td align="center">2</td>
+        <td>导航系统天线未接</td>
+        <td align="center">
+            
+            <img src="/images/global/ls.png"/>
+            
+            
+        </td>
+        <td>
+            
+            正常
+            
+            
+        </td>
+        <td>--</td>
+        <td>--</td>
+        <td>--</td>
+    </tr>
+    <tr>
+        <td align="center">3</td>
+        <td>导航系统天线短路</td>
+        <td align="center">
+            
+            <img src="/images/global/ls.png"/>
+            
+            
+        </td>
+        <td>
+            
+            正常
+            
+            
+        </td>
+        <td>--</td>
+        <td>--</td>
+        <td>--</td>
+    </tr>
+    <tr>
+        <td align="center">4</td>
+        <td>车机主电源欠压</td>
+        <td align="center">
+            
+            <img src="/images/global/ls.png"/>
+            
+            
+        </td>
+        <td>
+            
+            正常
+            
+            
+        </td>
+        <td>--</td>
+        <td>--</td>
+        <td>--</td>
+    </tr>
+    <tr>
+        <td align="center">5</td>
+        <td>车机主电源掉电</td>
+        <td align="center">
+            
+            <img src="/images/global/ls.png"/>
+            
+            
+        </td>
+        <td>
+            
+            正常
+            
+            
+        </td>
+        <td>--</td>
+        <td>--</td>
+        <td>--</td>
+    </tr>
+    <tr>
+        <td align="center">6</td>
+        <td>终端显示屏故障</td>
+        <td align="center">
+            
+            <img src="/images/global/ls.png"/>
+            
+            
+        </td>
+        <td>
+            
+            正常
+            
+            
+        </td>
+        <td>--</td>
+        <td>--</td>
+        <td>--</td>
+    </tr>
+    <tr>
+        <td align="center">7</td>
+        <td>语音模块故障</td>
+        <td align="center">
+            
+            <img src="/images/global/ls.png"/>
+            
+            
+        </td>
+        <td>
+            
+            正常
+            
+            
+        </td>
+        <td>--</td>
+        <td>--</td>
+        <td>--</td>
+    </tr>
+    <tr>
+        <td align="center">8</td>
+        <td>摄像头故障</td>
+        <td align="center">
+            
+            <img src="/images/global/ls.png"/>
+            
+            
+        </td>
+        <td>
+            
+            正常
+            
+            
+        </td>
+        <td>--</td>
+        <td>--</td>
+        <td>--</td>
+    </tr>
+	<tr>
+		<td align="center">9</td>
+		<td>定位状态</td>
+		<td>定位状态</td>
+		<td align="center">
+		    
+			<img src="/images/global/ls.png"/>
+			
+			
+		</td>
+		<td>
+			
+			正常
+			
+			
+		</td>
+		<td>--</td>
+		<td>--</td>
+		<td>--</td>
+	</tr>
+	<tr>
+		<td align="center">10</td>
+		<td>冷却液温度</td>
+		<td>冷却液温度</td>
+		<td align="center">
+		    
+			
+			
+			<img src="/images/global/hs.png"/>
+		</td>
+		<td>
+			<!-- 发动机冷却液温度（单位：1bit=1℃ 0=-40℃） -->
+			
+			
+			无效
+		</td>
+		<td>--</td>
+		<td>
+			103&nbsp;
+		</td>
+		<td>度</td>
+	</tr>
+	<tr>
+		<td align="center">11</td>
+		<td nowrap>蓄电池电压</td>
+		<td>蓄电池电压</td>
+		<td align="center">
+		    
+			
+			
+			<img src="/images/global/hs.png"/>
+		</td>
+		<td>
+			<!-- 外部电压（蓄电池）（单位：1bit=0.1V 0=0V） -->
+			
+			
+			无效
+		</td>
+		<td>
+			23&nbsp;
+		</td>
+		<td>
+			29&nbsp;
+		</td>
+		<td>伏</td>
+	</tr>
+	<tr>
+		<td align="center">12</td>
+		<td rowspan="3">严重警告</td>
+		<td>发动机油压</td>
+		<td align="center">
+		    
+			
+			
+			<img src="/images/global/hs.png"/>
+		</td>
+		<td>
+			
+			
+			
+			无效
+		</td>
+		<td>--</td>
+		<td>--</td>
+		<td>--</td>
+	</tr>
+	<tr>
+		<td align="center">13</td>
+		<td>制动气压</td>
+		<td align="center">
+		    
+			
+			
+			<img src="/images/global/hs.png"/>
+		</td>
+		<td>
+			
+			
+			
+			无效
+		</td>
+		<td>--</td>
+		<td>--</td>
+		<td>--</td>
+	</tr>
+	<tr>
+		<td align="center">14</td>
+
+		<td nowrap>制动蹄片磨损</td>
+		<td align="center">
+			
+			
+			
+			<img src="/images/global/hs.png"/>
+		</td>
+		<td>
+			
+			
+			
+			无效
+		</td>
+		<td>--</td>
+		<td>--</td>
+		<td>--</td>
+	</tr>
+	<tr>
+		<td align="center">15</td>
+		<td rowspan="3">阻塞警告</td>
+		<td>空滤阻塞</td>
+		<td align="center">
+			
+			
+			
+			<img src="/images/global/hs.png"/>
+		</td>
+		<td>
+			
+			
+			
+			无效
+		</td>
+		<td>--</td>
+		<td>--</td>
+		<td>--</td>
+	</tr>
+	<tr>
+		<td align="center">16</td>
+		
+		<td>机滤阻塞</td>
+		<td align="center">
+			
+			
+			
+			<img src="/images/global/hs.png"/>
+		</td>
+		<td>
+			
+			
+			
+			无效
+		</td>
+		<td>--</td>
+		<td>--</td>
+		<td>--</td>
+	</tr>
+	<tr>
+		<td align="center">17</td>
+		
+		<td>燃油阻塞</td>
+		<td align="center">
+			
+			
+			
+			<img src="/images/global/hs.png"/>
+		</td>
+		<td>
+			
+			
+			
+			无效
+		</td>
+		<td>--</td>
+		<td>--</td>
+		<td>--</td>
+	</tr>
+	<tr>
+		<td align="center">18</td>
+		<td rowspan="3">高温警告</td>
+		<td>机油温度</td>
+		<td align="center">
+			
+			
+			
+			<img src="/images/global/hs.png"/>
+		</td>
+		<td>
+			
+			
+			
+			无效
+		</td>
+		<td>--</td>
+		<td>--</td>
+		<td>--</td>
+	</tr>
+	<tr>
+		<td align="center">19</td>
+
+		<td>缓速器温度</td>
+		<td align="center">
+			
+			
+			
+			<img src="/images/global/hs.png"/>
+		</td>
+		<td>
+			
+			
+			
+			无效
+		</td>
+		<td>--</td>
+		<td>--</td>
+		<td>--</td>
+	</tr>
+	<tr>
+		<td align="center">20</td>
+
+		<td>发动机仓温</td>
+		<td align="center">
+			
+			
+			
+			<img src="/images/global/hs.png"/>
+		</td>
+		<td>
+			
+			
+			
+			无效
+		</td>
+		<td>--</td>
+		<td>--</td>
+		<td>--</td>
+	</tr>
+	<tr>
+		<td align="center">21</td>
+		<td rowspan="4">其它警告</td>
+		<td>燃油油位告警</td>
+		<td align="center">
+			
+			
+			
+			<img src="/images/global/hs.png"/>
+		</td>
+		<td>
+			
+			
+			
+			无效
+		</td>
+		<td>--</td>
+		<td>--</td>
+		<td>--</td>
+	</tr>
+	<tr>
+		<td align="center">22</td>
+		
+		<td>ABS故障</td>
+		<td align="center">
+			
+			
+			
+			<img src="/images/global/hs.png"/>
+		</td>
+		<td>
+			
+			
+			
+			无效
+		</td>
+		<td>--</td>
+		<td>--</td>
+		<td>--</td>
+	</tr>
+	<tr>
+		<td align="center">23</td>
+		
+		<td>水位低告警</td>
+		<td align="center">
+			
+			
+			
+			<img src="/images/global/hs.png"/>
+		</td>
+		<td>
+			
+			
+			
+			无效
+		</td>
+		<td>--</td>
+		<td>--</td>
+		<td>--</td>
+	</tr>
+	<tr>
+		<td align="center">24</td>
+
+		<td>发动机进气压力</td>
+		<td align="center">
+			
+			
+			
+			<img src="/images/global/hs.png"/>
+		</td>
+		<td>
+			<!-- 大气压力（单位：1bit=0.5Kpa 0=0Kpa） -->
+			
+			
+			无效
+		</td>
+		<td>
+			70&nbsp;
+		</td>
+		<td>
+			103&nbsp;
+		</td>
+		<td>千帕</td>
+	</tr> 
+</table>
+    </div>
+	<div class="kcptWindow_bottom">
+		<div class="kcptWindow_bottom_middle"></div>
+	</div>
+</div>
+</body>
+</html>

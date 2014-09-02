@@ -1,0 +1,1 @@
+window.RichLayer = window.RichLayer || {};

@@ -1,0 +1,43 @@
+.topTabTool {
+	width: 100%;
+	height: 30px;
+	border-bottom:#9cafc4 1px solid;
+ }
+ 
+ .topTabTool ul {
+	margin-left:10px;
+}
+.top_tags {
+	padding: 0px;
+	height: 30px;
+}
+
+.top_tags li {
+	float: left;
+	margin-right: 3px;
+	list-style-type: none;
+	width:104px;
+	height: 30px;
+}
+
+.top_tags li a {
+	float: left;
+	color:#07519a;
+	width:104px;
+	height: 30px;
+	line-height:30px;
+	text-align:center;
+	text-decoration: none;
+	background: url(../../images/global/tab_0.png) no-repeat;
+}
+
+.selectTag {
+	position: relative;
+	margin-bottom: -2px;
+}
+
+.top_tags .selectTag a {
+	color:#FFF;
+	font-weight:bold;
+	background: url(../../images/global/tab_1.png) no-repeat;
+}

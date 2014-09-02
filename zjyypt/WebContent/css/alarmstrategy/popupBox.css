@@ -1,0 +1,773 @@
+@CHARSET "UTF-8";
+/*弹出框总体设置*/
+.alarmsty_popUpBox{
+	width:382px;
+	height:370px;
+}
+/*topStart*/
+.alarmsty_top{
+	width:381px;
+	height:30px;
+}
+.alarmsty_topLeft{
+	width:345px;
+	height:30px;
+	float:left;
+}
+.alarmsty_topLeftOne{
+	width:10px;
+	height:30px;
+	background:url(../../images/alarmstrategy/pub_bjLeft01.png) no-repeat;
+	float:left;
+}
+.alarmsty_topLeftTwo{
+	width:335px;
+	height:30px;
+	background:url(../../images/alarmstrategy/pub_bjCenter01.png) repeat-x;
+	float:left;
+}
+.alarmsty_topFont{
+	line-height:30px;
+	font-size:12px;
+	color:#ffffff;
+	float:left;
+}
+.alarmsty_topIcon{
+	width:23px;
+	height:17px;
+	background:url(../../images/alarmstrategy/icon01.png) no-repeat;
+	margin:5px 5px 0px 0px;
+	float:left;
+}
+.alarmsty_topRight{
+	width:31px;
+	height:30px;
+	float:left;
+}
+/*topEnd*/
+
+/*popUpBoxMainStart*/
+.alarmsty_popUpBoxMain{
+	width:375px;
+	height:340px;
+	background:url(../../images/alarmstrategy/pub_update_bj01.png) repeat-y;
+	padding:5px 5px 0px 5px;
+}
+.alarmsty_update_popUpBoxMain{
+	width:375px;
+	height:340px;
+	background:url(../../images/alarmstrategy/pub_update_bj01.png) repeat-y;
+	padding:5px 5px 0px 5px;
+}
+.alarmsty_popUpBoxLeft{
+	width:296px;
+	height:329px;
+	float:left;
+}
+.alarmsty_popUpBoxRight{
+	width:364px;
+	height:329px;
+	float:left;
+}
+.alarmsty_pubMenu{
+	width:327px;
+	height:30px;
+	margin:0 auto;
+}
+.alarmsty_pubMenuOne{
+	width:104px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	color:#ffffff;
+	font-size:12px;
+	background:url(../../images/alarmstrategy/pub_btn01.png) no-repeat;
+	margin-right:5px;
+	display:block;
+	float:left;
+}
+.alarmsty_pubMenuTwo{
+	width:104px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	color:#587590;
+	font-size:12px;
+	background:url(../../images/alarmstrategy/pub_btn02.png) no-repeat;
+	margin-right:5px;
+	display:block;
+	float:left;
+}
+.alarmsty_rightContent{
+	width:364px;
+	height:311px;
+	border:1px solid #adbdd5;
+}
+.alarmsty_rightContentTop{
+	height:26px;
+	line-height:26px;
+	text-align:center;
+	color:#0f0f0f;
+	font-size:12px;
+	background:url(../../images/alarmstrategy/pub_bj03.png) repeat-x;
+	border-bottom:1px solid #aebed8;
+}
+.alarmsty_rightContentBright{
+	height:26px;
+	line-height:26px;
+	text-align:center;
+	color:#0f0f0f;
+	font-size:12px;
+	background:#fffffd;
+	padding-top:3px;
+	border-bottom:1px solid #aebed8;
+}
+.alarmsty_rightTable{
+	width:182px;
+	height:26px;
+	line-height:26px;
+	text-align:center;
+	font-size:12px;
+	color:#0f0f0f;
+	border-right:1px solid #acbed6;
+	float:left;
+}
+.alarmsty_rightTableOne{
+	width:181px;
+	height:26px;
+	line-height:26px;
+	text-align:center;
+	font-size:12px;
+	color:#0f0f0f;
+	float:right;
+}
+.alarmsty_rightContentGray{
+	height:26px;
+	line-height:26px;
+	text-align:center;
+	color:#0f0f0f;
+	font-size:12px;
+	background:#f5f5f5;
+	border-bottom:1px solid #aebed8;
+}
+.alarmsty_rightInput{
+	width:22px;
+	height:22px;
+	line-height:22px;
+	background:#ffffff;
+	border:1px solid #c7d5de;
+}
+.alarmsty_rightSelect{
+	width:68px;
+	height:22px;
+	background:#ffffff;
+	border:1px solid #c7d5de;
+	margin-top:2px;
+}
+.alarmsty_rightBtn{
+	width:167px;
+	height:21px;
+	margin-top:50px;
+	margin-left:98px;
+	display:block;
+}
+.alarmsty_save{
+	width:81px;
+	height:27px;
+	line-height:27px;
+	text-align:center;
+	color:#FFF;
+	font-size:12px;
+	background:url(../../images/alarmstrategy/pub_btn03.png) no-repeat;
+	margin-right:5px;
+	display:block;
+	float:left;
+}
+.alarmsty_reset{
+	width:81px;
+	height:27px;
+	line-height:27px;
+	text-align:center;
+	color:#FFF;
+	font-size:12px;
+	background:url(../../images/alarmstrategy/pub_btn04.png) no-repeat;
+	float:left;
+}
+.alarmsty_rightInputOne{
+	width:57px;
+	height:22px;
+	line-height:22px;
+	background:#ffffff;
+	border:1px solid #c6d6de;
+}
+/*popUpBoxMainEnd*/
+
+/*popUpBoxBottomStart*/
+.alarmsty_popUpBoxBottom{
+	width:375px;
+	height:8px;
+	background:url(../../images/alarmstrategy/pub_update_bj02.png) no-repeat;
+}
+.alarmsty_update_popUpBoxBottom{
+	width:375px;
+	height:8px;
+	background:url(../../images/alarmstrategy/pub_update_bj02.png) no-repeat;
+}
+/*popUpBoxBottomEnd*/
+
+/*曲线Start*/
+.alarmsty_bight{
+	width:728px;
+	height:292px;
+}
+.alarmsty_bightTop{
+	width:728px;
+	height:30px;
+}
+.alarmsty_bightTopLeft{
+	width:697px;
+	height:30px;
+	float:left;
+}
+.alarmsty_bightTopRight{
+	width:31px;
+	height:30px;
+	float:left;
+}
+.alarmsty_bightLeft{
+	width:10px;
+	height:30px;
+	background:url(../../images/alarmstrategy/pub_bjLeft01.png) no-repeat;
+	float:left;
+}
+.alarmsty_bightRight{
+	width:687px;
+	height:30px;
+	background:url(../../images/alarmstrategy/pub_bjCenter01.png) repeat-x;
+	float:left;
+}
+.alarmsty_bightIcon{
+	width:30px;
+	height:20px;
+	background:url(../../images/alarmstrategy/icon02.png) no-repeat;
+	margin:5px 5px 0px 0px;
+	float:left;
+}
+.alarmsty_bightFont{
+	line-height:30px;
+	font-size:12px;
+	color:#ffffff;
+	float:left;
+}
+.alarmsty_bightMain{
+	width:728px;
+	height:292px;
+}
+.alarmsty_bightMainLeft{
+	width:718px;
+	height:292px;
+	float:left;
+}
+.alarmsty_bightMainRight{
+	width:10px;
+	height:292px;
+	background:url(../../images/alarmstrategy/pub_bjRight03.png) no-repeat;
+	float:left;
+}
+.alarmsty_bightMainTu{
+	width:10px;
+	height:292px;
+	background:url(../../images/alarmstrategy/pub_bjLeft02.png) no-repeat;
+	float:left;
+}
+.alarmsty_bightMainBg{
+	width:708px;
+	height:292px;
+	background:url(../../images/alarmstrategy/pub_bjCenter02.png) repeat-x;
+	float:left;
+}
+.alarmsty_bightGraph{
+	width:493px;
+	height:272px;
+	margin-top:10px;
+	margin-right:3px;
+	display:block;
+	float:left;
+}
+.alarmsty_bightTable{
+	width:212px;
+	height:272px;
+	margin-top:10px;
+	display:block;
+	float:left;
+}
+.alarmsty_TableBiaoge{
+	width:212px;
+	height:234px;
+	font-size:12px;
+	color:#0f0f0f;
+	border:1px solid #aebed8;
+	border-right:none;
+	border-bottom:none;
+}
+.alarmsty_TableBiaoge td{
+	text-align:center;
+	border-right:1px solid #aebed8;
+	border-bottom:1px solid #aebed8;
+}
+.alarmsty_tableTd{
+	height:26px;
+	line-height:26px;
+	text-align:center;
+	background:url(../../images/alarmstrategy/pub_bj03.png) repeat-x;
+}
+.alarmsty_tableBg{
+	height:26px;
+	line-height:26px;
+	text-align:center;
+	background:#fffffd;
+}
+.alarmsty_tableBgGray{
+	height:26px;
+	line-height:26px;
+	text-align:center;
+	background:#f5f5f5;
+}
+/*曲线End*/
+
+/*-------------添加POI点start-------------*/
+.poimanage_poi{
+	width:258px;
+	/* height:291px; */
+}
+.poimanage_poiTop{
+	width:258px;
+	height:30px;
+}
+.poimanage_poiLeft{
+	width:227px;
+	height:30px;
+	float:left;
+}
+.poimanage_poiLeftTu{
+	width:10px;
+	height:30px;
+	background:url(../../images/alarmstrategy/pub_bjLeft01.png) no-repeat;
+	float:left;
+}
+.poimanage_poiLeftBj{
+	width:217px;
+	height:30px;
+	background:url(../../images/alarmstrategy/pub_bjCenter01.png) repeat-x;
+	float:left;
+}
+.poimanage_poiIcon{
+	width:18px;
+	height:21px;
+	margin:3px 5px 0px 0px;
+	float:left;
+}
+.poimanage_poiFont{
+	line-height:30px;
+	color:#ffffff;
+	font-weight:bold;
+	font-size:12px;
+	font-family:"宋体"Verdana, Geneva, sans-serif;
+}
+.poimanage_poiRight{
+	width:31px;
+	height:30px;
+	background:url(../../images/alarmstrategy/pub_bjRight01.png) no-repeat;
+	float:left;
+}
+.poimanage_poiMain{
+	width:258px;
+	height:261px;
+}
+.poimanage_poiMainLeft{
+	width:253px;
+	height:261px;
+	float:left;
+}
+.poimanage_poiMainLeftBj{
+	width:5px;
+	height:261px;
+	background:url(../../images/poimanage/poiLeft.png) no-repeat;
+	float:left;
+}
+.poimanage_poiMainRightBj{
+	width:248px;
+	height:261px;
+	background:url(../../images/poimanage/poiCenter.png) repeat-x;
+	float:left;
+}
+.poimanage_poiMainRight{
+	width:5px;
+	height:261px;
+	background:url(../../images/poimanage/poiRight.png) no-repeat;
+	float:left;
+}
+.poimanage_poiTable{
+	font-size:12px;
+	margin:0 auto;
+	margin-left:10px;
+}
+.poimanage_poiTable td{
+	line-height:25px;
+	text-align:left;
+}
+/* .poimanage_tableIcon{
+	width:25px;
+	height:28px;
+	background:url(../../images/poimanage/icon04.png) no-repeat;
+} */
+.poimanage_poiInput{
+	width:167px;
+	height:20px;
+	background:#fff;
+	border:1px solid #c4d4dd;
+}
+.poimanage_poiTableTextarea{
+	width:167px;
+	height:40px;
+	background:#fff url(../../images/poimanage/poiBackground01.png) repeat-x;
+	border:1px solid #c4d4dd;
+}
+.poimanage_poiColour{
+	width:20px;
+	height:20px;
+	position:absolute;
+	margin-top:2px;
+}
+.poimanage_tableName{
+	line-height:28px;
+	vertical-align:middle;
+}
+.poimanage_poiButton{
+	width:200px;
+	height:27px;
+	margin-top:10px;
+	margin-left:40px;
+}
+.poimanage_poiPutIn{
+	width:81px;
+	height:27px;
+	line-height:27px;
+	text-align:center;
+	font-size:12px;
+	color:#fff;
+	background:url(../../images/poimanage/pub_btn03.png) no-repeat;
+	float:left;
+	margin-right:5px;
+}
+.poimanage_poiCancel{
+	width:81px;
+	height:27px;
+	line-height:27px;
+	text-align:center;
+	font-size:12px;
+	color:#fff;
+	background:url(../../images/poimanage/pub_btn04.png) no-repeat;
+	float:left;
+	margin-left:5px;
+}
+.poimanage_poiSelect{
+	width:89px;
+	height:20px;
+	border:1px solid #c4d4dd;
+}
+/*-------------添加POI点end-------------*/
+
+
+/*-------------添加POI点图标start-------------*/
+.poimanage_icon{
+	font-size:12px;
+	margin-top: 10px;
+	margin-left:10px;
+}
+.poimanage_icon td{
+	height:35px;
+	line-height:35px;
+}
+/* .poimanage_shop{
+	width:25px;
+	height:25px;
+	background:url(../../images/poimanage/icon06.png) -0px -0px no-repeat;
+	margin-top:10px;
+}
+.poimanage_serviceStation{
+	width:25px;
+	height:25px;
+	background:url(../../images/poimanage/icon06.png) -35px -0px no-repeat;
+	margin-top:10px;
+}
+.poimanage_village{
+	width:23px;
+	height:25px;
+	background:url(../../images/poimanage/icon06.png) -80px -0px no-repeat;
+	margin-top:10px;
+}
+.poimanage_centerOfAction{
+	width:25px;
+	height:25px;
+	background:url(../../images/poimanage/icon06.png) -120px -0px no-repeat;
+	margin-top:10px;
+}
+.poimanage_bank{
+	width:25px;
+	height:25px;
+	background:url(../../images/poimanage/icon06.png) -150px -0px no-repeat;
+	margin-top:10px;
+}
+.poimanage_hospital{
+	width:25px;
+	height:25px;
+	background:url(../../images/poimanage/icon06.png) -195px -0px no-repeat;
+	margin-top:10px;
+}
+.poimanage_factory{
+	width:25px;
+	height:25px;
+	background:url(../../images/poimanage/icon06.png) -0px -35px no-repeat;
+	margin-top:10px;
+}
+.poimanage_airport{
+	width:25px;
+	height:25px;
+	background:url(../../images/poimanage/icon06.png) -40px -35px no-repeat;
+	margin-top:10px;
+}
+.poimanage_railwayStation{
+	width:25px;
+	height:25px;
+	background:url(../../images/poimanage/icon06.png) -80px -35px no-repeat;
+	margin-top:10px;
+}
+.poimanage_place{
+	width:25px;
+	height:25px;
+	background:url(../../images/poimanage/icon06.png) -120px -35px no-repeat;
+	margin-top:10px;
+}
+.poimanage_parkingSpace{
+	width:25px;
+	height:25px;
+	background:url(../../images/poimanage/icon06.png) -155px -35px no-repeat;
+	margin-top:10px;
+}
+.poimanage_hazardousArticle{
+	width:25px;
+	height:25px;
+	background:url(../../images/poimanage/icon06.png) -193px -35px no-repeat;
+	margin-top:10px;
+}
+.poimanage_help{
+	width:25px;
+	height:25px;
+	background:url(../../images/poimanage/icon06.png) -0px -70px no-repeat;
+	margin-top:10px;
+}
+.poimanage_house{
+	width:25px;
+	height:25px;
+	background:url(../../images/poimanage/icon06.png) -40px -70px no-repeat;
+	margin-top:10px;
+}
+.poimanage_bungalow{
+	width:25px;
+	height:25px;
+	background:url(../../images/poimanage/icon06.png) -80px -70px no-repeat;
+	margin-top:10px;
+}
+.poimanage_bungalowA{
+	width:25px;
+	height:25px;
+	background:url(../../images/poimanage/icon06.png) -120px -70px no-repeat;
+	margin-top:10px;
+}
+.poimanage_ensign{
+	width:25px;
+	height:25px;
+	background:url(../../images/poimanage/icon06.png) -160px -70px no-repeat;
+	margin-top:10px;
+}
+.poimanage_map{
+	width:25px;
+	height:25px;
+	background:url(../../images/poimanage/icon06.png) -190px -70px no-repeat;
+	margin-top:10px;
+}
+.poimanage_bungalowIcon{
+	width:25px;
+	height:25px;
+	background:url(../../images/poimanage/icon06.png) -0px -105px no-repeat;
+	margin-top:10px;
+}
+.poimanage_cube{
+	width:25px;
+	height:25px;
+	background:url(../../images/poimanage/icon06.png) -39px -105px no-repeat;
+	margin-top:10px;
+}
+.poimanage_school{
+	width:25px;
+	height:25px;
+	background:url(../../images/poimanage/icon06.png) -78px -105px no-repeat;
+	margin-top:10px;
+}
+.poimanage_weather{
+	width:25px;
+	height:25px;
+	background:url(../../images/poimanage/icon06.png) -117px -105px no-repeat;
+	margin-top:10px;
+}
+.poimanage_coin{
+	width:25px;
+	height:25px;
+	background:url(../../images/poimanage/icon06.png) -156px -105px no-repeat;
+	margin-top:10px;
+}
+.poimanage_graph{
+	width:25px;
+	height:25px;
+	background:url(../../images/poimanage/icon06.png) -194px -105px no-repeat;
+	margin-top:10px;
+} */
+/*-------------添加POI点图标End-------------*/
+
+/*-------------添加POI点（右侧栏）Start-------------*/
+.poimanage_poiMap{
+}
+.poimanage_poiContent{
+	width:360px;
+	background:url(../../images/poimanage/poiBackground03.png) no-repeat;
+}
+.poimanage_poiContentTop{
+	height:32px;
+}
+.poimanage_ContentTopIcon{
+	width:25px;
+	height:24px;
+	background:url(../../images/poimanage/icon07.png) no-repeat;
+	float:left;
+	margin:4px 5px 0px 10px;
+}
+.poimanage_ContentTopFont{
+	line-height:32px;
+	font-weight:bold;
+	font-size:12px;
+	color:#000000;
+	float:left;
+}
+.poimanage_poiLine{
+	border-top:1px solid #c4d4dd;
+	border-bottom:1px solid #dff2f9;
+}
+.poimanage_poiContentQuery{
+	height:34px;
+	line-height:34px;
+}
+.poimanage_ContentQuery{
+	width:278px;
+	height:27px;
+	margin:0 auto;
+	padding-top:5px;
+}
+.poimanage_queryInput{
+	width:187px;
+	height:20px;
+	background:#ffffff;
+	border:1px solid #b3bac1;
+	float:left;
+}
+.poimanage_queryButton{
+	width:81px;
+	height:27px;
+	float:left;
+	margin-left:5px;
+	display:block;
+}
+.poimanage_poiButtonAdd{
+	height:40px;
+}
+.poimanage_ButtonAdd{
+	width:182px;
+	height:27px;
+	margin:0 auto;
+	margin-top:12px;
+}
+.poimanage_addAnniu{
+	width:81px;
+	height:27px;
+	font-size:12px;
+	line-height:27px;
+	text-align:center;
+	color:#ffffff;
+	background:url(../../images/poimanage/pub_btn03.png) no-repeat;
+	float:left;
+	margin-right:10px;
+}
+.poimanage_guideAnniu{
+	width:81px;
+	height:27px;
+	font-size:12px;
+	line-height:27px;
+	text-align:center;
+	color:#ffffff;
+	background:url(../../images/poimanage/pub_btn05.png) no-repeat;
+	float:left;
+	margin-left:10px;
+}
+.poimanage_poiTableOne{
+	width:360px;
+}
+.poimanage_poiTableOneTable{
+	width:360px;
+	font-size:12px;
+	border:1px solid #adbdd6;
+	border-right:none;
+	border-bottom:none;
+}
+.poimanage_poiTableOneTable td{
+	text-align:center;
+	line-height:26px;
+	border-right:1px solid #adbdd6;
+	border-bottom:1px solid #adbdd6;
+}
+.poimanage_poiTableTr{
+	height:26px;
+	background:url(../../images/poimanage/pub_bj03.png) repeat-x;
+}
+.poimanage_poiTableTrWhite{
+	height:26PX;
+	background:#fffffd;
+}
+.poimanage_poiTableTrGray{
+	height:26PX;
+	background:#f5f5f5;
+}
+.poimanage_poiClose{
+	width:42px;
+	height:16px;
+	margin:0 auto;
+}
+.poimanage_editAnniu{
+	width:16px;
+	height:16px;
+	margin-right:5px;
+	display:block;
+	float:left;
+}
+.poimanage_closeAnniu{
+	width:16px;
+	height:16px;
+	margin-left:5px;
+	display:block;
+	float:left;
+}
+.poimanage_poiancai{
+	color:#34829c;
+	text-decoration:underline;
+}
+/*-------------添加POI点（右侧栏）End-------------*/
+

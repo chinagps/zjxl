@@ -1,0 +1,193 @@
+@charset "utf-8";
+
+/*
+* {margin:0px; padding:0px; list-style:none;}
+html, body {font-size:12px; font-family:Verdana, Geneva, sans-serif; overflow:hidden; border:0px;}
+input, select {font-family:Verdana, Geneva, sans-serif; font-size:12px;}
+img {border:none;}*/
+.hidden {
+	display: none;
+}
+
+.tool_menu {
+	line-height: 26px;
+	height: 26px;
+	overflow: hidden;
+	width: 99%;
+	/*border-left: 1px solid #888888;*/
+}
+
+.map_center {
+	margin-left: 5px;
+	_margin-left: 2px;
+	line-height: 25px;
+	height: 25px;
+	float: left;
+	white-space: nowrap;
+	margin-top: 0px;
+}
+
+.map_center li {
+	float: left;
+	line-height: 25px;
+}
+
+.lileft {
+	float: left;
+	width: 11px;
+	background: url(../images/maptool/lileft.gif) no-repeat;
+}
+
+.licenter {
+	float: left;
+	background: url(../images/maptool/licenter.gif) repeat-x;
+	height: 26px;
+	padding-top: 0px;
+	width: auto;
+}
+
+.liright {
+	float: left;
+	width: 11px;
+	background: url(../images/maptool/liright.gif) no-repeat;
+}
+
+.map_center li span {
+	float: left;
+	display: block;
+	padding: 0px 2px;
+}
+
+.map_center li span.no_link {
+	display: block;
+	padding: 1px 0px 1px 15px;
+}
+
+.map_center a {
+	text-decoration: none;
+	color: #0070ee;
+	position: relative;
+	display: block;
+	float: left;
+	margin: 1px 1px;
+}
+
+.map_center a:hover {
+	text-decoration: underline;
+	color: #f00;
+}
+
+.map_center a.img_bg {
+	width: 16px;
+	height: 16px;
+	display: block;
+	background: url(../images/maptool/list_0.png) no-repeat 0px 5px;
+}
+
+.tool_panel {
+	line-height: 20px;
+	height: 20px;
+	float: right;
+	margin-right: 10px;
+	margin-top: 3px;
+}
+
+.tool_panel a {
+	color: #077DB6;
+	text-decoration: none;
+	padding: 0px 3px;
+}
+
+.tool_panel a:hover {
+	color: #077DB6;
+}
+
+.tool_panel span {
+	float: left;
+	cursor: pointer;
+}
+
+.tool_panel span img {
+	float: left;
+	margin-top: 2px;
+}
+
+.tool_panel span a {
+	float: left;
+}
+
+.full_screen {
+	margin-right: 8px;
+}
+
+.mapbtn_split {
+	float: left;
+	/*background:url(../images/maptool/split.png) no-repeat center;*/
+	padding-left: 0px;
+	margin: -4px 4px;
+}
+
+.more_btn {
+	position: absolute;
+	z-index: 99999;
+	right: 90px;
+	width: 95px;
+	padding: 5px 8px;
+	background: #F4FAFF;
+	border: 1px solid #7f9db9;
+	line-height: 30px;
+}
+
+.more_btn span {
+	line-height: 20px;
+	float: left;
+}
+
+.more_btn img {
+	margin-top: 5px;
+	float: left;
+}
+
+.more_btn a {
+	/*color: #000;*/
+	text-decoration: none;
+	float: left;
+	display: block;
+}
+/*
+.more_btn a:link,.more_btn a:visited {
+	color: #000;
+}
+*/
+.more_btn a:hover {
+	color: #177CD4;
+}
+
+.more_btn_arrow {
+	position: absolute;
+	z-index: 999999;
+	right: 6px;
+	top: -11px;
+	margin: 0px;
+}
+
+.location_list_result {
+	width: 90px;
+	height: 190px;
+	border: 1px solid #039;
+	padding: 10px;
+	font-size: 12px;
+	line-height: 22px;
+	background-color: #fff;
+	overflow: auto;
+	z-index: 1000
+}
+
+.location_list_result a {
+	text-decoration: none;
+	color: #0070ee;
+}
+
+.location_list_result a:hover {
+	color: #f00;
+}

@@ -1,0 +1,487 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="shortcut icon" type="image/x-icon"
+	href="/lmis-portal/templet/lmis/resources/img/favicon.ico" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="author" content="http://www.sinotranspo.com" />
+<meta name="copyright" content="http://www.sinotranspo.com" />
+<meta name="url" content="http://www.sinotranspo.com" />
+<meta name="description" content="中交兴路供应链以货运车辆监管平台为基础，依托高速公路网，利用车机、手机等终端设备将GPS监控技术融入到物流服务中，通过车载GPS与智能调度系统相结合，整合社会车辆、货运代理等资源，逐步建立完整、畅通、高效的国内城际干线运输快速通道 " />
+<meta name="keywords" content="智能物流,供应链,中交兴路供应链,中交供应链"/>
+
+
+<title>北京中交兴路车联网科技有限公司供应链中心（北京中交兴路供应链管理有限公司）</title>
+
+<script type="text/javascript" src="/lmis-portal/templet/lmis/resources/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="/lmis-portal/templet/lmis/resources/js/util.js"></script>
+<script type="text/javascript" src="/lmis-portal/templet/lmis/resources/js/ddsmoothmenu.js" ></script>
+<script language="javascript" type="text/javascript" src="/lmis-portal/templet/lmis/resources/js/jquery.colorbox.js"></script>
+<link title="Main stylesheet" rel=stylesheet type=text/css href="/lmis-portal/templet/lmis/resources/css/menu.css" media=all></link>
+<link title="Main stylesheet" rel=stylesheet type=text/css href="/lmis-portal/templet/lmis/resources/css/header.css" media=all>
+<link title="Main stylesheet" rel=stylesheet type=text/css href="/lmis-portal/templet/lmis/resources/css/index.css" media=all></link>
+<link title="Main stylesheet" rel=stylesheet type=text/css href="/lmis-portal/templet/lmis/resources/css/channel.css" media=all></link>
+<link title="Main stylesheet" rel=stylesheet type=text/css href="/lmis-portal/templet/lmis/resources/css/colorbox.css" media=all>
+
+
+<script charset="UTF-8">
+
+/**
+ * 智能物流平台访问地址
+ */
+ 
+var contextPath = "/lmis-portal/";
+
+$(document).ready(function() {
+	var scrollTopVal = GetQueryString("scrollTopVal");
+	if (scrollTopVal != null && scrollTopVal !='') {
+		$("html,body").animate({scrollTop:scrollTopVal},0);
+	};
+	
+	//发布信息协议
+	$(".treaty").colorbox({iframe:true, width:"90%", height:"90%"});
+	//法律声明
+	$(".lawexplain").colorbox({iframe:true, width:"90%", height:"90%"});
+	
+	//Initialize Menu instance(s):
+	ddsmoothmenu.init({
+		mainmenuid: "menu", //menu DIV id
+		customtheme: [], //override default menu CSS background values? Uncomment: ["normal_background", "hover_background"]
+		contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+	});
+	
+	
+	initializeMenu("productsMenu", "productsActuator");    
+	initializeMenuSub("newPhonesMenu", "newPhonesActuator");
+	initializeMenuSub("compareMenu", "compareActuator");
+	
+});
+
+//跳转到链接页面
+function redirectUrl(obj) {
+	var y = $(document).scrollTop(); 
+	var clickNode = obj.name;
+	if (clickNode == null || clickNode == '') {
+		obj.href = obj.href + "?scrollTopVal=" + y;
+	} else {
+		obj.href = obj.href + "?scrollTopVal=" + y + "&clickNode=" + clickNode;
+	}
+}
+
+String.prototype.trim = function() 
+{ 
+	return this.replace(/(^\s*)|(\s*$)/g, ""); 
+} 
+
+// 获得http请求参数
+function GetQueryString(name) 
+{ 
+	var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); 
+	var r = window.location.search.substr(1).match(reg); 
+	if (r!=null) return unescape(r[2]); return null; 
+}
+
+var menus=new Array();
+var menusubs=new Array();
+
+if (!document.getElementById)
+     document.getElementById = function() { return null; }
+
+//栏目页面 2级菜单点击显示
+function initializeMenu(menuId, actuatorId) {
+     var menu = document.getElementById(menuId);
+     var actuator = document.getElementById(actuatorId);
+     if (menu == null || actuator == null) return;
+    
+     menus.push(menu);
+
+     actuator.parentNode.style.backgroundImage = "";
+     actuator.onclick = function() {
+         for(var i=0;i<menus.length;i++)if(menus[i]!=menu)menus[i].style.display="none";
+         var display = menu.style.display;
+         this.parentNode.style.backgroundImage =
+             (display == "block") ? "" : "";
+         menu.style.display = (display == "block") ? "none" : "block";
+
+         return false;
+     }
+}
+
+function initializeMenuSub(menuId, actuatorId) {
+     var menusub = document.getElementById(menuId);
+     var actuatorsub = document.getElementById(actuatorId);
+     if (menusub == null || actuatorsub == null) return;
+    
+     menusubs.push(menusub);
+
+     actuatorsub.parentNode.style.backgroundImage = "";
+     actuatorsub.onclick = function() {
+         for(var i=0;i<menusubs.length;i++)if(menusubs[i]!=menusub)menusubs[i].style.display="none";
+         var display = menusub.style.display;
+         this.parentNode.style.backgroundImage =
+             (display == "block") ? "" : "";
+         menusub.style.display = (display == "block") ? "none" : "block";
+         return false;
+     }
+}
+
+</script>
+</head>
+<body>
+	<!--headerStart-->
+	<div class="header">
+           <div  class="logo">
+           		<img src="/lmis-portal/templet/lmis/resources/img/logo.png" alt="中交兴路供应链" width="319" height="57"/>
+           	</div>
+           <div class="member">
+                <div class="memberFont">
+                	  <a href="http://www.sinotranspo.com"> 供应链中心</a>&nbsp;|&nbsp;
+					  <a href="http://www.4000966666.com"  target="_blank"> 油品中心</a>&nbsp;|&nbsp;
+					  <a href="http://www.sinoiov.com/dwjk/"  target="_blank"> 定位与监控中心</a>
+				</div>
+                <div class="phone">
+					<img src="/lmis-portal/templet/lmis/resources/img/supply_11.gif" alt="呼叫中心" width="278" height="27"/>
+				</div>
+           </div>
+	</div>
+	<div class="caidan">
+		<div class="menu">
+           <div class="menuleft" id="menu">
+                <ul class="menu_ul">
+				  <li>
+					<!-- 一级栏目 -->
+					<a href="/lmis-portal/site/lmis/sy/index.html"><span>首页</span></a>
+				</li>
+				  <li>
+					<!-- 一级栏目 -->
+					<a href="/lmis-portal/site/lmis/gywm/index.html"><span>关于我们</span></a>
+					<ul>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/qyjs/index.html"><span>企业介绍</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/qiyewenhua/index.html"><span>中交理念</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/zizhirongyu/index.html"><span>资质荣誉</span></a>
+						</li>
+					</ul>
+				</li>
+				  <li>
+					<!-- 一级栏目 -->
+					<a href="/lmis-portal/site/lmis/hexinyewu/index.html"><span>核心业务</span></a>
+					<ul>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/gyljjfa/index.html"><span>供应链解决方案</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/ldbc/index.html"><span>零担班车</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/zcky/index.html"><span>整车运输</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/xmwl/index.html"><span>项目物流</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/ccfw/index.html"><span>仓储服务</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/zzfw/index.html"><span>增值服务</span></a>
+						</li>
+					</ul>
+				</li>
+				  <li>
+					<!-- 一级栏目 -->
+					<a href="/lmis-portal/site/lmis/fwpt/index.html"><span>服务平台</span></a>
+					<ul>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/ddcx/index.html"><span>订单查询</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/fwwl/index.html"><span>服务网络</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/fbcy/index.html"><span>发布车源</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/fbhy/index.html"><span>发布货源</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="http://www.sinotrucker.com" target="_blank"><span>登陆智能物流</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/zxts/index.html"><span>在线投诉</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/cjwtjd/index.html"><span>常见问题解答</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/wlxts/index.html"><span>物流小贴士</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/yhhd/index.html"><span>优惠活动</span></a>
+						</li>
+					</ul>
+				</li>
+				  <li>
+					<!-- 一级栏目 -->
+					<a href="/lmis-portal/site/lmis/xwzx/index.html"><span>新闻中心</span></a>
+					<ul>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/hydt/index.html"><span>行业动态</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/hyxw/index.html"><span>企业新闻</span></a>
+						</li>
+					</ul>
+				</li>
+				  <li>
+					<!-- 一级栏目 -->
+					<a href="/lmis-portal/site/lmis/lmzx/index.html"><span>联盟中心</span></a>
+					<ul>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/wycy/index.html"><span>我要创业</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/wylm/index.html" class="parent">
+										<span>我要联盟</span>
+									</a>
+							<ul>
+								<!-- 三级栏目 -->
+								<li>
+									<a href="/lmis-portal/site/lmis/lmxz/index.html"><span>联盟须知</span></a>
+								</li>
+								<li>
+									<a href="/lmis-portal/site/lmis/lxwm/index.html"><span>联系我们</span></a>
+								</li>
+								<li>
+									<a href="/lmis-portal/site/lmis/lmsq/index.html"><span>联盟申请</span></a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/sjtd/index.html"><span>司机通道</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/cdtd/index.html"><span>车队通道</span></a>
+						</li>
+					</ul>
+				</li>
+				</ul>
+           </div>
+		   <div class="menuright">
+		   		<a href="http://www.sinoiov.com" target="_blank">
+		   			<img src="/lmis-portal/templet/lmis/resources/img/supply_182.jpg" alt="中交兴路车联网" border="0" />
+		   		</a>
+		   	</div>
+        </div>
+	</div>
+
+<div class="bannergyl">
+	<img src="/lmis-portal/templet/lmis/resources/img/xwzx.jpg" width="960" height="194"/>
+</div>
+<div class="gylMain">
+	
+<div class="gylMainLeft">
+	<div class="gylBj">
+		<div class="gylTop">
+							新闻中心
+		</div>
+		<div class="subnav">
+			<ul>
+						<li>
+							<a href="/lmis-portal/site/lmis/hydt/index.html">行业动态</a>
+						</li>
+						<li>
+							<a href="/lmis-portal/site/lmis/hyxw/index.html">企业新闻</a>
+						</li>
+			</ul>
+		</div>
+	</div>
+	<div class="gylBottom"><img src="/lmis-portal/templet/lmis/resources/img/icon06.png"/></div>
+</div>
+
+
+
+
+
+
+<!-- <div class="hxywTop"></div> -->
+<!-- <div class="hxywCentre"> -->
+<!-- 	<div class="title"> -->
+<!-- 		 -->
+<!-- 			新闻中心 -->
+<!-- 		 -->
+<!-- 	</div> -->
+<!-- 	<div id="mainMenu"> -->
+<!-- 		<ul id="menuList"> -->
+<!-- 			 -->
+<!-- 			 -->
+<!-- 			<li class="menubar"> -->
+<!-- 				<a href="/lmis-portal/site/lmis/hydt/index.html">行业动态</a> -->
+<!-- 			</li> -->
+<!-- 			 -->
+<!-- 			 -->
+<!-- 			 -->
+<!-- 			<li class="menubar"> -->
+<!-- 				<a href="/lmis-portal/site/lmis/hyxw/index.html">企业新闻</a> -->
+<!-- 			</li> -->
+<!-- 			 -->
+<!-- 			 -->
+<!-- 		</ul> -->
+<!-- 	</div> -->
+<!-- </div> -->
+<!-- <div class="hxywBottom"></div> -->
+
+<script>
+window.onload = function() {
+}
+</script>
+    <div class="gylMainRight">
+		<div class="MainRight">
+			<div class="navTop">
+				<div class="ntLeft">
+					当前位置：<a href="/lmis-portal/site/lmis/sy/index.html">首页</a> >  
+						新闻中心
+					> 企业新闻
+				</div>
+				<div class="ntRight">
+					<div class="ntIcon"></div>
+					<div class="ntFont"></div>
+				</div>
+			</div>
+			<div class="neirong">
+<!--FreeCMS_channel_info_list_hasNextPage-->				<div class="newsCenter">
+					<ul>
+						<li>
+							<samp>
+								<img src="/lmis-portal/templet/lmis/resources/img/scm_icon01.png" />
+							</samp>
+							<a href="/lmis-portal/site/lmis/hyxw/info/2014/001d7296-88b1-4587-a336-2814fc681c99.html">2013年度优秀联盟商评选揭晓</a>
+							<span class="newsCenterDate">[2014-01-17]</span>
+						</li>
+						<li>
+							<samp>
+								<img src="/lmis-portal/templet/lmis/resources/img/scm_icon01.png" />
+							</samp>
+							<a href="/lmis-portal/site/lmis/hyxw/info/2014/45e6edea-288a-41ea-acc3-cd7b6f4001b6.html">中交协“车辆运输经理人”沙龙北京站圆满落幕</a>
+							<span class="newsCenterDate">[2014-01-06]</span>
+						</li>
+						<li>
+							<samp>
+								<img src="/lmis-portal/templet/lmis/resources/img/scm_icon01.png" />
+							</samp>
+							<a href="/lmis-portal/site/lmis/hyxw/info/2013/94f5d174-8e69-4884-8df1-0520239ea74c.html">中交兴路供应链举办系列业务培训</a>
+							<span class="newsCenterDate">[2013-06-13]</span>
+						</li>
+						<li>
+							<samp>
+								<img src="/lmis-portal/templet/lmis/resources/img/scm_icon01.png" />
+							</samp>
+							<a href="/lmis-portal/site/lmis/hyxw/info/2013/1626de95-e1c6-4ce5-b02f-65e6ad850f38.html">uShip来访中交兴路供应链   奠定友好合作基础</a>
+							<span class="newsCenterDate">[2013-06-09]</span>
+						</li>
+						<li>
+							<samp>
+								<img src="/lmis-portal/templet/lmis/resources/img/scm_icon01.png" />
+							</samp>
+							<a href="/lmis-portal/site/lmis/hyxw/info/2013/562eb955-3523-4867-be2d-f890bc7a00d9.html">无车承运人模式  货运行业整合时代的到来</a>
+							<span class="newsCenterDate">[2013-05-19]</span>
+						</li>
+						<li>
+							<samp>
+								<img src="/lmis-portal/templet/lmis/resources/img/scm_icon01.png" />
+							</samp>
+							<a href="/lmis-portal/site/lmis/hyxw/info/2013/eb8dde1c-3bbf-4fef-b1d8-2aa5f35a0c0b.html">携手车联网  开辟新天地</a>
+							<span class="newsCenterDate">[2013-05-19]</span>
+						</li>
+						<li>
+							<samp>
+								<img src="/lmis-portal/templet/lmis/resources/img/scm_icon01.png" />
+							</samp>
+							<a href="/lmis-portal/site/lmis/hyxw/info/2013/215ecfb9-13b7-4907-9406-7c1dca1d8b60.html">中交兴路供应链举办全员培训</a>
+							<span class="newsCenterDate">[2013-05-13]</span>
+						</li>
+						<li>
+							<samp>
+								<img src="/lmis-portal/templet/lmis/resources/img/scm_icon01.png" />
+							</samp>
+							<a href="/lmis-portal/site/lmis/hyxw/info/2013/be555c93-60a0-4f5d-aca2-4ad896209385.html">我国首个国家车联网产业基地落户北京市通州区</a>
+							<span class="newsCenterDate">[2013-04-30]</span>
+						</li>
+						<li>
+							<samp>
+								<img src="/lmis-portal/templet/lmis/resources/img/scm_icon01.png" />
+							</samp>
+							<a href="/lmis-portal/site/lmis/hyxw/info/2013/3b2eb23f-db78-4534-904a-c94b5ada4e29.html">中交兴路供应链承办物联网专委会年终工作总结大会</a>
+							<span class="newsCenterDate">[2013-03-28]</span>
+						</li>
+						<li>
+							<samp>
+								<img src="/lmis-portal/templet/lmis/resources/img/scm_icon01.png" />
+							</samp>
+							<a href="/lmis-portal/site/lmis/hyxw/info/2013/96c17e0d-2d8d-4739-88fc-0018f474b49d.html">中交兴路供应链管理公司举办货运代理座谈会</a>
+							<span class="newsCenterDate">[2013-03-28]</span>
+						</li>
+						<li>
+							<samp>
+								<img src="/lmis-portal/templet/lmis/resources/img/scm_icon01.png" />
+							</samp>
+							<a href="/lmis-portal/site/lmis/hyxw/info/2013/7e448f3f-f2b6-4faa-9974-c142cb3b16d6.html">中交甩挂运输智能调度系统亮相信息化与应急高端论坛</a>
+							<span class="newsCenterDate">[2013-02-27]</span>
+						</li>
+					</ul>
+				</div>
+				<!--newsCenterEnd-->
+				<!--pageStart-->
+				<div class="scmPage" style="text-align: center;">
+				共&nbsp;<b>16</b>&nbsp;条&nbsp;首页&nbsp;上一页&nbsp;<a href="javascript:location.href='index_1.html';">下一页</a>&nbsp;<a href="javascript:location.href='index_1.html'">尾页</a>&nbsp;每页&nbsp;<b>11</b>&nbsp;条&nbsp;当前第&nbsp;<b>1</b>&nbsp;页/共&nbsp;<b>2</b>&nbsp;页&nbsp;第&nbsp;<input id="pageNum" type="text" value="1" class="ts_box4" size="1" style="text-align:center">&nbsp;页&nbsp;<a href="javascript:if(isNaN(document.getElementById('pageNum').value)==false&&document.getElementById('pageNum').value!=1&&document.getElementById('pageNum').value>=1&&document.getElementById('pageNum').value<=2){location.href='index'+(parseInt(document.getElementById('pageNum').value)>1?'_'+(parseInt(document.getElementById('pageNum').value)-1):'')+'.html';}">跳转</a>&nbsp;
+				</div>
+			</div>
+<!-- 		<div class="nrImg"> -->
+<!-- 			<img src="/lmis-portal/templet/lmis/resources/img/img08.jpg" /> -->
+<!-- 		</div> -->
+	</div>
+    	<div class="mrBj"><img src="/lmis-portal/templet/lmis/resources/img/right.png"/></div>
+	</div>
+</div>
+<div class="footer">
+	<div class="copyright">
+		<ul>
+			<li>免费服务热线400-096-6666　货车人QQ群:296722632 　
+				<a target="_blank" href="http://weibo.com/sinoiov">新浪微博@中交兴路车联网</a>
+			</li>
+			<li>版权所有 中交兴路车联网供应链中心　京ICP备12002390号-9</li>
+		</ul>
+	</div>
+</div>
+
+</body>
+</html>
+

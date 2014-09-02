@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>车辆监控-左侧树</title>
+</head>
+<body>
+	<div class="monitor_left_menu">
+		<div class="monitor_left_menu_top">
+			<ul id="monitorTreeLeft">
+				<li class="monitor_left_menu_pic"><a href="javascript:void(0);"
+					onfocus="javascript:this.blur();">组织</a></li>
+				<li class="monitor_left_menu_pic_1"><a href="javascript:void(0);"
+					onfocus="javascript:this.blur();">搜索</a></li>
+				<li class="monitor_left_menu_pic_1"><a href="javascript:void(0);"
+					onfocus="javascript:this.blur();">我的关注</a></li>
+			</ul>
+		</div>
+		<div id="monitor_left_tree_content">
+			<div class="monitor_left_tree_content">
+				<div class="left_menu_main">
+					<div class="left_menu_main_search">
+						<!--<select name="" id="firstSearchType" size="1">
+
+                                <option selected="selected" value="0">车牌号</option>
+                                <option value="1">SIM卡号</option>
+                                <option value="2">组织名称</option>
+                                <option value="3">线路名称</option>
+                            </select>
+                            <div class="left_menu_main_search_2">
+
+							<input name="" type="text" id="firstSearchInput" size="24"
+								style="float: left; color: gray;" value="请输入组织名称" />
+							<div class="left_menu_main_search_button" id="firstSearchButton">
+								<a href="javascript:void(0);">&nbsp;</a></div>
+
+						</div>
+                            -->
+
+						<div class="left_menu_main_search">
+							<!-- br />请选择搜索条件： <select name="" size="1">
+								<option selected="selected">车牌号</option>
+								<option>SIM卡号</option>
+								<option>组织名称</option>
+								<option>线路名称</option>
+							</select-->
+							<div class="left_menu_main_search_2">
+								<input name="" type="text" id="firstSearchInput" size="24" style="color: gray; vertical-align:middle;" value="请输入组织名称" />
+								<input id="firstSearchButton" type="button" class="btn_inquires" onmouseover="this.style.backgroundPosition='0px -200px'" onmouseout="this.style.backgroundPosition='0px -150px'" value="&nbsp;" />
+								<!-- <div class="left_menu_main_search_button" id="firstSearchButton">
+									<a href="javascript:void(0);">&nbsp;</a>
+								</div>-->
+							</div>
+						</div>
+					</div>
+					<div class="left_menu_main_2">
+						<div class="left_menu_main_table">
+							<div class="left_menu_main_refresh">
+								<input type="button" id="left_menu_main_refresh_first" class="btn_blue" style="float:left; margin:5px 10px 0px 10px;" onmouseover="this.style.backgroundPosition='0px -50px'" onmouseout="this.style.backgroundPosition='0px 0px'" value="刷&nbsp;&nbsp;新"/>
+								<input type="button" id="left_menu_main_unCheck_first" class="btn_green" style="float:left; margin-top:5px" onmouseover="this.style.backgroundPosition='-100px -50px'" onmouseout="this.style.backgroundPosition='-100px 0px'" value="清空已选" />
+								<div style="float:left;margin:8px 0 0 10px;"><input type=checkbox value="" style="vertical-align:middle; border:none;" name="onlineFlag"/>只显示在线</div>
+							</div>
+						</div>
+						<div id="monitorTreeeFirst" style="background: #d8ecf7; height: 320px;width: 298px;" class="treeField"></div>
+					</div>
+				</div>
+			</div>
+			<div class="monitor_left_tree_content hidden">
+				<div class="left_menu_main">
+					<div class="left_menu_main_search_3">
+						<form action="" id="monitor_left_tree_form">
+							<select style="vertical-align:middle;" name="secondSearchType" size="1">
+								<option selected="selected" value="requestParam.like.vehicleNo">车牌号</option>
+								<option value="requestParam.like.commaddr">SIM卡号</option>
+								<option value="requestParam.like.innerCode">内部编号</option>
+<!-- 								<option value="requestParam.like.staffName">驾驶员</option> -->
+							</select>
+							<input style="vertical-align:middle;" name="secondSearchInput" type="text" id="textfield4" size="20" />
+							<input type="button" class="left_menu_main_button_3" style="margin:5px 0 0 40px;" onmouseover="this.style.backgroundPosition='0px -200px'" onmouseout="this.style.backgroundPosition='0px -150px'" value="&nbsp;" />
+							<input type="button" class="btn_green" style="margin-top:5px" onmouseover="this.style.backgroundPosition='-100px -50px'" onmouseout="this.style.backgroundPosition='-100px 0px'" value="清空已选" />
+<!--							<input type="button" class="btn_red" style="margin-top:5px" onmouseover="this.style.backgroundPosition='-200px -50px'" onmouseout="this.style.backgroundPosition='-200px 0px'" value="清空已选" />-->
+						</form>
+						
+					</div>
+
+					<div class="left_menu_main_search_result"
+						id="left_menu_main_search_result" style="background: #e9f1f7">
+					</div>
+				</div>
+			</div>
+			<div class="monitor_left_tree_content hidden">
+				<div class="left_menu_main">
+					<div class="left_menu_main_refresh">
+						<input type="button" id="left_menu_main_refresh_second" class="btn_blue" style="margin:5px 10px 0 50px;" onmouseover="this.style.backgroundPosition='0px -50px'" onmouseout="this.style.backgroundPosition='0px 0px'" value="刷&nbsp;&nbsp;新" />
+						<input type="button" id="left_menu_main_unCheck_second" class="btn_green" style="margin-top:5px" onmouseover="this.style.backgroundPosition='-100px -50px'" onmouseout="this.style.backgroundPosition='-100px 0px'" value="清空已选" />
+					</div>
+					<div id="monitorTreeSecond" class="treeField"
+						style="background: #d8ecf7"></div>
+				</div>
+			</div>
+		</div>
+		<div class="monitor_left_menu_bottom">
+			<!-- 批量跟踪 -->
+			<div class="monitor_left_menu_batch batchMonitor hidden" style="bottom: 97px;">
+				<div class="monitor_left_menu_bottom_title">
+					<div class="monitor_left_menu_close">
+						<a href="javascript:void(0);">&nbsp;</a>
+					</div>
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td align="center" width="27"><img
+								src="images/monitorTree/function_1_title.png" /></td>
+							<td width="238" style="color:white;">批量跟踪</td>
+
+						</tr>
+					</table>
+
+				</div>
+				<div class="monitor_left_menu_Monitor">
+					<!--
+					  
+					    <table width="260" align="center" border="0" cellpadding="1" cellspacing="1">
+					      <tr>
+					        <td colspan="3"></td>
+					      </tr>
+					      <tr>
+					        <td>上传间隔（2-60秒）</td>
+					        <td>
+					        <input name="textfield" type="text" id="textfield" value="30" size="1" /></td>
+					        <td><div class="monitor_left_menu_Monitor_tip_bg">2 - 60</div></td>
+					      </tr>
+					      <tr>
+					        <td>上报次数（1-100次）</td>
+					        <td><input name="textfield2" type="text" id="textfield2" value="30" size="1" /></td>
+					        <td><div class="monitor_left_menu_Monitor_tip_bg">1 - 100</div></td>
+					      </tr>
+					      <tr>
+					        <td>刷新间隔（2-60秒）</td>
+					        <td><input name="textfield3" type="text" id="textfield3" value="30" size="1" /></td>
+					        <td><div class="monitor_left_menu_Monitor_tip_bg">2 - 60</div></td>
+					      </tr>
+					    </table>
+					    <div class="monitor_left_menu_Monitor_3">
+					        <label>
+					          <input type="radio" name="RadioGroup1" value="单选" id="RadioGroup1_0" />
+					          下发设置命令</label>
+					        <label>
+					          <input type="radio" name="RadioGroup1" value="单选" id="RadioGroup1_1" />
+					          不下发设置命令</label>
+					    </div>-->
+					<div>
+						<div class="monitor_left_menu_button_1 L">
+							<a href="javascript:void(0);">&nbsp;</a>
+						</div>
+						<div style="margin-top: 10px;" class="monitor_left_menu_Monitor_tip L hidden"></div>
+					</div>
+				</div>
+			</div>
+			<!-- 批量拍照 -->
+			<!--<div class="monitor_left_menu_batch batchPhoto hidden">
+				<div class="monitor_left_menu_bottom_title">
+					<!--<div class="monitor_left_menu_bottom_title_left"></div>
+					<label class="L">拍照</label>
+					<div class="monitor_left_menu_close">
+						<a href="javascript:void(0);"></a>
+						<!--<img src="images/monitorTree/monitor_left_menu_close.png">
+					</div>
+				</div>
+
+				<div class="monitor_left_menu_photography">
+					<div class="monitor_left_menu_photography_select">
+						摄像头: <input name="cameraChanel" type="checkbox" value="1" />1路 <input
+							name="cameraChanel" type="checkbox" checked=true value="2" />2路
+						<input name="cameraChanel" type="checkbox" value="3" />3路 <input
+							name="cameraChanel" type="checkbox" value="4" />4路
+						<div class="monitor_left_menu_photography_button">拍照</div>
+					</div>
+					<div class="monitor_left_menu_photography_tip">可选择多路镜头进行拍摄</div>
+				</div>
+			</div>
+
+-->
+			<!-- 2012-03-09 jxf -->
+			<div class="monitor_left_menu_batch batchPhoto hidden" style="bottom: 135px;">
+				<div class="monitor_left_menu_bottom_title">
+					<div class="monitor_left_menu_close">
+						<a href="javascript:void(0);">&nbsp;</a>
+					</div>
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td align="center" width="27"><img src="images/monitorTree/function_2_title.png" /></td>
+							<td width="238" style="color:white;">批量拍照</td>
+						</tr>
+					</table>
+				</div>
+				<div class="monitor_left_menu_photography">
+					<div class="monitor_left_menu_photography_select">
+						<table width="260" border="0">
+							<tr>
+								<td>摄像头：</td>
+								<td><input name="cameraChanel" type="checkbox" class="checkbox" value=1 />1路</td>
+								<td><input name="cameraChanel" type="checkbox" class="checkbox" value=2 />2路</td>
+								<td><input name="cameraChanel" type="checkbox" class="checkbox" value=3 />3路</td>
+								<td><input name="cameraChanel" type="checkbox" class="checkbox" value=4 />4路</td>
+							</tr>
+						</table>
+					</div>
+					<div>
+						<div class="monitor_left_menu_button_2">
+							<a href="javascript:void(0);">&nbsp;</a>
+						</div>
+						<div class="monitor_left_menu_Monitor_tip L hidden"></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 批量点名 -->
+			<!-- <div class="monitor_left_menu_batch batchRecall hidden">
+				<div class="monitor_left_menu_bottom_title">
+					<label class="L">点名</label>
+					<div class="monitor_left_menu_close">
+						<a href="javascript:void(0);"></a>
+						<!--<img src="images/monitorTree/monitor_left_menu_close.png">
+					</div>
+				</div>
+
+				<div class="monitor_left_menu_recall">
+					<div class="monitor_left_menu_recall_tip">请下发点名指令</div>
+					<div class="monitor_left_menu_recall_button">点名</div>
+				</div>
+			</div>-->
+
+			<div class="monitor_left_menu_batch batchRecall hidden" style="bottom: 90px;">
+				<div class="monitor_left_menu_bottom_title">
+					<div class="monitor_left_menu_close">
+						<a href="javascript:void(0);">&nbsp;</a>
+					</div>
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td align="center" width="27"><img src="images/monitorTree/function_3_title.png" /></td>
+							<td width="238" style="color:white;">批量点名</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="monitor_left_menu_recall">
+
+					<div>
+						<div class="monitor_left_menu_button_3">
+							<a href="javascript:void(0);">&nbsp;</a>
+						</div>
+						<div class="monitor_left_menu_Monitor_tip L hidden"></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 批量消息 -->
+			<!--<div class="monitor_left_menu_batch batchSchedule hidden">
+				<div class="monitor_left_menu_bottom_title">
+					<label class="L">群发消息</label>
+					<div class="monitor_left_menu_close">
+						<a href="javascript:void(0);"></a>
+						<!--<img src="images/monitorTree/monitor_left_menu_close.png">
+					</div>
+				</div>
+
+				<div class="monitor_left_menu_message">
+					<div class="monitor_left_menu_message_select">
+						<input name="" type="checkbox" checked=true />紧急 <input name=""
+							type="checkbox" />终端显示 <input name="" type="checkbox" />终端播报 <input
+							name="" type="checkbox" />广告屏显示
+					</div>
+					<div class="monitor_left_menu_text">
+						<textarea name="textContent" class="grayText L" cols="24" rows="3">请输入消息内容</textarea>
+						<div class="monitor_left_menu_message_button">提交</div>
+						<div>
+							<select style="width: 266px; margin-top: 4px;"
+								name="preinstallSelect">
+								<option value="">请选择...</option>
+							</select>
+						</div>
+
+					</div>
+					<div class="monitor_left_menu_message_tip">可选择预设信息</div>
+				</div>
+			</div>-->
+
+
+			<div class="monitor_left_menu_batch batchSchedule hidden" style="bottom: 184px;">
+				<div class="monitor_left_menu_bottom_title">
+					<div class="monitor_left_menu_close">
+						<a href="javascript:void(0);">&nbsp;</a>
+					</div>
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td align="center" width="27"><img
+								src="images/monitorTree/function_4_title.png" /></td>
+							<td width="238" style="color:white;">批量发消息</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="monitor_left_menu_Monitor" style="height: 137px;">
+					<div class="monitor_left_menu_message_select">
+						<input name="msgSendType" type="checkbox" class="checkbox" checked />紧急 <input name="msgSendType" type="checkbox" class="checkbox" />终端显示
+						<input name="msgSendType" type="checkbox" class="checkbox" />终端播报 <input name="msgSendType" type="checkbox" class="checkbox" />广告屏显示
+					</div>
+					<div class="monitor_left_menu_text">
+						<textarea name="textContent" style="width: 275px; height: 40px;"></textarea>
+						<div class="monitor_left_menu_text_2">
+							<select style="width: 275px; margin-top: 3px;" name="preinstallSelect">
+								<option>请选择...</option>
+							</select>
+						</div>
+
+					</div>
+					<div>
+						<div class="monitor_left_menu_button_4">
+							<a href="javascript:void(0);">&nbsp;</a>
+						</div>
+						<div class="monitor_left_menu_Monitor_tip L hidden"></div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<div class="monitor_left_menu_bottom">
+				<div class="monitor_left_menu_function">
+					<ul>
+						<li title="跟踪">
+							<div class="monitor_left_menu_function_1">
+								<a href="javascript:void(0);">&nbsp;</a>
+							</div><font style="padding-left:4px;">跟踪</font>
+						</li>
+						<li title="拍照">
+							<!--<img src="images/monitorTree/monitor_left_menu_function_2.png" />
+							<a href="javascript:void(0);">拍照</a>-->
+							<div class="monitor_left_menu_function_2">
+								<a href="javascript:void(0);">&nbsp;</a>
+							</div><font style="padding-left:3px;">拍照</font>
+						</li>
+						<li title="点名">
+							<!--<img src="images/monitorTree/monitor_left_menu_function_3.png" />
+							<a href="javascript:void(0);">点名</a>-->
+							<div class="monitor_left_menu_function_3">
+								<a href="javascript:void(0);">&nbsp;</a>
+							</div><font style="padding-left:3px;">点名</font>
+						</li>
+						<li title="消息">
+							<!-- <img src="images/monitorTree/monitor_left_menu_function_4.png" />
+							<a href="javascript:void(0);">消息</a>-->
+							<div class="monitor_left_menu_function_4">
+								<a href="javascript:void(0);">&nbsp;</a>
+							</div><font style="padding-left:4px;">消息</font>
+						</li>
+					</ul>
+					<!--<table>
+				      <tr align="center">
+				        <td><img src="images/monitorTree/monitor_left_menu_function_1.png"></td>
+				        <td><img src="images/monitorTree/monitor_left_menu_function_2.png"></td>
+				        <td><img src="images/monitorTree/monitor_left_menu_function_3.png"></td>
+				        <td><img src="images/monitorTree/monitor_left_menu_function_4.png"></td>
+				      </tr>
+				      <tr align="center">
+				        <td>跟踪</td>
+				        <td>拍照</td>
+				        <td>点名</td>
+				        <td>消息</td>
+				      </tr>
+				    </table>-->
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

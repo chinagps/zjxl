@@ -1,0 +1,42 @@
+ #layerBody {
+ 	width : 100%;
+ 	height : 100%;
+ }
+
+ #left {
+	width : 300px;
+	height : 300px;
+	float : left;
+ }
+
+ #right {
+ 	width : 630px;
+ 	height: 500px;
+ 	float : left;
+ 	border : 1px solid red;
+ }
+
+ #accordion1 > div {
+ 	padding : 5px;
+ }
+ #accordionMain > div {
+ 	padding : 5px;
+ }
+ #accordioniO1 > div {
+ 	padding : 5px;
+ }
+ .panelInner {
+ 	padding : 5px;
+ }
+
+ .panelSearch {
+ 	background-color: F1F7FD;
+ 	padding-left: 0px;
+ 	padding-top: 10px;
+ 	padding-bottom: 5px;
+	width : 100%;
+ }
+ .searchBk{
+ 	background-color: CDDCF2;
+
+ }

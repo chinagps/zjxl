@@ -1,0 +1,62 @@
+
+
+<HTML>
+<HEAD>
+<script type="text/javascript" src="script/energymanagement/vehicleAlarm.js"></script>
+<TITLE>车辆管理 | 车辆告警统计</TITLE>
+
+</HEAD>
+<BODY>
+<div>
+<div class="content">
+<div id="rightContent" class="right_c">
+<div class="right_cs">
+<div class="right_ct">
+			
+<FORM id="vehicleAlarmForm" action="#" >
+<input id="vehicleAlarmvidInStr" type="hidden" name="vidInStr" />
+<div class="right_titlechos">
+<span class="L">
+报警类型： 
+<SELECT  id="alarmType" onchange="vehicleAlarmObj.vehicleAlarmt()" style="width:80px;" name="requestParam.equal.alarmType"> 
+</SELECT>
+     <INPUT id="queryPatternAlarm" onclick="" type="radio" class="checkbox"  value="0" name="requestParam.equal.queryPattern" checked>
+                           时段：
+     <SELECT id="timeType"  style="width:65px;" name="requestParam.equal.timeType" onclick="vehicleAlarmObj.changeRedioaa('0')"> 
+       <OPTION value="week"  selected>上周</OPTION> 
+       <OPTION value="month">上月</OPTION>
+       <OPTION value="year" >上年度</OPTION>
+     </SELECT> 
+   
+     <INPUT id="queryPatternAlarm" onclick="" type="radio"  class="checkbox" value="1" name="requestParam.equal.queryPattern">自定义时段：
+    
+     <INPUT style="width:100px;" id="startDatevehiclealarm"  readonly="readonly" name="requestParam.equal.startDate" class="Wdate"  onClick="WdatePicker();vehicleAlarmObj.changeRedioaa('1');">
+              至 
+     <INPUT style="width:100px;" id="endDatevehiclealarm"  name="requestParam.equal.endDate"  readonly="readonly" class="Wdate"  onClick="WdatePicker();vehicleAlarmObj.changeRedioaa('1');">
+     </span>
+     <span class="R">
+     <input type="submit" class="btn_inquires" onmouseover="this.style.backgroundPosition='0px -200px'" onmouseout="this.style.backgroundPosition='0px -150px'" value="" />
+ 	 <!-- <button type="submit" class="bt_yy3" >查询</button> -->
+ 	 </span>
+
+</div>
+</FORM>
+</div>
+</div>
+
+                <div class="right_cdc2">
+                    <span class="R"> <a id="gridExport" style="cursor: hand;"><img
+                            title="导出信息" src="images/global/xiahao.png" /> </a> </span>
+                </div>
+<div id="vehicleAlarmgrid" ></div>  
+<div id="vehicleAlarmgrid1" style="display:'none'"></div>  
+<div id="vehicleAlarmgrid2"  style="display:'none'"></div> 
+<div id="vehicleAlarmgrid3"  style="display:'none'"></div> 
+<div id="vehicleAlarmgrid4"  style="display:'none'"></div> 
+<div id="vehicleAlarmgrid5" style="display:'none'"></div> 
+</div>
+</div>
+
+</div>
+
+</BODY></HTML>

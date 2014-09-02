@@ -1,0 +1,36 @@
+@CHARSET "UTF-8";
+
+.seven7map {
+	width: 500px;
+}
+
+.seventitlemap {
+	background: url(../images/sevenblue.png) repeat-x;
+	padding: 6px 10px 0 10px;
+	height: 24px;
+	width:100%;
+}
+
+.sevenbg4map {
+	border: 3px #014d88 solid;
+	border-top: 0;
+	padding: 10px;
+	overflow: hidden;
+}
+
+.sevenimgmap {
+	border: #c0d7eb 1px solid;
+	margin: 0 auto 10px;
+}
+
+.list3map {
+	width: 190px;
+}
+
+.L {
+	float: left;
+}
+
+.R {
+	float: right;
+}

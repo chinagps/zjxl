@@ -1,0 +1,321 @@
+<%@page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_ctl00_Head1"><title>
+	
+    
+    全球领先的开放式定位服务平台
+
+
+</title><link rel="Shortcut Icon" href="/Images/favicon.ico" /><link type="text/css" rel="stylesheet" href="../content/style.css" /><link type="text/css" rel="stylesheet" href="../content/manage.css" /><link type="text/css" rel="stylesheet" href="../content/jquery.treeview.css" /><link type="text/css" rel="stylesheet" href="../Scripts/Plugins/Jqgrid/css/redmond/jquery-ui-1.7.1.custom.css" /><link type="text/css" rel="stylesheet" href="../Scripts/Plugins/Jqgrid/css/ui.jqgrid.css" />
+    <script type="text/javascript">        var appRootPath = '/';</script>
+    <script type="text/javascript" src="/Scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/Scripts/Plugins/Jqgrid/js/jquery-ui-1.7.1.custom.min.js"></script>
+    <script type="text/javascript" src="/Scripts/Plugins/Jqgrid/js/grid.locale-cn.js"></script>
+    <script type="text/javascript" src="/Scripts/Plugins/Jqgrid/js/jquery.jqGrid.min.js"></script>
+    <script type="text/javascript" src="/Scripts/get.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.treeview.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.ztree.core-3.1.js"></script>
+    <script type="text/javascript" src="../../Scripts/Plugins/toggleLoading/jquery-loading.js"></script>
+    <script type="text/javascript" src="/Content/Scripts/Common.js"></script>
+    <script type="text/javascript">
+        var first1 = true;//第一次加载客户列表标示
+        
+        //当前用户信息
+        var SessionUserInfo = {
+            TenantName: '体验账号',
+            TenantLogoImgURl:' /Images/head_logo.png',
+            IsExperienceLogin: 1,
+            TenantType: 3,
+            IsExistSelectedUser: 1,
+            SelectedTenantName: '体验账号',
+            IsSuper:'-1',
+            IsShowDaoHang:''
+        };
+
+        $(document).ready(function () { //页面初始
+            $('#currCus').text(SessionUserInfo.SelectedTenantName);
+
+            $('.popuserInfo').mouseout(function () {
+                $('.popuserInfo').hide()
+            });
+            $('.popuser,.popuserInfo').mouseover(function () {
+                $('.popuserInfo').show()
+            });
+            //终端用户登录
+            if (SessionUserInfo && SessionUserInfo.TenantType == 3) {
+                $('#spanCurrentUser').hide();
+
+                //终端用户才刷新
+                reinitSmsCount();
+                setTimeout(reinitSmsCount, 10000);
+                //$('#spanChangeUser').hide();
+            }
+        });
+
+        function reinitSmsCount() {
+            $.ajax({
+                url: appRootPath + "SiteMaster/Index",
+                type: "post",
+                data: {},
+                success: function (data) {
+                    var spanImg = $("#spanImg");
+                    spanImg.empty();
+                    var imgHtml = "";
+                    if (data && data != null) {
+                        if(data.SmsNum < 1)
+                            imgHtml = '<img class="alert" id="imgAlert" src="' + appRootPath + 'images/alert_no.gif" /><a href="' + appRootPath + 'AlarmSetting/index" id="smsCount">信息(0)</a>';
+                        else 
+                            imgHtml = '<img class="alert" id="imgAlert" src="' + appRootPath + 'images/alert.gif" /><a href="' + appRootPath + 'AlarmSetting/index" id="smsCount">信息(' + data.SmsNum + ')</a>';
+
+                        if(data.IsAlarmSound)
+                            $('#spanAlarmSound').html('<embed src="' + appRootPath + 'Content/Alarm.mp3" autostart="true" loop="1" playcount="1" hidden="true"></embed>');
+                        else
+                            $('#spanAlarmSound').html('');
+                    }
+
+                    spanImg.append(imgHtml);
+               }
+            });
+           setTimeout(reinitSmsCount, 30000);
+        }
+    </script>
+    <!--[if IE 6]>
+    <script type="text/javascript" src="/Scripts/dd_belatedpng.js"></script>
+    <script>
+    DD_belatedPNG.fix('#daohang img,ul,.png,.head,.nav-bk,.m_now a,a:hover,#s_btn,#s_btn span,#locationSearchResult img,.ub_in,.ub_aw,.um_in,.um_aw');
+    $(document).ready(function() {   
+       if ($(".c-name").width()>400){
+            $(".c-name").css({"width":"400px"});  
+        }
+    });
+    document.execCommand("BackgroundImageCache", false, true);
+    </script>
+    <![endif]-->
+    
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.3"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/RectangleZoom/1.2/src/RectangleZoom_min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/DistanceTool/1.2/src/DistanceTool_min.js"></script>
+    <script type="text/javascript" src="/Content/Scripts/Map/BaiduEventWrapper.min.js"></script>
+
+    <script type="text/javascript" src="/Scripts/Dictionary.js"></script>
+    <script type="text/javascript" src="/Content/Scripts/Map/BaiduMap.js"></script>
+    <script type="text/javascript" src="/Content/Scripts/Map/MapCommon.js"></script>
+
+    <script type="text/javascript">
+        var URL_GetCurrentShortInfoListWithVehicle = '/Position/GetCurrentShortInfoListWithVehicle';
+        var URL_EleLimit = '/LocationService/CheckMarkLimit';
+
+        $(document).ready(function () {
+
+            map = new BaiduMap();
+            map.init('dvMap', new Point('', 106.00000, 35.00000), 5);
+
+            winResize();
+            $(window).resize(winResize);
+        });
+
+        function winResize() {//debugger;
+            var _winWidth = getWindowWidth();
+            _winWidth = _winWidth < 1024 ? 1024 : _winWidth;
+            _winWidth = _winWidth - 283;
+
+            if ($.browser.msie) {
+                _winWidth -= 4;
+            }
+
+            var _MapHeight = $(window).height() - $("#header").height();
+            $('#content,.map-area,#side-list,#s_btn').css("height", _MapHeight + "px");
+            _MapHeight -= 30;
+            $("#dvMap").css({ width: _winWidth + "px", height: _MapHeight + "px", clip: "rect(0px " + _winWidth + "px " + _MapHeight + "px 0px)" });
+        }
+    </script>
+    
+    <link type="text/css" rel="stylesheet" href="/Scripts/Plugins/ymPrompt/skin/bluebar/ymPrompt.css" />
+    <link type="text/css" rel="stylesheet" href="/Content/jquery.combobox.css" />
+    <script type="text/javascript" src="/Content/Scripts/Map/BMapLib.Convertor.js"></script>
+    <script type="text/javascript" src="/Scripts/ztree.js"></script>
+    <script type="text/javascript" src="/Scripts/Plugins/ymPrompt/ymPrompt.js"></script>
+    <script type="text/javascript" src="/Scripts/Plugins/toggleLoading/jquery-loading.js"></script>
+    <script type="text/javascript" src="/Content/Scripts/TCombobox.min.js"></script>
+    <script type="text/javascript" src="/Content/Scripts/Map/BaiduMap.Monitor.js"></script>
+    
+    <style type="text/css">
+        .list_con .sta_con { padding-left:0;}
+        .treeview li { background:none; list-style:none; white-space:nowrap;}
+        .treeview li .active { background-color:#f0f5fb; }
+        .treeview .hitarea { background:none; }
+        .treeview li.lastCollapsable, .treeview li.lastExpandable { background:none; }
+    </style>
+    <script type="text/javascript">
+        var _MapType = '';
+        var _MapZoom = '';
+        var _MapCenter = '';
+        var _TenantType = '3';
+    </script>
+
+    <style type="text/css">
+        .RequiredTag { color:Red; }
+        .divMarkToolBarBtn { float:left; padding:2px 5px; margin:2px; text-align:center; border:solid 1px #ddd; cursor:pointer; }
+        .tdAgnR { text-align:right; }
+        .eleHidden { display:none; }
+        div.tiplabel { height:18px; line-height:18px; padding-left:4px; padding-right:4px;  }
+        .SaveBtn { width:50px; height:23px; }
+        .CancelBtn { width:50px; height:23px; }
+        .DeleteBtn { width:50px; height:23px; }
+        
+        .con-box { width:303px; padding-bottom:5px; overflow:hidden; background:url(/images/MapInfoWindow/p_bt.png) 0 bottom no-repeat;}
+        .con-box .cb-top { float:left; width:280px; height:33px; padding-left:25px; line-height:33px; background:url(/images/MapInfoWindow/p_head.png) 0 top no-repeat;}
+        .con-box .cb-top span { float:left; font-size:14px;font-weight:600; padding-left:10px;}
+        .con-box .cb-top a { float:right; display:block; _display:inline; width:10px; height:10px; margin:11px 15px 0 0; text-indent:-9999px; overflow:hidden; background:url(/images/MapInfoWindow/cl_01.png) no-repeat;}
+        .con-box .cb-top a:hover { background:url(/images/MapInfoWindow/cl_02.png) no-repeat;}
+        .con-box .cb-area { float:left; width:303px; background:url(/images/MapInfoWindow/p_rep.png) repeat-y;}
+        .con-box .cb-tx { float:left; padding:5px 15px 5px 35px; width:253px; line-height:22px; min-height:150px; background:url(/images/MapInfoWindow/p_arrow.png) 0 57px no-repeat;}
+        
+        .up_box { width:280px; clear:both; }
+        .up_box .ub_in { width:268px; padding:5px 7px 0 5px; overflow:hidden; _zoom:1; background:url(/Content/imgs/infoWindow-bg.png) left top no-repeat; }
+        .up_box .ub_aw { width:268px; height:50px; padding:0 7px 3px 5px; background:url(/Content/imgs/infoWindow-bg.png) left bottom no-repeat; }
+        .up_min { width:180px; clear:both;}
+        .up_min .um_in { width:168px; padding:5px 7px 0 5px; overflow:hidden; _zoom:1; background:url(/Content/imgs/infoWindow-minBg.png) left top no-repeat;}
+        .up_min .um_aw { width:168px; height:50px; padding:0 7px 3px 5px; background:url(/Content/imgs/infoWindow-minBg.png) left bottom no-repeat;}
+        
+        .gInfoWindowTb { width:100%; }
+        .gInfoWindowTb tr { height:20px; line-height:20px; }
+        .gInfoWindowTb tr a { float:right; display:block; _display:inline; width:10px; height:10px; margin:2px 3px 0 0; text-indent:-9999px; overflow:hidden; background:url(/images/MapInfoWindow/cl_01.png) no-repeat;}
+        .gInfoWindowTb tr a:hover { background:url(/images/MapInfoWindow/cl_02.png) no-repeat;}
+    </style>
+</head>
+<body scroll="no">
+
+    
+    <div id="header">
+        <div class="head">
+            <div class="head-top">
+                <span class="t-text">全球领先的开放式平台</span>
+                <ul class="user-info">
+                    <li>您好！<em>movo体验账号</em><a href="/Login/LogOff">退出</a></li><li><span>|</span><a href="/EndCustomer/Index">个人中心</a></li><li><span>|</span><a href="/VehicleManage/Index">车辆管理</a></li><li><span>|</span><li id="spanImg"><img class="alert" id="imgAlert" src="/images/alert_no.gif" /><a href="/AlarmSetting/index" id="smsCount">信息(0)</a></li><li><span>|</span><a href="/Helps/help_02.html" target="_blank">帮助</a></li>
+                </ul>
+                <span id="spanAlarmSound"></span>
+            </div>
+            <div class="head-cont">
+                <div class="logo">
+                    <img src="/Images/head_logo.png" /><strong class="c-name">体验账号</strong></div>
+                <table style="float: right;">
+                    <tr>
+                       
+                        <td>
+                            <div class="menu">
+                                <ul id="daohang">
+                                    <li id="Position"><a title="定位监控" href="#" onclick="PositionMonitor();">
+                                        <img src="/images/position_icon.png" alt="定位监控" /><span>定位监控</span></a>
+                                    </li>
+                                    <li id="HistoricalTrack"><a title="历史轨迹" href="#" onclick="HistoricalTrack();">
+                                        <img src="/images/track_icon.png" alt="历史轨迹" /><span>历史轨迹</span></a>
+                                    </li>
+                                    <li id="Report"><a title="" href="/Report/index">
+                                        <img src="/images/mileage_icon.png" alt="报表中心" /><span>报表中心</span></a>
+                                    </li>
+                                    <li id="AlarmSetting"><a title="" href="/AlarmSetting/index">
+                                        <img src="/images/alerting_icon.png" alt="报警/提醒" /><span>报警/提醒</span></a></li>
+                                    <li id="FastService"><a title="" href="/FastService/index">
+                                        <img src="/images/movo_icon.png" alt="魔方宝库" /><span>魔方宝库</span></a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div id="content">
+        
+    <div id="div_Map_Area" class="map-area">
+        <div class="map-top">
+            <div class="map-sel">
+                <select id="selMapType" name="selMapType" onchange="mapSwitch(this)">
+                    
+                    <option value="1">谷歌地图</option>
+                    <option value="3">百度地图</option>
+                    
+                </select>
+            </div>
+            <div id="toolBars" class="mt-btn">
+                <a class="enl" id="toolZoomIn" href="javascript:zoomin();">放大</a>
+                <a class="shrink" id="toolZoomOut" href="javascript:zoomout();">缩小</a>
+                <a class="meter" id="toolMeasure" href="javascript:measure();">测距</a>
+                <a class="sign" id="toolMark" href="javascript:bookMark();">标记</a>
+                <a class="gps" id="toolGPS" href="javascript:navigation();">驾车导航</a>
+                <a class="map" id="toolSearch" href="javascript:mapSearch();">地图查找</a>
+                <a class="del" id="toolClear" href="javascript:mapClear();">清除</a>
+                
+                <div id="divMarkerBar" style="position:absolute; left:160px; top:30px; background-color:White; display:none; z-index:1000;">
+                    <div class="divMarkToolBarBtn" onclick="drawPoint(this);"><img src="/images/sign.png" alt="添加标注点" /></div>
+                    <div class="divMarkToolBarBtn" onclick="drawRect(this);"><img src="/images/area.png" alt="添加标注区域" /></div>
+                    <div class="divMarkToolBarBtn" onclick="dreaArea(this);"><img src="/images/area1.png" alt="添加标注区域" /></div>
+                </div>
+            </div>
+            <div class="map-time"><label id="lbMapReFreshSeconds" style="color:Red">10</label> 秒后刷新</div>
+        </div>
+        <div id="divMapContentPlace" class="cont">
+            <div id="dvMap" style="width:1150px; height:700px;"></div>
+        </div>
+    </div>
+    <div id="side-right" class="side-list">
+        <div id="s_btn" >
+            <span onclick="spliteClick();">关闭</span>
+        </div>
+        <div id="side-rightBox" class="side-box">
+            <div class="tab-title">
+                <ul id="tabs">
+                    <li><a class="tab1">定位监控</a></li>
+                </ul>
+            </div>
+            <div class="tab_conbox">
+                
+    <div id="tab1" class="tab_con">
+        <div id="divUserDataTree" class="cit-tree">
+			<span class="cit-h">
+                体验账号
+                <span id="selSpan">
+                </span>
+            </span>
+			<div class="cit-area">
+				<ul id="client" class="navtree" style="overflow:hidden;"></ul>
+			</div>
+		</div>
+        <div class="list-row" style="padding-bottom:5px;">
+            <span style="line-height: 22px;">车牌号：</span>
+            <input id="selVehicleList" type="text" style="padding:0;" />
+        </div>
+        <div class="info-box">
+            <div class="car-conbox">
+                <div id="car1" class="list_con" style="padding-top:0px;">
+                    <div class="l-title">
+						<ul id="tab_box">
+							<li><a class="cim1">全部(<label id="lbAllCarNum"></label>)</a></li>
+							<li><a class="cim2">在线(<label id="lbOnlineCarNum"></label>)</a></li>
+						</ul>
+					</div>
+                    <div id="tabCarIconList" class="sta-conbox">
+						<div id="cim1" class="tab_in">
+							<ul class="all-list"></ul>
+						</div>
+						<div id="cim2" class="tab_in">
+							<ul class="all-list"></ul>
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+</body>
+</html>

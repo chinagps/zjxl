@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v5.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v5.0 Server at localhost" name="Tomcat v5.0 Server at localhost" runtime-id="Apache Tomcat v5.0" server-type="org.eclipse.jst.server.tomcat.50" server-type-id="org.eclipse.jst.server.tomcat.50" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="6">
+    <list key="modules" value0="zjyypt::org.eclipse.jst.j2ee.server:zjyypt::jst.web::2.4" value1="kypt::org.eclipse.jst.j2ee.server:kypt::jst.web::2.4" value2="sinoiov::org.eclipse.jst.j2ee.server:sinoiov::jst.web::2.4" value3="dwjk::org.eclipse.jst.j2ee.server:dwjk::jst.web::2.4" value4="sinotranspo::org.eclipse.jst.j2ee.server:sinotranspo::jst.web::2.4" value5="4000966666::org.eclipse.jst.j2ee.server:4000966666::jst.web::2.4"/>
+  </server>
+</servers>

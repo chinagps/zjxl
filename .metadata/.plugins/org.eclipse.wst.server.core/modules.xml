@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modules>
+  <module moduleId="org.eclipse.jst.j2ee.server:zjyypt"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:4000966666" serverId="Tomcat v5.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:sinotranspo" serverId="Tomcat v5.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:sinoiov" serverId="Tomcat v5.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:dwjk" serverId="Tomcat v5.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:kypt" serverId="Tomcat v5.0 Server at localhost"/>
+</modules>

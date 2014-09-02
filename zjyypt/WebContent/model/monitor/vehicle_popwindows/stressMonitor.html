@@ -1,0 +1,103 @@
+
+        <div class="vehicle_details_main_6_monitor">
+            <div class="vehicle_details_main_6_monitor_1 stressMonitorParamDiv">
+                <table align="center" width="400" height="100" border="0">
+                    <tr>
+                        <td width="100">
+                            上报间隔（秒）：
+                        </td>
+                        <td>
+                           <input name="reportGap" type="text" class="ptext3" value="30" size=3 />
+                        </td>
+                        <td>
+                            <label>2 &nbsp;</label><div class="photoParamSlider" id="reportGapSlider"></div><label>&nbsp; 60</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            上报次数（次）：
+                        </td>
+                        <td>
+                            <input name="reportTimes" type="text" class="ptext3" value="50" size=3 />
+                        </td>
+                        <td>
+                            <label>1 &nbsp;</label><div class="photoParamSlider" id="reportTimesSlider"></div><label>&nbsp; 100</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            刷新间隔（秒）：
+                        </td>
+                        <td>
+                            <input name="refreshGap" type="text" class="ptext3" value="30" size=3 />
+                        </td>
+                        <td>
+                            <label>2 &nbsp;</label><div class="photoParamSlider" id="refreshGapSlider"></div><label>&nbsp; 60</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="vehicle_details_main_6_monitor_2">
+                <div class="vehicle_details_main_6_monitor_2_button sendEmphasisCommand">
+                    <a href="javascript:void(0);" onfocus="javascript:this.blur();">&nbsp;</a>
+                </div>
+                <div class="vehicle_details_main_tip hidden">
+                </div>
+            </div>
+        </div>
+        <div class="vehicle_details_main_6_map">
+            <div class="stressMonitorMap" id="stressMonitorMap"></div>
+            <div class="vehicle_details_main_6_window" style="position: absolute;z-index:8888;  right: 0px; bottom: 0px;">
+                <table width="240" border="0">
+                    <tr>
+                        <td width="80">
+                            上报时间：
+                        </td>
+                        <td>
+                            <label></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            方向：
+                        </td>
+                        <td>
+                            <label></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            车速：
+                        </td>
+                        <td>
+                            <label>0公里/小时</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            转速：
+                        </td>
+                        <td>
+                            <label>0转/分钟</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            瞬时油耗：
+                        </td>
+                        <td>
+                            <label>0升/小时</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            位置：
+                        </td>
+                        <td>
+                            <label class="detail_label" style="white-space: normal;"></label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+

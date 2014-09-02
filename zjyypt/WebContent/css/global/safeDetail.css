@@ -1,0 +1,284 @@
+@CHARSET "UTF-8";
+.Layer {
+	width: 800px;
+ 	clear: both;
+	overflow: hidden;
+}
+
+.Layer .topblue {
+	background: url(../../images/global/bbg_4.png) repeat-x;
+	padding: 8px 10px 0 10px;
+	height: 0px;
+	width: 100%;
+}
+
+.Layer .trendtp {
+	padding: 10px;
+	border: 3px solid #004C86;
+	border-top: 0;
+	width: 600px;
+	heigth:475px;
+}
+
+.trend_viewsafedetail {
+	width: 800px;
+	clear: both;
+	overflow: hidden;
+	height: 526px;
+}
+
+.trend_viewsafedetail .topblue_viewsafedetail {
+	background: url(../../images/global/bbg_4.png) repeat-x;
+	padding: 6px 10px 0 10px;
+	height: 26px;
+	width: 800px;
+}
+.trendtp2_viewsafedetail {
+	padding: 10px;
+	border: 3px solid #004C86;
+	border-top: 0;
+	width: 100%;
+	height: 500px;
+	overflow-y:auto;
+}
+
+.trendtp2_viewsafedetail table {
+	font-size: 12px;
+	font-family: "宋体"; width : 100%;
+	background-color: #8FB9E4;
+	width: 100%
+}
+
+.trendtp2_viewsafedetail td {
+	background-color: #fff;
+	padding: 5px;
+}
+
+.trendtp2_viewsafedetail .t td {
+	background-color: #C3D7EE;
+	color: #336699;
+}
+
+.trendtp2_viewsafedetail .b td {
+	background-color: #f4f6f9;
+}
+
+
+.Layer .topblue .right {
+	float: right;
+}
+
+
+.Left {
+	float: left;
+
+ }
+ .Layer .powerm_tab3 {
+	width: 600px;
+	padding: 0px 0;
+}
+.L .h4 {
+	float: left;
+	color: #ffffff;
+	font-size: 12px;
+	font-family: "宋体";
+}
+
+.Right {
+	float: right;
+}
+
+.Layer .powerm_tab3 {
+	width: 600px;
+	padding: 0px 0;
+}
+
+.trend_viewchat {
+	width: 600px;
+	clear: both;
+	overflow: hidden;
+	height: 500px;
+}
+
+.trend_viewchat .topblue_viewchat {
+	background: url(../../images/global/bbg_4.png) repeat-x;
+	padding: 6px 10px 0 10px;
+	height: 25px;
+	width: 600px;
+}
+.trendtp2_viewchat {
+	padding: 10px;
+	border: 3px solid #004C86;
+	border-top: 0;
+	height: 475px;
+	overflow-y:auto;
+}
+
+.trendtp2_viewchat table {
+	font-size: 12px;
+	font-family: "宋体"; width : 100%;
+	background-color: #8FB9E4;
+	width: 100%
+}
+
+.trendtp2_viewchat td {
+	background-color: #fff;
+	padding: 5px;
+}
+
+.trendtp2_viewchat .t td {
+	background-color: #C3D7EE;
+	color: #336699;
+}
+
+.trendtp2_viewchat .b td {
+	background-color: #f4f6f9;
+}
+
+.trendtp2_viewchat .powerm_tab3 {
+	width: 575px;
+	padding: 0px 0;
+}
+
+.trend_oilmanager {
+	width: 600px;
+	clear: both;
+	overflow: hidden;
+	height: 140px;
+}
+
+.trend_oilmanager .topblue_oilmanager {
+	background: url(../../images/global/bbg_4.png) repeat-x;
+	padding: 6px 10px 0 10px;
+	height: 25px;
+	width: 600px;
+}
+.trendtp2_oilmanager {
+	padding: 10px;
+	border: 3px solid #004C86;
+	border-top: 0;
+	width: 600px;
+	height: 115px;
+	overflow-y:auto;
+}
+
+.trendtp2_oilmanager table {
+	font-size: 12px;
+	font-family: "宋体"; width : 100%;
+	background-color: #8FB9E4;
+	width: 100%
+}
+
+.trendtp2_oilmanager form{
+	text-align: center;
+	margin:10px;
+}
+
+.frame_upload{
+	width: 80%;
+	text-align:center;
+	margin:10px 0
+}
+
+.frame_upload li{
+	height: 40px;
+	width: 100%;
+	text-align: center;
+	padding-top:10px;
+}
+.trendtp2_viewSafeDriverin table {
+	font-size: 12px;
+	font-family: "宋体"; width : 100%;
+	background-color: #8FB9E4;
+	width: 100%
+}
+
+.trendtp2_viewSafeDriverin td {
+	background-color: #fff;
+	padding: 5px;
+}
+
+.trendtp2_viewSafeDriverin .t td {
+	background-color: #C3D7EE;
+	color: #336699;
+}
+
+.trendtp2_viewSafeDriverin .b td {
+	background-color: #f4f6f9;
+}
+.trend_viewecondrv2 {
+	clear: both;
+	overflow: hidden;
+	height: 525px;
+}
+.topblue_viewecondrv2 {
+	background: url(../../images/global/bbg_4.png) repeat-x;
+	padding: 6px 10px 0 10px;
+	height: 25px;
+}
+.trendtp2_viewecondrv2 {
+	padding: 10px;
+	border: 3px solid #004C86;
+	border-top: 0;
+	width: 100%;
+	height: 500px;
+	overflow-y:auto;
+}
+/*非法营运分析调用样式*/
+.trendtp2_viewecondrv3 {
+	padding: 10px;
+	border: 3px solid #004C86;
+	border-top: 0;
+	width: 100%;
+	height: 465px;
+	overflow-y:auto;
+}
+.trendtp2_viewecondrv4 {
+	padding: 10px;
+	border: 3px solid #004C86;
+	border-top: 0;
+	width: 100%;
+	height: 465px;
+	overflow-y:auto;
+}
+/*非法营运分析调用样式结束*/
+.trendtp2_viewecondrvin2 table {
+	font-size: 12px;
+	font-family: "宋体"; width : 100%;
+	background-color: #8FB9E4;
+	width: 100%
+}
+
+.trendtp2_viewecondrvin2 td {
+	background-color: #fff;
+	padding: 5px;
+}
+
+.trendtp2_viewecondrvin2 .t td {
+	background-color: #C3D7EE;
+	color: #336699;
+}
+
+.trendtp2_viewecondrvin2 .b td {
+	background-color: #f4f6f9;
+}
+.trendtp2_viewecondrvin table {
+	font-size: 12px;
+	font-family: "宋体"; width : 100%;
+	background-color: #8FB9E4;
+	width: 100%
+}
+
+.trendtp2_viewecondrvin td {
+	background-color: #fff;
+	padding: 5px;
+}
+
+.trendtp2_viewecondrvin .t td {
+	background-color: #C3D7EE;
+	color: #336699;
+}
+
+.trendtp2_viewecondrvin .b td {
+	background-color: #f4f6f9;
+}

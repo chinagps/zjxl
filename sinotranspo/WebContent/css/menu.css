@@ -1,0 +1,128 @@
+/* menu::base */
+
+.caidan{
+	height:40px;
+	background:url(../img/supply_15.jpg) repeat-x;
+}
+.menu{
+	width:900px;
+	height:35px;
+	margin:0 auto;
+}
+.menuleft{
+	width:770px;
+	text-align: center;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif "宋体";
+	margin:0 auto;
+}
+.menuright{
+	float:right;
+	margin:0 auto;
+	height:40px;
+}
+.menuleft ul{
+	list-style-type:none;
+}
+.menuleft li a{
+	width:100px;
+	line-height:35px;
+	color:#000;
+	text-decoration:none;
+	text-align:center;
+	float:left;
+}
+.menuleft li a:hover{
+	color:#666666;
+}
+.menuleft li img{
+	line-height:34px;
+	float:left;
+}
+
+div#menu li {
+    position: relative;
+    z-index: 9;
+    margin: 0 auto;
+    float: left;
+}
+
+div#menu a {
+    position: relative;
+    z-index: 10;
+    height: 37px;
+    display: block;
+    line-height: 37px;
+    text-decoration: none;
+    font: normal 12px Trebuchet MS;
+}
+
+
+
+/* menu::level1 */
+div#menu a {
+    line-height:37px;
+}
+/**@replace#1*/
+div#menu li.last { background: none; }
+
+
+
+/* menu::level2 */
+div#menu ul ul li { 
+	background: none;
+	width: 100%; 
+}
+div#menu ul li ul{
+	width: 100px;
+	margin-left: 20px;
+}
+
+div#menu ul ul {
+    position: absolute;
+    top: 37px;
+    left:-99999px;
+	background:#cdcdcd;/*masongzhi #1c5ca7 */
+    filter:alpha(Opacity=80);-moz-opacity:0.8;opacity: 0.8;
+}
+div#menu ul ul a {
+    padding-left:5px;
+    text-align:left;
+    height: auto;
+    text-align:left;
+    display: block;
+    line-height:25px;
+    width: 95px;
+}
+div#menu ul ul a.parent{
+    background-image:url(../img/item-pointer-mover.png) ;
+    background-repeat:no-repeat;
+    background-position:70% 8px;
+}
+div#menu ul ul a.parent:hover{
+    background-image:url(../img/item-pointer.png);
+    background-repeat:no-repeat;
+    background-position:70% 8px;
+}
+
+div#menu ul ul a:hover{
+    color:#fff;
+    background-color: #0b1746;
+}
+
+div#menu ul ul li.last { background: none; }
+
+/* menu::level3 */
+
+div#menu ul ul ul {
+    padding-left:10px;
+    padding-right:10px;
+    margin: 0 0 0 -10px !important;
+	width: 70px;
+	background:#cdcdcd;
+}
+
+
+/* colors  a5c0dd  #3f3e3e*/
+div#menu ul ul ul ul { background:#F00; }
+div#menu ul ul ul ul { background:#F90; }

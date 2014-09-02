@@ -1,0 +1,212 @@
+
+        <div class="vehicle_details_main_3_photography">
+            <div>
+                <table width="280" border="0">
+                    <tr align="center">
+                        <td height="34">
+                            清晰度：
+                        </td>
+                        <td align="left" style="padding-left: 5px;">
+                            <input name="photoSharpness" type="radio" class="checkbox" value="1" />高清
+                        </td>
+                        <td>
+                            <input name="photoSharpness" type="radio" class="checkbox" value="2" />清晰
+                        </td>
+                        <td>
+                            <input name="photoSharpness" type="radio" class="checkbox" value="3" checked=true />一般
+                        </td>
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td>
+                            &nbsp;
+                        </td>
+                    </tr>
+                </table>
+            </div>
+			<div style="border-bottom:1px solid #b1c6cf;padding-left: 5px;">
+                <table width="480" border="0">
+                    <tr align="center">
+                        <td height="44">
+                            摄像头：
+                        </td>
+                        <td>
+                            <input name="cameraPosition" type="checkbox" class="checkbox" value="1" />1路
+                        </td>
+                        <td>
+                            <input name="cameraPosition" type="checkbox" class="checkbox" value="2" checked=true />2路
+                        </td>
+                        <td>
+                            <input name="cameraPosition" type="checkbox" class="checkbox" value="3" />3路
+                        </td>
+                        <td>
+                            <input name="cameraPosition" type="checkbox" class="checkbox" value="4" />4路
+                        </td>
+                        <td>
+                            <div class="vehicle_details_main_button sendPhotoCommand">
+                                <a href="javascript:void(0);" onfocus="javascript:this.blur();">拍照</a>
+                            </div>
+                        </td>
+                        <td style="width:115px;">
+                            <div class="vehicle_details_main_tip_3 hidden">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+			<div style="margin:4px 0 0 10px;">
+				<table>
+					<tr>
+						<td height="28px;"><div class="vehicle_details_main_button refreshPhotoList" style="width:70px; text-align: center;">刷新</div></td>
+						<td height="28px;"><div class="vehicle_details_main_tip_4 hidden" style="width:115px;"></div></td>
+					</tr>
+				</table>
+			</div>
+			<!--
+            <div class="vehicle_details_main_3_photography_set">
+                <div class="vehicle_details_main_3_photography_set_1">
+                    <table border="0" height="100%">
+                        <tr>
+                            <td height="40">
+                                镜头设置：
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="setDefaultPhotoParam">恢复默认</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="refreshPhotoList">刷新</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="vehicle_details_main_3_photography_set_2 photoParamDiv">
+                    <table width="400" height="80" border="0">
+                        <tr>
+                            <td>
+                                图像质量：
+                            </td>
+                            <td width="20">
+                                <input name="photoQuality" style="width:30px;" size="5" class="ptext3" value="5" />
+                            </td>
+                            <td>
+                                <label>1 &nbsp;</label><div class="photoParamSlider" id="photoQualitySlider"></div><label>&nbsp; 10</label>
+                            </td>
+                            <td>
+                                分辨率：
+                            </td>
+                            <td colspan="2">
+                                <label for="photoSense">
+									<select name="photoSense" style="width:122px;">
+										<option value="0">320*240</option>
+										<option value="1">640*480</option>
+										<option value="2">800*600</option>
+										<option value="3">1024*768</option>
+									</select>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                对比度：
+                            </td>
+                            <td>
+                                <input name="photoContrast" style="width:30px;" size="5" class="ptext3" value="65" />
+                            </td>
+                            <td>
+                                <label>0 &nbsp;</label><div class="photoParamSlider" id="photoContrastSlider"></div><label>&nbsp; 127</label>
+                            </td>
+                            <td>
+                                亮度：
+                            </td>
+                            <td>
+                            <input name="photoBrightness" style="width:30px;" size="5" class="ptext3" value="126" />
+                        </td>
+                        <td>
+                            <label>0 &nbsp;</label><div class="photoParamSlider" id="photoBrightnessSlider"></div><label>&nbsp; 255</label>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                饱和度：
+                            </td>
+                            <td>
+                                <input name="photoSaturation" style="width:30px;" size="5" class="ptext3" value="65" />
+                            </td>
+                            <td>
+                                <label>0 &nbsp;</label><div class="photoParamSlider" id="photoSaturationSlider"></div><label>&nbsp; 127</label>
+                            </td>
+                            <td>
+                                色度：
+                            </td>
+                            <td>
+                            <input name="photoChroma" style="width:30px;" size="5" class="ptext3" value="126" />
+                        </td>
+                        <td>
+                            <label>0 &nbsp;</label><div class="photoParamSlider" id="photoChromaSlider"></div><label>&nbsp; 255</label>
+                        </td>
+                    </tr>
+                    </table>
+                </div>
+            </div>
+			-->
+        </div>
+        <div class="vehicle_details_main_3_photo_1">
+            <div class="photoListDiv">
+				<div class="curShowPhoto">
+					<img src="images/map/noPic_big.gif" width="370" height="310" />
+				</div>
+				<div class="pagingPhoto">
+					<div class="scrollPreButton">
+						<img src="images/map/new/scrollPreButtonGray.png" />
+					</div>
+					<div class="scrollPhotosDiv">
+						<img src="images/map/noPic_small.gif" width="96" height="69" /> <img src="images/map/noPic_small.gif" width="96" height="69" /> <img src="images/map/noPic_small.gif" width="96" height="69" />
+						<img src="images/map/noPic_small.gif" width="96" height="69" />
+					</div>
+					<div class="scrollNextButton">
+						<img src="images/map/new/scrollNextButton.png" />
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="photoRemarkDiv">
+            <table align="center" border="0" width="95%">
+                <tr>
+                    <td width="60" height="20">
+                        标记超载：
+                    </td>
+                    <td width="60" style="text-align: center">
+                        <input name="overloadFlag" type="checkbox" class="checkbox" value="" />超载
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td height="19">
+                        添加备注：
+                    </td>
+                    <td rowspan="2"  style="text-align: center">
+                        <label for="overloadFlag"></label>
+                        <textarea name="overloadFlag" cols="37" rows="3"></textarea>
+                    </td>
+                    <td >                       
+                        <div style="float:right;" class="vehicle_details_main_button savePhotoRemark">                        	
+                            <a href="javascript:void(0);" onfocus="javascript:this.blur();">保存</a>
+                        </div>                       
+                    </td>
+                </tr>
+                <tr>
+                    <td height="19">
+                        &nbsp;
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+            </table>
+        </div>
+

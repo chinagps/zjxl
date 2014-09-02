@@ -1,0 +1,105 @@
+* {
+	margin: 0px; padding: 0px;
+}
+
+
+ul {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+}
+select {
+	outline: 0px;
+}
+
+.subnav{
+	margin-top: 2px;
+}
+
+
+#main {
+	margin: 0px auto; width: 960px;
+}
+#lefter {
+	width: 230px; margin-bottom: 10px; float: left;
+}
+#navc2 {
+	margin: 0px 0px 10px; width: 230px;
+}
+#navc2 dl dt {
+	width: 230px; height: 35px;
+}
+#navc2 dl dd {
+	border: 0px solid rgb(204, 204, 204); height: auto;
+}
+
+#righter {
+	width: 719px; margin-bottom: 10px; float: right;
+}
+#main_top {
+	background: url("../img/main_right.jpg") repeat-x; width: 719px; height: 35px;
+}
+#main_top h1 {
+	width: 300px; height: 35px; float: left; position: relative;
+}
+#main_top h1 span {
+	left: 15px; top: 10px; color: rgb(16, 102, 194); font-size: 15px; position: absolute;
+}
+#main_top h1 u {
+	left: 80px; top: 17px; color: rgb(16, 102, 194); font-size: 12px; text-decoration: none; position: absolute;
+}
+#main_top p {
+	margin: 0px 12px 0px 0px; padding: 3px 0px 0px; width: 300px; height: 32px; text-align: right; color: rgb(102, 102, 102); line-height: 33px; font-size: 12px; float: right;
+}
+#main_top p span {
+	margin: 0px 5px;
+}
+#main_top p span a {
+	color: rgb(102, 102, 102);
+}
+
+.main_conttwo{
+	padding: 10px 5px; width: 708px; line-height: 25px; font-size: 12px;
+}
+
+#main_conttwo {
+	margin:0;padding:20px 0;
+	width: 708px; line-height: 25px; font-size: 12px;
+	
+}
+
+
+#main_conttwo a {
+	color: rgb(51, 51, 51);
+}
+#main_conttwo a:hover {
+	color: rgb(204, 0, 0);
+}
+#map{
+	padding-left: 40px;
+}
+#main_cont4 {
+	margin: 0px; border: 1px solid rgb(204, 204, 204); width:180px; font-size: 12px;
+}
+#main_cont4 span {
+	color: rgb(51, 51, 51);
+	cursor: pointer;
+}
+#main_cont4 span:hover {
+	color: rgb(204, 0, 0);
+}
+
+.tbl3 {
+	border: 1px solid rgb(217, 217, 217); border-collapse: collapse;
+}
+.tbl3 td {
+	border: 1px solid rgb(217, 217, 217); border-collapse: collapse;
+	min-height: 30px;line-height: 30px;
+	padding-left: 5px;
+	text-align: left;
+}
+.tbl3 td span{
+	padding:25px;
+	
+}

@@ -1,0 +1,76 @@
+.srkjl_employee {
+	width: 110px;
+	margin: 0px 0px 0px 0px;
+}
+.vehicle_font {
+	font-size: 12px;
+	}
+.right_cdt7_vehicle_score {
+	width: 100%;
+	overflow: hidden;
+}
+.right_cdt7_vehicle_score table {
+	width: 98%;
+	background-color: #8FB9E4;
+	margin: 10px auto;
+}
+
+.right_cdt7_vehicle_score td {
+	background: #fff;
+	padding: 8px 4px;
+}
+
+.right_cdt7_vehicle_score th {
+	background: #C3D7EE;
+	padding: 8px 4px;
+	text-align: left;
+	font-weight: normal;
+}
+
+.right_cdt7_vehicle_score .t td {
+	background: #C3D7EE;
+	color: #336699;
+}
+
+.right_cdt7_vehicle_score .b td {
+	background: #f4f6f9;
+}
+.right_cdc8_vehicle_score {
+	padding: 8px 10px 0;
+	background: url(../../images/global/grayline.png) repeat-x;
+	border-bottom: #CCC 1px solid;
+	height: 30px;
+	clear: both;
+	overflow: hidden;
+}
+.srkjl3_vehicle_score{
+	background: url(../../images/global/day.png) #fff no-repeat 115px 2px;
+	width: 130px;
+	border: 1px solid #abadb3;
+	padding: 2px;
+	color: #666;
+	margin-right: 10px;
+}
+.srkjl8_vehicle_score {
+	width: 50px;
+	margin: 2px;
+	height:19px;
+}
+.right_cdc9_vehicle_score  {
+	padding: 8px 10px 0;
+	background: url(../../images/global/grayline.png) repeat-x;
+	border: #CCC 1px solid;
+	border-left: 0;
+	border-right: 0;
+	height: 30px;
+	clear: both;
+	overflow: hidden;
+}
+.right_cs_vehicle_score {
+	width: 100%;
+	border: 1px solid #c0d7eb;
+	/*padding-bottom: 10px;*/
+}
+.ptop_vehicle_score {
+	padding-top: 0px;
+}

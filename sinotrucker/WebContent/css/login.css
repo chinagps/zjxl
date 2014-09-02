@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+/*----------CSS 通用属性----------*/
+body,html{ margin:0; padding:0; background:url(../images/login/wuliu_bj01.jpg) repeat-x; font-size:12px; font-family:Arial, Helvetica, sans-serif,"宋体";}
+ul, p,h1,h2,h3,h4,h5,li{margin:0px; padding:0;list-style:none;}
+label, button, input[type="submit"], input[type="button"] {cursor:pointer;}
+.clear{clear:both;}
+.float_lef{float:left; display:inline;}
+.float_rig{float:right; display:inline;}
+img{border:none; margin:0; padding:0;}
+.font_wei{font-weight:bold;}
+.clearfix {zoom:1;}     
+.clearfix:after {     
+    content:'.';     
+    display:block;     
+    visibility:hidden;     
+    clear:both;     
+    height:0px;     
+    font-size:0;     
+    line-height:0px;     
+}  
+.marg_lef5{margin-left:5px;}
+.marg_rig5{margin-right:5px;}
+.marg_lef10{margin-left:10px;}
+.padd10{padding:10px;}
+.width100{width:100%;}
+.width80{width:80%;}
+.width30{width:30%;}
+a{color:#2c6795; text-decoration:none; font-weight:normal;}
+a:link{color:#2c6795; text-decoration:none; font-weight:normal;}
+a:visited {color:#2c6795; text-decoration:none; font-weight:normal;}
+a:hover{color:#2c6795; text-decoration:underline; font-weight:normal;}
+a:active{color:#2c6795; text-decoration:none; font-weight:normal;}
+/*----------end CSS 通用属性----------*/
+/*--------------------start login----------------*/
+.login_content{background:url(../images/login/wuliu_bj01.jpg) repeat-x;}
+.loginMain{width:1000px; height:589px; margin:0 auto;}
+.logo{width:505px; height:140px; background:url(../images/login/logo.png) no-repeat; background-position:bottom; margin:0 auto; vertical-align:middle;}
+.login_box{width:1000px; height:500px; background:url(../images/login/login_box.png) no-repeat;}
+/*文本输入框Start*/
+.loginTextInput{width:315px; height:131px; margin-left:595px; float:left;}
+.loginText{width:300px; height:21px; padding-top:10px; clear:both;}
+.loginRemeberText{width:90px;margin-left:65px; line-height:21px;clear:both;color:#ffffff; float:left;}
+.loginRemeberText input{vertical-align: middle;}
+.loginText span{width:70px; height:21px; line-height:21px; text-align:right; color:#fff; float:left;}
+.loginInput{width:200px; height:21px; background:url(../images/login/login_Icon01.png) no-repeat; border:none;}
+.loginInputOne{width:80px; height:21px; background:url(../images/login/login_Icon02.png) repeat-x; border:none;}
+.loginInputTwo{width:53px; height:21px; background:url(../images/login/login_Icon03.png) no-repeat; border:none;}
+.loginMima{width:280px; height:21px; float:left;}
+.loginMimaYzm{width:170px; height:21px; float:left;}
+.loginMima span{color:#fff;}
+.loginWjmm{line-height:21px; color:#fff; text-decoration:underline; float:left;}
+.loginWjmm img{cursor: pointer;}
+.loginBtn{width:88px; height:60px; background:url(../images/login/login_btn01.png) no-repeat; float:right; margin-top:6px;cursor: pointer;}
+.loginErrorCode{width:260px; color:red;font-weight: bold; line-height:24px;float:left;padding-left: 20px;margin-top: 5px;}
+/*文本输入框End*/
+
+
+/*--------------------end login----------------*/

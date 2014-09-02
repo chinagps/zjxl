@@ -1,0 +1,1251 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif "锟斤拷锟斤拷";
+	font-size: 12px;
+	color: #6c6c6c;
+	background: #e8edf3;
+}
+
+.floatLeft:{
+float:left;
+
+}
+.floatRight:{
+float:left;
+
+}
+
+/*---------------Common Start---------------*/
+#{
+width
+:
+100%;
+
+	
+height
+:
+100%;
+
+	
+clear
+:both
+;
+
+
+}
+*
+html
+ 
+#{
+width
+:
+100%;
+
+	
+height
+:
+100%;
+
+	
+clear
+:both
+;
+
+
+}
+*
++
+html
+ 
+#{
+width
+:
+100%;
+
+	
+height
+:
+100%;
+
+	
+clear
+:both
+;
+
+
+}
+.hand {cursor:pointer;}
+
+/**************common end**********/
+
+/******main start*****/
+#busThreeTop {
+	width: 100%;
+	height: 32px;
+	background: url(../../images/alarmHandler/busThree_bj01.gif) repeat-x;
+	border-bottom: 1px solid #FFF;
+	clear: both;
+}
+
+* html #busThreeTop {
+	width: 100%;
+	height: 32px;
+	background: url(../../images/alarmHandler/busThree_bj01.gif) repeat-x;
+	border-bottom: 1px solid #FFF;
+	clear: both;
+}
+
+*+html #busThreeTop {
+	width: 100%;
+	height: 32px;
+	background: url(../../images/alarmHandler/busThree_bj01.gif) repeat-x;
+	border-bottom: 1px solid #FFF;
+	clear: both;
+}
+.w138{width:138px;};
+.w156 {width: 156px;}
+.hidden {
+	display: none;
+}
+.busThreeIcon {
+	width: 16px;
+	height: 16px;
+	float: left;
+	margin: 3px 3px 0px 5px;
+}
+
+.historyRightDetail {
+	width: 100%;
+	/* 	height:582px; */
+	clear: both;
+}
+
+.busThreeFont {
+	width: 120px;
+	height: 32px;
+	line-height: 32px;
+	color: #000;
+	font-weight: bold;
+	float: left;
+}
+
+.alarmHandler_processDetailDiv {
+	height: 200px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+/*锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟紼nd*/
+
+/*锟斤拷前锟芥警锟叫憋拄1�7-锟芥警锟斤拷史锟斤拷录Start*/
+.busThreebj {
+/* 	width: 100%; */
+/* 	height: 700px; */
+	background: #e8edf3 url(../../images/alarmHandler/busThree_bj02.gif)
+		repeat-x;
+	clear: both;
+		overflow:hidden;
+}
+
+* html .busThreebj {
+/* 	width: 100%; */
+/* 	height: 700px; */
+	background: #e8edf3 url(../../images/alarmHandler/busThree_bj02.gif)
+		repeat-x;
+	clear: both;
+		overflow:hidden;
+}
+
+*+html .busThreebj {
+/* 	width: 100%; */
+/* 	height: 700px; */
+	background: #e8edf3 url(../../images/alarmHandler/busThree_bj02.gif)
+		repeat-x;
+	clear: both;
+	overflow:hidden;
+}
+/*tabPanel2*/
+.tabPanel2 {
+	clear: both;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	padding-top: 5px;
+}
+
+.tabPanel2 .tabGroup {
+	position: relative;
+	top: 1px;
+	height: 30px;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.tabPanel2 li.tab,.tabPanel2 li.tabSelected {
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	cursor: pointer;
+	margin: 0 5px 0 5px;
+}
+
+.tabPanel2 li.tab a,.tabPanel2 li.tabSelected a {
+	display: block;
+	_float: left;
+	height: auto;
+	padding: 0 25px 0 25px;
+}
+
+.tabPanel2 .tab {
+	background: url(../../images/alarmHandler/tab_bg1.png) no-repeat left;
+}
+
+.tabPanel2 .tab a {
+	background: url(../../images/alarmHandler/tab_bg2.png) no-repeat right;
+}
+
+.tabPanel2 .tabSelected {
+	background: url(../../images/alarmHandler/tabSelected_bg1.png) repeat-x
+		left;
+}
+
+.tabPanel2 .tabSelected a {
+	background: url(../../images/alarmHandler/tabSelected_bg2.png) no-repeat
+		right;
+}
+
+.tabPanel2 .tabContentGroup {
+	clear: both;
+	border-top: 3px solid #257bd3;
+}
+
+.tabPanel2 .tab a:link {
+	font-size: 12px;
+	color: #6c6c6c;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.tabPanel2 .tab a:visited {
+	font-size: 12px;
+	color: #6c6c6c;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.tabPanel2 .tab a:hover {
+	font-size: 12px;
+	color: #6c6c6c;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.tabPanel2 .tabSelected a:link {
+	font-size: 12px;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.tabPanel2 .tabSelected a:visited {
+	font-size: 12px;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.tabPanel2 .tabSelected a:hover {
+	font-size: 12px;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.tabHidden {
+	display: none;
+}
+
+.busFind {
+	width: 80px;
+	height: 27px;
+	line-height: 27px;
+	text-align: center;
+	background: url(../../images/alarmHandler/busIcon03.png) no-repeat;
+	border: none;
+	color: #FFFFFF;
+	float:right;
+}
+.timeRangeInput{
+	margin-top:3px;
+}
+
+.photo_bt1 {
+	width: 75px;
+	height: 29px;
+	line-height: 29px;
+	text-align: center;
+	background: url(../../images/alarmHandler/busIcon06.png) no-repeat;
+	color: #FFFFFF;
+	border: none;
+	display: block;
+}
+
+.ptext3 {
+	width: 30px;
+	height: 20px;
+	border: 1px solid #c3d4de;
+}
+/*锟斤拷前锟芥警锟叫憋拷Start*/
+.busThreeMain {
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: block;
+}
+/*锟斤拷前锟芥警锟叫憋拷锟斤拷锟斤拷Start*/
+.busThreeLeft {
+	height: auto;
+	border-right: 1px solid #b5bec5;
+	float: left;
+}
+
+.remarksTable {
+	margin-top: 10px;
+	display: block;
+}
+
+.busRemarks {
+	width: 99%;
+	height: 60px;
+	background: #FFF url(../../images/alarmHandler/busThree_bj03.gif)
+		repeat-x;
+	border: 1px solid #b5bec5;
+	/*padding-right:20px;*/
+}
+
+* html.busRemarks {
+	width: 400px;
+	height: 60px;
+	background: #FFF url(../../images/alarmHandler/busThree_bj03.gif)
+		repeat-x;
+	border: 1px solid #b5bec5;
+}
+
+*+html.busRemarks {
+	width: 400px;
+	height: 60px;
+	background: #FFF url(../../images/alarmHandler/busThree_bj03.gif)
+		repeat-x;
+	border: 1px solid #b5bec5;
+}
+
+.busThreeButton {
+/* 	width: 253px; */
+	height: 30px;
+	margin-top: 20px;
+	float:right;
+	/*padding-right:11px;*/
+}
+
+.busThreeResult {
+	width: 168px;
+	height: 23px;
+	float: left;
+}
+
+.busOrange {
+	width: 74px;
+	height: 23px;
+	line-height: 23px;
+	text-align: center;
+	background: url(../../images/alarmHandler/Button-01.gif) no-repeat;
+	color: #FFFFFF;
+	margin-left: 10px;
+	float: left;
+}
+
+.busThreeInformation {
+/* 	width: 50%; */
+	height: auto;
+}
+
+.busThreeInformation p {
+/* 	width: 50%; */
+	line-height: 22px;
+	margin-left: 10px;
+}
+
+.busBlue {
+	width: 74px;
+	height: 23px;
+	line-height: 23px;
+	text-align: center;
+	background: url(../../images/alarmHandler/Button-02.gif) no-repeat;
+	color: #FFFFFF;
+	margin-left: 10px;
+	float: left;
+}
+
+.busGreen {
+	width: 74px;
+	height: 23px;
+	line-height: 23px;
+	text-align: center;
+	background: url(../../images/alarmHandler/Button-03.gif) no-repeat;
+	color: #FFFFFF;
+	margin-left: 10px;
+	float: left;
+}
+
+.busline {
+	width: 100%;
+	height: 2px;
+	background: url(../../images/alarmHandler/busThree_bj04.gif) repeat-x;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.busThree {
+/* 	width: ; */
+/* 	height: 80px; */
+}
+
+.busThreeSelect {
+	border: 1px solid #c4d4dd;
+	float:left;
+}
+.timeRange{
+	width:300px;
+	height:30px;
+	line-height:30px;
+	float:left;
+	overflow:hidden;
+}
+
+.busbiaodan {
+	width: 90px;
+	height: 20px;
+	clear: both;
+}
+
+.busThreeInput {
+	width: 20px;
+	height: 20px;
+	float: left;
+}
+.processAlarmMenu{
+/* 	width:55px; */
+	line-height:30px;
+	float:right;
+}
+
+.busThreeimg {
+	width: 50px;
+	height: 20px;
+	float: left;
+	margin: 3px 0px 0px 0px;
+}
+
+.busThreeButtona {
+	width: 80px;
+	height: 27px;
+	text-align: left;
+	float: left;
+}
+
+.busThreebiaoge {
+	width: 100%;
+/* 	height: 240px; */
+	float: left;
+}
+
+.tablebus {
+	border-left: 1px solid #b2c8d0;
+	margin-top: 5px;
+}
+
+.biaogeThree {
+	width: 100%;
+	height: 32px;
+	background: url(../../images/alarmHandler/busThree_bj05.gif) repeat-x;
+	font-weight: bold;
+}
+
+.biaogethreetr {
+	background: #dbe4ed;
+}
+
+.biaogethreete {
+	background: #edf2f6;
+}
+
+.busThreePage {
+	width: 250px;
+	height: 25px;
+	float: right;
+	margin-top: 5px;
+	display: block;
+	overflow: hidden;
+}
+
+* html .busThreePage {
+	width: 240px;
+	height: 25px;
+	float: right;
+	margin-top: 5px;
+	display: block;
+	overflow: hidden;
+}
+
+*+html .busThreePage {
+	width: 230px;
+	height: 25px;
+	float: right;
+	margin-top: 5px;
+	display: block;
+	overflow: hidden;
+}
+
+.busThreeCljbxx {
+	width: 99.9%;
+	height: 32px;
+	line-height: 32px;
+	background: url(../../images/alarmHandler/busThree_bj06.gif) repeat-x;
+	border: 1px solid #b5bec5;
+	clear: both;
+}
+/*锟斤拷前锟芥警锟叫憋拷锟斤拷锟斤拷End*/
+
+/*锟斤拷前锟芥警锟叫憋拷锟斤拷锟斤拷tableStart*/
+.busThreeRight {
+	width: 495px;
+	height: auto;
+	float: left;
+	border-top: 1px solid #b4bfc5;
+	border-right: 1px solid #b4bfc5;
+	border-bottom: 1px solid #b4bfc5;
+	z-index: 1;
+	position: absolute;
+	left: 50%;
+}
+
+.busThreeMonitor {
+	width: 100%;
+	height: 480px;
+	float: left;
+}
+
+* html .busThreeMonitor {
+	width: 100%;
+	height: 500px;
+	float: left;
+}
+
+*+html .busThreeMonitor {
+	width: 100%;
+	height: 500px;
+	float: left;
+}
+/*tabPanel3*/
+.tabPanel3 {
+	clear: both;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	padding-top: 2px;
+}
+
+.tabPanel3 .tabGroup {
+	position: relative;
+	top: 1px;
+	height: 30px;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.tabPanel3 li.tab,.tabPanel3 li.tabSelected {
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	cursor: pointer;
+	margin: 0 5px 0 5px;
+}
+
+.tabPanel3 li.tab a,.tabPanel3 li.tabSelected a {
+	display: block;
+	_float: left;
+	height: auto;
+	padding: 0 20px 0 20px;
+}
+
+.tabPanel3 .tab {
+	background: url(../../images/alarmHandler/tab_bg12.png) no-repeat left;
+}
+
+.tabPanel3 .tab a {
+	background: url(../../images/alarmHandler/tab_bg2.png) no-repeat right;
+}
+
+.tabPanel3 .tabSelected {
+	background: url(../../images/alarmHandler/tabSelected_bg12.png) repeat-x
+		left;
+}
+
+.tabPanel3 .tabSelected a {
+	background: url(../../images/alarmHandler/tabSelected_bg21.png)
+		no-repeat right;
+}
+
+.tabPanel3 .tabContentGroup {
+	clear: both;
+	border-top: 3px solid #428d1f;
+}
+
+.tabPanel3 .tab a:link {
+	font-size: 12px;
+	color: #6c6c6c;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.tabPanel3 .tab a:visited {
+	font-size: 12px;
+	color: #6c6c6c;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.tabPanel3 .tab a:hover {
+	font-size: 12px;
+	color: #6c6c6c;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.tabPanel3 .tabSelected a:link {
+	font-size: 12px;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.tabPanel3 .tabSelected a:visited {
+	font-size: 12px;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.tabPanel3 .tabSelected a:hover {
+	font-size: 12px;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+}
+/*busjiantingStart*/
+.busjianting {
+	width: 100%;
+	height: 438px;
+	clear: both;
+} /*lsm*/
+.jianting {
+	width: 100%;
+	height: 30px;
+	display: block;
+	clear: both;
+}
+
+.jtLeft {
+	width: 90%;
+	height: 30px;
+	float: left;
+}
+
+.jtRight {
+	width: 45%;
+	height: 30px;
+	float: left;
+}
+
+.jtLeft input {
+	margin: 5px 3px 0;
+}
+
+.jtLeft span {
+	line-height: 30px;
+}
+
+.jtRight input {
+	margin: 5px 3px 0px 0px;
+}
+
+.jtRight span {
+	line-height: 30px;
+}
+
+.busThreecar {
+	width: 100%;
+	height: 32px;
+	line-height: 32px;
+	background: url(../../images/alarmHandler/busThree_bj06.gif) repeat-x;
+	border: 1px solid #b5bec5;
+	border-left: none;
+	clear: both;
+}
+
+.busMonitor {
+/* 	width: 500px; */
+}
+.busMonitor td {
+	line-height:23px;
+}
+
+.busjtfs {
+	width: 300px;
+	height: 30px;
+	clear: both;
+}
+
+.jtfsLeft {
+	line-height: 30px;
+	float: left;
+}
+
+.jtfsLeft input {
+	margin: 1px 3px 0px 5px;
+}
+
+.jtfsLeft span {
+	line-height: 30px;
+}
+
+.jtfsRight {
+	width:140px;
+	line-height: 30px;
+	float: left;
+	margin-left: 10px;
+	line-height: 30px;
+	display:block;
+}
+
+.jtfsRight input {
+	float:left;
+	margin: 6px 3px 0px 5px;
+}
+
+.jtfsRight span {
+	width:80px;
+	line-height: 30px;
+	margin-top: 3px;
+	float:left;
+}
+
+.busInput {
+	width: 150px;
+	height: 20px;
+	border: 1px solid #c5d3dc;
+}
+
+.busTextarea {
+	width: 350px;
+	height: 60px;
+	background: url(../../images/alarmHandler/busThree_bj07.gif) repeat-x;
+	border: 1px solid #b6bfc6;
+}
+
+.busNewsRemarks {
+	width: 456px;
+	margin-left:28px;
+	height: 140px;
+	background: url(../../images/alarmHandler/busThree_bj07.gif) repeat-x;
+	border: 1px solid #b6bfc6;
+	overflow-y:auto;
+	background-color:#ffffff;
+}
+
+.busStartListening {
+/* 	width: 340px; */
+	height: 40px;
+	margin: 0 auto;
+	margin-left: 180px;
+	margin-top:15px;
+}
+
+.StartListening {
+	width: 75px;
+	height: 30px;
+	line-height: 30PX;
+	text-align: center;
+	color: #ffffff;
+	background: url(../../images/alarmHandler/busIcon06.png) no-repeat;
+	float: left;
+}
+
+.StartListeningRight {
+	width: 120px;
+	height: 25px;
+	background: #fce2e3;
+	border: 1px solid #f6b2b1;
+	margin-left: 20px;
+	float: left;
+}
+
+.StartListeningRight img {
+	width: 16px;
+	height: 16px;
+	float: left;
+	margin: 5px 5px 0px 3px;
+}
+
+.StartListeningRight span {
+	line-height: 25px;
+}
+
+.StartListeningYellow {
+	width: 120px;
+	height: 25px;
+	background: #e4f9b6;
+	border: 1px solid #b5d649;
+	margin-left: 20px;
+	float: left;
+}
+
+.StartListeningYellow img {
+	width: 16px;
+	height: 16px;
+	float: left;
+	margin: 5px 5px 0px 3px;
+}
+
+.StartListeningYellow span {
+	line-height: 25px;
+}
+
+.busmap {
+	height: 260px;
+	border-top: 1px solid #b4bfc5;
+	border-right: 1px solid #b4bfc5;
+	border-bottom: 1px solid #b4bfc5;
+	z-index: 1;
+	position: absolute;
+	left: 50%;
+}
+
+.busNews {
+	width: 100%;
+	height: 30px;
+	float: left;
+}
+
+.busContent {
+	width: 130px;
+	height: 42px;
+	background: url(../../images/alarmHandler/busThree_bj03.gif) repeat-x;
+	border: 1px solid #b6bfc6;
+} /*lsm*/
+.busContentmessage {
+	width: 100%;
+	height: auto;
+	margin-top: 10px;
+	display: block;
+	float: left;
+}
+
+.busTextareaTwo {
+	width: 180px;
+	height: 100px;
+	background: url(../../images/alarmHandler/busThree_bj07.gif) repeat-x;
+	border: 1px solid #b6bfc6;
+}
+
+.busSelect {
+	width: 133px;
+	height: 20px;
+	border: 1px solid #b5bec5;
+} /*lsm*/
+.busCenter {
+	margin: auto;
+/* 	margin-top: 10px; */
+	margin-left: 100px;
+} /**/
+.busSuccess {
+	width: 450px;
+	height: 25px;
+	text-align: center;
+	background: #e3f9b6;
+	border: 1px solid #b3d747;
+	margin: 0 auto;
+	margin-top: 10px;
+	display: block;
+	overflow: hidden;
+	position: relative;
+	clear: both;
+}
+
+.busSuccess img {
+	margin: 5px 3px 0px 3px;
+}
+
+.busSuccess span {
+	margin-bottom: 5px;
+}
+
+.busFailure {
+	width: 450px;
+	height: 25px;
+	text-align: center;
+	background: #fce2e2;
+	border: 1px solid #f6b2b2;
+	margin: 0 auto;
+	margin-top: 10px;
+	display: block;
+	overflow: hidden;
+	position: relative;
+	clear: both;
+}
+
+.busFailure img {
+	margin: 5px 3px 0px 3px;
+}
+
+.busFailure span {
+	margin-bottom: 5px;
+}
+
+.busTextbox {
+	width: 100px;
+	float: left;
+}
+
+.busTextareaThree {
+	width: 300px;
+	height: 131px;
+	background: url(../../images/alarmHandler/busThree_bj07.gif) repeat-x;
+	border: 1px solid #b6bfc6;
+	margin-left: 130px;
+	margin-top: 5px;
+}
+/*busjiantingEnd*/
+/*paizhaoStart*/
+.busPhotograph {
+	width: 220px;
+	height: 200px;
+	line-height: 200px;
+	text-align: center;
+	border: 1px solid #b9c2ca;
+	padding: 5px;
+	margin-left: 5px;
+	float: left;
+}
+
+/*paizhaoEnd*/
+.busDefault {
+	width: 57px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	background: url(../../images/alarmHandler/Default.png) no-repeat;
+	border: none;
+	color: #373737;
+	float: right;
+}
+
+/*鍛婅鍘嗗彶璁板綍Start*/
+.busHistory {
+	width: 100%;
+	height: auto;
+	clear: both;
+}
+
+.historyLeft {
+/* 	height: 800px; */
+	border-right: 1px solid #b5bec7;
+	float: left;
+}
+
+.historyRight {
+	width: 495px;
+	height: auto;
+	float: left;
+}
+
+.busHistoryone {
+	width: 100%;
+}
+
+.busSelectone {
+	border: 1px solid #c5d4db;
+}
+
+.busStarttime {
+/* 	width: 200px; */
+	height: 20px;
+	clear: both;
+}
+.cprocessAlarmMenu{}
+
+.busStarttime input {
+	width: 120px;
+	height: 18px;
+	border: 1px solid #c5d4db;
+	float: left;
+}
+
+.busStarttime span {
+	width: 16px;
+	height: 16px;
+	margin: 3px 0px 0px 1px;
+	float: left;
+}
+
+.busButtona {
+/* 	width: 80px; */
+	height: 27px;
+	margin-top: 10px;
+	display: block;
+}
+
+.historyTable {
+	width: 100%;
+	/* 	height:470px; */
+	margin-top: 5px;
+	display: block;
+	float: left;
+}
+
+.historyFont {
+	width: 100%;
+	line-height: 30px;
+	text-align: center;
+	float: left;
+	height: 360px;
+	margin: 0 auto;
+}
+/*鍛婅鍘嗗彶璁板綍End*/
+.StartRecording {
+	width: 75px;
+	height: 30px;
+	line-height: 30PX;
+	text-align: center;
+	color: #ffffff;
+	background: url(../../images/alarmHandler/busIcon08.png) no-repeat;
+	margin-left: 10px;
+	display: block;
+	float: left;
+}
+
+.photoSlider,.stressMonitorSlider {
+	width: 100px;
+/* 	margin-top: 6px; */
+	height:8px;
+}
+.photoSlider div{
+	height:6px;
+}
+.photoSlider a{
+	 display:none;
+}
+.maptprightframe3,.maptprightframe3_monitor {
+	background: #e4effa;
+	width: 154px;
+	border: #a6cff5 1px solid;
+	padding: 5px 0 5px 4px;
+	color: #276290;
+	line-height: 18px;
+	overflow: hidden;
+}
+
+.maptprightframe3_monitor {
+	width: 214px;
+	line-height: 20px;
+}
+
+.maptprightframe3 li {
+	width: 148px;
+	float: left;
+}
+
+.maptprightframe3_monitor li {
+	width: 100%;
+	float: left;
+}
+
+.maptprightframe3 li label,.maptprightframe3 li div,.maptprightframe3 li input,.maptprightframe3_monitor li label,.maptprightframe3_monitor li div
+	{
+	float: left;
+}
+
+.maptprightframe3_monitor li input {
+	float: right;
+}
+
+.photoSlider,.stressMonitorSlider {
+	width: 100px;
+/* 	margin-top: 6px; */
+}
+
+.photoSlider_monitor,.stressMonitorSlider_monitor {
+	width: 100px;
+}
+
+.whiteBackground {
+	background: #fff;
+}
+
+/*****鎶ヨ璇︽儏***/
+.AlarmHandler { /* 	border: 3px #014d88 solid; */
+	border-top: 0;
+	padding: 10px 10px;
+	overflow: hidden;
+	width: 100%;
+	/* 	background: #fff; */
+}
+
+.alarmProcessPopAlarmDetailDiv table {
+	border-bottom: 1px dashed #64a1db;
+	margin-top: 5px;
+}
+
+.alarmProcessPopAlarmDetailDiv table tr td {
+	height: 26px;
+}
+
+/****瑙嗛1�7*****/
+.videoDiv {
+	width: 235px;
+	height: 170px;
+/* 	float: left; */
+	border: 1px solid #d1d1d1;
+}
+
+/*鍗曡溅鎷嶇収鏍峰約1�7*/
+.photoDiv {
+/* 	width: 522px; */
+	margin-top:25px;
+	height: 340px;
+	overflow:hidden;
+	border: 1px solid #d1d1d1;
+}
+
+.bigShowPhoto {
+	float: left;
+	width: 380px;
+	height: 285px;
+/* 	margin: 2px 0 0 2px; */
+	border: #d1d1d1 1px solid;
+}
+
+.pagingPhoto,.pagingPhoto div {
+	float: left;
+	width: 80px;
+}
+
+.pagingPhoto {
+/* 	margin: 2px 0 0 4px; */
+	border: #d1d1d1 1px solid;
+	cursor: pointer;
+}
+
+.scrollPhotosDiv {
+/* 	width: 106px; */
+/* 	padding-left: 6px; */
+}
+.scrollPhotosDiv img,.scrollNextButton img{
+margin-top:2px;
+}
+
+.scrollPreButton,.scrollNextButton {
+/* 	padding-left: 12px; */
+}
+.alarmHandler_picTitle{
+	height:28px;
+	padding-left:15px;
+	line-height:28px;
+background:url(../../images/alarmHandler/alarmHandler_picTitleBg.jpg) repeat-x;
+}
+
+/*浠ヤ笂鍗曡溅鎷嶇収鏍峰紡*/
+
+/***褰撳墠鎶ヨ琛屾牱寮ￄ1�7*/
+.level0 {
+	color: #ff1600
+}
+
+.level1 {
+	color: #ff5400
+}
+
+.level2 {
+	color: #004eff
+}
+
+.level3 {
+	
+}
+/***当前报警行样弄1�7**/
+
+/*报警历史处理详情*/
+
+.Alarm_history_processing_details {
+/* 	width:498px; */
+	border:1px solid #b5bfc8;
+}
+
+.Alarm_history_processing_details_top {
+	height:33px;
+	line-height:33px;
+	border-bottom:1px solid #b6bdc3;
+	background:url(images/processing_details_top_bg.png) repeat-x;
+}
+
+.Alarm_history_processing_details_main {
+	background:#e8edf3;
+	border-bottom:1px solid #b5bfc8;
+	margin-bottom:1px;
+}
+
+.Alarm_history_processing_print {
+	float:right;
+	margin-right:10px;
+	width:57px;
+	height:25px;
+	background:url(../../images/processing_details_print.png) no-repeat;
+}
+
+.Alarm_history_processing_print a {
+	display:block;
+	text-decoration:none;
+	border:0;
+	height:25px;
+}
+.Alarm_history_processing_print a:hover {
+	background:url(images/processing_details_print_2.png) no-repeat;
+}
+.Alarm_history_processing_print a:active {
+	background:url(images/processing_details_print_3.png) no-repeat;
+}
+
+
+.Alarm_history_processing_details_bottom {
+	height:202px;
+	overflow:auto;
+}
+
+.Alarm_history_processing_details_bottom_table {
+	background:#e8edf3;
+	border-bottom:1px solid #b5bfc8;
+	margin-bottom:1px;
+}
+
+.seventitle{background:url(../../images/openwindow/sevenblue.png) repeat-x; padding:6px 10px 0 10px; height:24px;}
+
+

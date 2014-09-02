@@ -1,0 +1,66 @@
+
+<!-- 图片布局的样式 -->
+
+#Searchresult {
+	margin-top:15px;
+	margin-bottom:15px;
+	border:solid 1px #eef;
+	padding:5px;
+	background:#eef;
+  	width:100%;
+}
+
+#Searchresult p { margin-bottom:1.4em;}
+
+#ImageContainer {
+    height:125px;
+    width:200px;
+    border:solid 1px #ccc;
+    margin-bottom:10px;
+}
+
+#ImageContainer img {display:none;}
+
+
+
+.gallery {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.gallery li {
+	padding: 6px;
+	margin: 0;
+	float: left;
+	position: relative;
+	width: 180px;
+	height: 180px;
+}
+.gallery li:hover img {
+	border-color: #000;
+}
+.gallery img {
+	background: #fff;
+	border: solid 1px #888;
+	padding: 5px;
+}
+.gallery em {
+	background: #fff;
+	color: #000;
+	font-style: normal;
+	padding: 2px 10px;
+	display: block;
+	position: absolute;
+	top: 110px;
+	left: 9px;
+	border: 1px solid #999;
+	border-left-color: #888;
+}
+.gallery a {
+	text-decoration: none;
+}
+.gallery a:hover em {
+	background: #ffdb01;
+	border-color: #c25b08;
+}
+

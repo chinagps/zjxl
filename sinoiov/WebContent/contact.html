@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>中交兴路车联网_联系我们</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+    html,body{margin:0;padding:0;}
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+</head>
+
+<body>
+<!--headerStart-->
+
+<div class="header">
+           <div class="headerMain">
+
+                      <div class="headerRight">
+                                  <p><a href="http://weibo.com/sinoiov" target="_blank">官方微博</a></p><span>|</span><p><a href="contact.html">联系方式</a></p>
+                      </div>
+           </div>
+</div>
+<!--headerEnd-->
+<!--logoStart-->
+<div class="logo">
+           <div class="logoMain">
+                      <div class="logoLeft"><img src="images/2014_03.gif" width="310" height="49"/></div>
+                      <div class="logoRight" "><img src="images/2014_06.gif" width="283" height="41"/></div>
+           </div>
+</div>
+<!--logoEnd-->
+<div class="nav">
+           <div class="navMain">
+                      <div class="navFont">
+                                <ul>
+                                <li><a href="index.html"  class="navBj" id="selected">首页</a></li>
+                                <li><a href="about.html">了解SINOIOV</a></li>
+                                <li><a href="news.html">新闻动态</a></li>
+                                <li><a href="business.html">业务概览</a></li>
+                                <li><a href="media.html">媒体中心</a></li>
+                                <li><a href="fwwl.html">服务专区</a></li>
+                                <li><a href="e-card.html">卡行E家</a></li>
+                                <li><a href="responsibility.html">社会责任</a></li>
+                                <li><a href="careers.html">加入我们</a></li>
+                                </ul>
+                      </div>
+           </div>
+</div>
+<div class="navbanner">
+           <div class="navbannerMain">
+
+            <div class="advert"><img src="images/contacts.jpg" width="949" height="250"/></div>
+
+           </div>
+</div>
+<div class="main">
+            <div class="zjclMain">
+                        <div class="zjclLeft" >
+                                    <div class="left">联系我们</div>
+                                    <div class="leftContent"><a href="contact.html">公司总部</a></div>
+                                    <div class="leftContent"><a href="branch.html">全国分支机构</a></div>
+                        </div>
+                        <div class="zjclRight">
+                                   <div class="rightTop">
+                                              <div class="subnav">您当前所在位置：首页 ><span class="gray"> 联系我们</span></div>
+                                              <div class="rightTitle">
+                                                         <div class="rt">联系我们</div>
+                                                         <div class="rtTitle"></div>
+                                                         <div class="rtContent">
+                                                                    <div class="rtNeirong">
+                                                                               <div class="rtImg"><img src="images/weishi3.jpg" width="260" height="169"/></div>
+                                                                               <div class="rtFont">
+                                                                                          <ul>
+                                                                                          <li>总部：
+                                                                                            <p class="liveChat_leftTextTip">北京中交兴路车联网科技有限公司</p>
+                                                                                          </li><br>
+                                                                                          <li>
+                                                                                            <p>地址：北京市海淀区学院路39号唯实大厦8层（100191）</p>
+                                                                                            <p>电话：010-61959888 传真：010-61959908 </p>
+                                                                                            <p> </p>
+                                                                                            <p>网址：www.sinoiov.com</p>
+                                                                                            <p>24小时服务热线：400-096-6666<br />
+                                                                                            </p>
+                                                                                          </li>
+                                                                                          </ul>
+                                                                               </div>
+                                                                    </div><br><br>
+                                                                  <!--百度地图容器-->
+  <div style="width:638px;height:350px;border:#ccc solid 1px;" id="dituContent"></div>
+</body>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(116.359566,39.984315);//定义一个中心点坐标
+        map.centerAndZoom(point,18);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+
+    //标注点数组
+    var markerArr = [{title:"中交兴路车联网",content:"北京中交兴路车联网科技有限公司",point:"116.35953|39.984398",isOpen:1,icon:{w:23,h:25,l:0,t:21,x:9,lb:12}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+
+    initMap();//创建和初始化地图
+</script>
+
+
+                                              </div>
+                                   </div>
+                        </div>
+            </div>
+
+            </div>
+</div><br><br><!--mainEnd-->
+            <!--lineStart-->
+			<table width="100%" height="300"  border="0" cellpadding="0" cellspacing="0" bgcolor="a6a6a6">
+              <tr>
+                <td colspan="2" valign="middle"><div align="center">
+                    <table width="980" border="0" cellspacing="6" cellpadding="0">
+                      <tr>
+                        <td colspan="10"><div align="center"></div>                          <div align="center"></div>                          </td>
+                      </tr>
+                      <tr>
+                        <td width="230" rowspan="2"><div align="center"><img src="images/2014_31.gif" width="183" height="102" /></div></td>
+                        <td width="30" rowspan="2" ><div align="center"><img src="images/2014_28.gif" width="11" height="178" /></div></td>
+                        <td width="30" >&nbsp;</td>
+                        <td width="180" ><div align="left" class="rtCopy">供应链中心</div></td>
+                        <td width="30" rowspan="2" ><img src="images/2014_28.gif" width="11" height="178" /></td>
+                        <td width="10" >&nbsp;</td>
+                        <td width="180" ><div align="left" class="rtCopy">油品中心</div></td>
+                        <td width="30" rowspan="2" ><img src="images/2014_28.gif" width="11" height="178" /></td>
+                        <td width="10" >&nbsp;</td>
+                        <td width="230" ><div align="left" class="rtCopy">定位监控中心</div></td>
+                      </tr>
+                      <tr>
+                        <td width="10" >&nbsp;</td>
+                        <td><span class="ff1"><p class="flishfont">&nbsp;</p>
+                            <p class="flishfont"><a href="gyl.html">供应链解决方案</a> </p>
+                            <p class="flishfont"><a href="ldbc.html">零担运输</a></p>
+							<p class="flishfont"><a href="zcys.html">整车运输</a></p>
+                            <p class="flishfont"><a href="xmwl.html">项目物流</a></p>
+                            <p class="flishfont"><a href="ccfw.html">仓储服务</a></p>
+                            <p class="flishfont"><a href="zzfu.html">增值服务</a></p></span></td>
+                        <td width="10" >&nbsp;</td>
+                        <td><span class="ff1"><p class="flishfont"><a href="ywsh.html">油为实惠</a> </p>
+                            <p class="flishfont"><a href="ztb.html">在途保</a></p>
+                            <p class="flishfont"><a href="hcws.html">货车卫士</a></p>
+                            <p class="flishfont"><a href="yjq.html">违章e缴清</a></p>                            <p class="flishfont"><a href="cgj.html">车管家</a></p></span></td>
+                        <td width="10" >&nbsp;</td>
+                        <td><span class="ff1"><p class="flishfont"><a href="ptfw.html">车联网平台解决方案</a></p>
+                                                <p class="flishfont"><a href="zjys.html">我们的优势和特色</a></p>
+                                                <p class="flishfont"><a href="jzl.html">核心竞争力</a> </p>
+                                                <p class="flishfont">&nbsp;</p>
+												<p class="flishfont">&nbsp;</p></span></td>
+                      </tr>
+                      <tr>
+                        <td colspan="10"><img src="images/2014_35.gif" width="948" height="10" /></td>
+                      </tr>
+                      <tr>
+                        <td colspan="10"><span class="ff">
+                          <div align="left"><a href="about.html">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="job.html">诚聘英才</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="contact.html">联系我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="sitemap.html">网站地图</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="legal.html">法律声明</a></div>
+                          <br />
+&copy;版权所有 中交兴路车联网　京ICP备12002390号 增值电信业务许可证B2-20110244</span></td>
+                      </tr>
+                    </table>
+                  </div>
+                    <div class="ff">
+                      <div align="left"></div>
+                  </div></td>
+              </tr>
+              <tr>
+                <td width="261" valign="middle">&nbsp;</td>
+                <td width="1073" height="30">&nbsp;</td>
+              </tr>
+            </table>
+</body>
+</html>

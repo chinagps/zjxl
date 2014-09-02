@@ -1,0 +1,783 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="shortcut icon" type="image/x-icon"
+	href="/lmis-portal/templet/lmis/resources/img/favicon.ico" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="author" content="http://www.sinotranspo.com" />
+<meta name="copyright" content="http://www.sinotranspo.com" />
+<meta name="url" content="http://www.sinotranspo.com" />
+<meta name="description" content="中交兴路供应链以货运车辆监管平台为基础，依托高速公路网，利用车机、手机等终端设备将GPS监控技术融入到物流服务中，通过车载GPS与智能调度系统相结合，整合社会车辆、货运代理等资源，逐步建立完整、畅通、高效的国内城际干线运输快速通道 " />
+<meta name="keywords" content="智能物流,供应链,中交兴路供应链,中交供应链"/>
+
+
+<title>北京中交兴路车联网科技有限公司供应链中心（北京中交兴路供应链管理有限公司）</title>
+
+<script type="text/javascript" src="/lmis-portal/templet/lmis/resources/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="/lmis-portal/templet/lmis/resources/js/util.js"></script>
+<script type="text/javascript" src="/lmis-portal/templet/lmis/resources/js/ddsmoothmenu.js" ></script>
+<script language="javascript" type="text/javascript" src="/lmis-portal/templet/lmis/resources/js/jquery.colorbox.js"></script>
+<link title="Main stylesheet" rel=stylesheet type=text/css href="/lmis-portal/templet/lmis/resources/css/menu.css" media=all></link>
+<link title="Main stylesheet" rel=stylesheet type=text/css href="/lmis-portal/templet/lmis/resources/css/header.css" media=all>
+<link title="Main stylesheet" rel=stylesheet type=text/css href="/lmis-portal/templet/lmis/resources/css/index.css" media=all></link>
+<link title="Main stylesheet" rel=stylesheet type=text/css href="/lmis-portal/templet/lmis/resources/css/channel.css" media=all></link>
+<link title="Main stylesheet" rel=stylesheet type=text/css href="/lmis-portal/templet/lmis/resources/css/colorbox.css" media=all>
+
+
+<script charset="UTF-8">
+
+/**
+ * 智能物流平台访问地址
+ */
+ 
+var contextPath = "/lmis-portal/";
+
+$(document).ready(function() {
+	var scrollTopVal = GetQueryString("scrollTopVal");
+	if (scrollTopVal != null && scrollTopVal !='') {
+		$("html,body").animate({scrollTop:scrollTopVal},0);
+	};
+	
+	//发布信息协议
+	$(".treaty").colorbox({iframe:true, width:"90%", height:"90%"});
+	//法律声明
+	$(".lawexplain").colorbox({iframe:true, width:"90%", height:"90%"});
+	
+	//Initialize Menu instance(s):
+	ddsmoothmenu.init({
+		mainmenuid: "menu", //menu DIV id
+		customtheme: [], //override default menu CSS background values? Uncomment: ["normal_background", "hover_background"]
+		contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+	});
+	
+	
+	initializeMenu("productsMenu", "productsActuator");    
+	initializeMenuSub("newPhonesMenu", "newPhonesActuator");
+	initializeMenuSub("compareMenu", "compareActuator");
+	
+});
+
+//跳转到链接页面
+function redirectUrl(obj) {
+	var y = $(document).scrollTop(); 
+	var clickNode = obj.name;
+	if (clickNode == null || clickNode == '') {
+		obj.href = obj.href + "?scrollTopVal=" + y;
+	} else {
+		obj.href = obj.href + "?scrollTopVal=" + y + "&clickNode=" + clickNode;
+	}
+}
+
+String.prototype.trim = function() 
+{ 
+	return this.replace(/(^\s*)|(\s*$)/g, ""); 
+} 
+
+// 获得http请求参数
+function GetQueryString(name) 
+{ 
+	var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); 
+	var r = window.location.search.substr(1).match(reg); 
+	if (r!=null) return unescape(r[2]); return null; 
+}
+
+var menus=new Array();
+var menusubs=new Array();
+
+if (!document.getElementById)
+     document.getElementById = function() { return null; }
+
+//栏目页面 2级菜单点击显示
+function initializeMenu(menuId, actuatorId) {
+     var menu = document.getElementById(menuId);
+     var actuator = document.getElementById(actuatorId);
+     if (menu == null || actuator == null) return;
+    
+     menus.push(menu);
+
+     actuator.parentNode.style.backgroundImage = "";
+     actuator.onclick = function() {
+         for(var i=0;i<menus.length;i++)if(menus[i]!=menu)menus[i].style.display="none";
+         var display = menu.style.display;
+         this.parentNode.style.backgroundImage =
+             (display == "block") ? "" : "";
+         menu.style.display = (display == "block") ? "none" : "block";
+
+         return false;
+     }
+}
+
+function initializeMenuSub(menuId, actuatorId) {
+     var menusub = document.getElementById(menuId);
+     var actuatorsub = document.getElementById(actuatorId);
+     if (menusub == null || actuatorsub == null) return;
+    
+     menusubs.push(menusub);
+
+     actuatorsub.parentNode.style.backgroundImage = "";
+     actuatorsub.onclick = function() {
+         for(var i=0;i<menusubs.length;i++)if(menusubs[i]!=menusub)menusubs[i].style.display="none";
+         var display = menusub.style.display;
+         this.parentNode.style.backgroundImage =
+             (display == "block") ? "" : "";
+         menusub.style.display = (display == "block") ? "none" : "block";
+         return false;
+     }
+}
+
+</script>
+</head>
+<body>
+	<!--headerStart-->
+	<div class="header">
+           <div  class="logo">
+           		<img src="/lmis-portal/templet/lmis/resources/img/logo.png" alt="中交兴路供应链" width="319" height="57"/>
+           	</div>
+           <div class="member">
+                <div class="memberFont">
+                	  <a href="http://www.sinotranspo.com"> 供应链中心</a>&nbsp;|&nbsp;
+					  <a href="http://www.4000966666.com"  target="_blank"> 油品中心</a>&nbsp;|&nbsp;
+					  <a href="http://www.sinoiov.com/dwjk/"  target="_blank"> 定位与监控中心</a>
+				</div>
+                <div class="phone">
+					<img src="/lmis-portal/templet/lmis/resources/img/supply_11.gif" alt="呼叫中心" width="278" height="27"/>
+				</div>
+           </div>
+	</div>
+	<div class="caidan">
+		<div class="menu">
+           <div class="menuleft" id="menu">
+                <ul class="menu_ul">
+				  <li>
+					<!-- 一级栏目 -->
+					<a href="/lmis-portal/site/lmis/sy/index.html"><span>首页</span></a>
+				</li>
+				  <li>
+					<!-- 一级栏目 -->
+					<a href="/lmis-portal/site/lmis/gywm/index.html"><span>关于我们</span></a>
+					<ul>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/qyjs/index.html"><span>企业介绍</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/qiyewenhua/index.html"><span>中交理念</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/zizhirongyu/index.html"><span>资质荣誉</span></a>
+						</li>
+					</ul>
+				</li>
+				  <li>
+					<!-- 一级栏目 -->
+					<a href="/lmis-portal/site/lmis/hexinyewu/index.html"><span>核心业务</span></a>
+					<ul>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/gyljjfa/index.html"><span>供应链解决方案</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/ldbc/index.html"><span>零担班车</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/zcky/index.html"><span>整车运输</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/xmwl/index.html"><span>项目物流</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/ccfw/index.html"><span>仓储服务</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/zzfw/index.html"><span>增值服务</span></a>
+						</li>
+					</ul>
+				</li>
+				  <li>
+					<!-- 一级栏目 -->
+					<a href="/lmis-portal/site/lmis/fwpt/index.html"><span>服务平台</span></a>
+					<ul>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/ddcx/index.html"><span>订单查询</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/fwwl/index.html"><span>服务网络</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/fbcy/index.html"><span>发布车源</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/fbhy/index.html"><span>发布货源</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="http://www.sinotrucker.com" target="_blank"><span>登陆智能物流</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/zxts/index.html"><span>在线投诉</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/cjwtjd/index.html"><span>常见问题解答</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/wlxts/index.html"><span>物流小贴士</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/yhhd/index.html"><span>优惠活动</span></a>
+						</li>
+					</ul>
+				</li>
+				  <li>
+					<!-- 一级栏目 -->
+					<a href="/lmis-portal/site/lmis/xwzx/index.html"><span>新闻中心</span></a>
+					<ul>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/hydt/index.html"><span>行业动态</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/hyxw/index.html"><span>企业新闻</span></a>
+						</li>
+					</ul>
+				</li>
+				  <li>
+					<!-- 一级栏目 -->
+					<a href="/lmis-portal/site/lmis/lmzx/index.html"><span>联盟中心</span></a>
+					<ul>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/wycy/index.html"><span>我要创业</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/wylm/index.html" class="parent">
+										<span>我要联盟</span>
+									</a>
+							<ul>
+								<!-- 三级栏目 -->
+								<li>
+									<a href="/lmis-portal/site/lmis/lmxz/index.html"><span>联盟须知</span></a>
+								</li>
+								<li>
+									<a href="/lmis-portal/site/lmis/lxwm/index.html"><span>联系我们</span></a>
+								</li>
+								<li>
+									<a href="/lmis-portal/site/lmis/lmsq/index.html"><span>联盟申请</span></a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/sjtd/index.html"><span>司机通道</span></a>
+						</li>
+						<li>
+							<!-- 二级栏目 -->
+									<a href="/lmis-portal/site/lmis/cdtd/index.html"><span>车队通道</span></a>
+						</li>
+					</ul>
+				</li>
+				</ul>
+           </div>
+		   <div class="menuright">
+		   		<a href="http://www.sinoiov.com" target="_blank">
+		   			<img src="/lmis-portal/templet/lmis/resources/img/supply_182.jpg" alt="中交兴路车联网" border="0" />
+		   		</a>
+		   	</div>
+        </div>
+	</div>
+<script type="text/javascript" src="/lmis-portal/js/validate/jquery.validate.js"></script>
+<script type="text/javascript" src="/lmis-portal/js/validate/jquery.metadata.js"></script>
+<script type="text/javascript" src="/lmis-portal/js/validate/jquery.validate.expand.js"></script>
+<link rel="stylesheet" type="text/css" href="/lmis-portal/js/validate/jquery.validate.css">
+<div class="bannergyl">
+	<img src="/lmis-portal/templet/lmis/resources/img/lmzx.jpg" width="960" height="194"/>
+</div>
+<div class="gylMain">
+	
+<div class="gylMainLeft">
+	<div class="gylBj">
+		<div class="gylTop">
+							联盟中心
+		</div>
+		<div class="subnav">
+			<ul>
+						<li>
+							<a href="/lmis-portal/site/lmis/wycy/index.html">我要创业</a>
+						</li>
+						<li class="menubar">
+							<A href="#" id="wylm">我要联盟</A> 
+							<ul id="wylm_sub" class="submenu">
+		         				<li>
+		         					<a href="/lmis-portal/site/lmis/lmxz/index.html" name="wylm" id="wylm" >
+		         					<samp><img src="/lmis-portal/templet/lmis/resources/img/scm_icon03.png"/></samp>
+		         					联盟须知
+		         					</a>
+		         				</li>
+		         				<li>
+		         					<a href="/lmis-portal/site/lmis/lxwm/index.html" name="wylm" id="wylm" >
+		         					<samp><img src="/lmis-portal/templet/lmis/resources/img/scm_icon03.png"/></samp>
+		         					联系我们
+		         					</a>
+		         				</li>
+		         				<li>
+		         					<a href="/lmis-portal/site/lmis/lmsq/index.html" name="wylm" id="wylm" >
+		         					<samp><img src="/lmis-portal/templet/lmis/resources/img/scm_icon03.png"/></samp>
+		         					联盟申请
+		         					</a>
+		         				</li>
+	   						</ul>
+						</li>
+						<li>
+							<a href="/lmis-portal/site/lmis/sjtd/index.html">司机通道</a>
+						</li>
+						<li>
+							<a href="/lmis-portal/site/lmis/cdtd/index.html">车队通道</a>
+						</li>
+			</ul>
+		</div>
+	</div>
+	<div class="gylBottom"><img src="/lmis-portal/templet/lmis/resources/img/icon06.png"/></div>
+</div>
+
+<script>
+window.onload = function() {
+        	  	  	initializeMenu("wylm_sub", "wylm");
+        
+        var clickNode = GetQueryString("clickNode");
+		if (clickNode != null || clickNode != '') {
+			$("#"+clickNode).click();
+		}
+}
+</script>
+    <div class="gylMainRight">
+		<div class="MainRight">
+			<div class="navTop">
+				<div class="ntLeft">
+					当前位置：<a href="/lmis-portal/site/lmis/sy/index.html">首页</a> >  
+						关于我们
+					> 司机通道
+				</div>
+				<div class="ntRight">
+					<div class="ntIcon"></div>
+					<div class="ntFont"></div>
+				</div>
+			</div>
+			<div class="neirong">
+				<form id="driversForm">
+					<input id="userId" name="userId" type="hidden" />
+					<div class="informationPublish">
+						<div class="ipContent">
+							<div class="ipContentFont">所在地区：</div>
+							<div class="ipContentRight">
+								<input name="atSite" id="atSite" type="text"
+									class="ipContentRightInput" /> <span class="asteriskRed">*</span>
+							</div>
+						</div>
+						<div class="ipContent">
+							<div class="ipContentFont">主要线路：</div>
+							<div class="ipContentRight">
+								<select name="fromProvince" id="fromProvince"
+									onChange="getFromArea('city')" class="ipContentRightSelect">
+									<option value="" selected>省份...</option>
+								</select> <select name="fromCity" id="fromCity"
+									class="ipContentRightSelect"">
+									<option value="" selected>城市...</option>
+								</select> 至 <select name="toProvince" id="toProvince"
+									onChange="getToArea('city')" class="ipContentRightSelect">
+									<option value="" selected>省份...</option>
+								</select> <select name="toCity" id="toCity" class="ipContentRightSelect">
+									<option value="" selected>城市...</option>
+								</select> <span class="asteriskRed">*</span>
+							</div>
+						</div>
+						<div class="ipContent">
+							<div class="ipContentFont">车辆类型：</div>
+							<div class="ipContentRight">
+								<select id="vehicleType" class="ipContentRightNoneInput">
+		
+								</select> <span class="asteriskRed">*</span>
+							</div>
+						</div>
+						<div class="ipContent">
+							<div class="ipContentFont">额定载重（吨）：</div>
+							<div class="ipContentRight">
+								<select name="standardLoad" id="standardLoad"
+									class="ipContentRightNoneInput"">
+								</select> <span class="asteriskRed">*</span>
+							</div>
+						</div>
+						<div class="ipContent">
+							<div class="ipContentFont">自有车辆数量：</div>
+							<div class="ipContentRight">
+								<input name="vehicleTotal" id="vehicleTotal" type="text"
+									class="ipContentRightInput" /> <span class="asteriskRed">*</span>
+							</div>
+						</div>
+						<div class="ipContent">
+							<div class="ipContentFont">联系人：</div>
+							<div class="ipContentRight">
+								<input name="contactName" id="contactName" type="text"
+									class="ipContentRightInput" /> <span class="asteriskRed">*</span>
+							</div>
+						</div>
+						<div class="ipContent">
+							<div class="ipContentFont">联系方式：</div>
+							<div class="ipContentRight">
+								<input name="contactType" id="contactType" type="text"
+									class="ipContentRightInput" /><span class="asteriskRed">*</span>
+							</div>
+						</div>
+						<div class="ipContent">
+							<div class="ipContentFont">验证码：</div>
+							<div class="ipContentRight">
+								<input name="verifyCode" id="verifyCode" type="text" class="ipContentRightInput" />
+								<span class="asteriskRed" id="verifyCodeSpan" >
+									<img title="点击刷新" src="/lmis-portal/jcaptcha.jpg" id="verifyCodeImg"
+									onclick="this.src='/lmis-portal//jcaptcha.jpg?'+ Math.random();">
+								</span>
+							</div>
+						</div>
+						<div class="ipContent"></div>
+				      	<div class="ipContent">
+							<div class="ipContentFont"></div>
+							<div class="ipContentRight">
+								<input name="" type="submit" value="" class="wanCheng" />
+							</div>
+					  	</div>
+
+					</div>
+				</form>
+			</div>
+<!-- 		<div class="nrImg"> -->
+<!-- 			<img src="/lmis-portal/templet/lmis/resources/img/img08.jpg" /> -->
+<!-- 		</div> -->
+	</div>
+    	<div class="mrBj"><img src="/lmis-portal/templet/lmis/resources/img/right.png"/></div>
+	</div>
+</div>
+
+<script type="text/javascript">
+<!--
+	var jQuery = $;
+
+	jQuery.validator.addMethod("floatnum", function(value, element) {
+		return this.optional(element) || /^(-?\d+)(\.\d+)?$/.test(value);
+	}, "只能是浮点数");
+
+	jQuery.validator.addMethod("alnum", function(value, element) {
+		return this.optional(element) || /^[a-zA-Z0-9]+$/.test(value);
+	}, "只能包括英文字母和数字");
+
+	jQuery.validator.addMethod("mobile", function(value, element) {
+		var length = value.length;
+		var mobile =  /^[1]\d{10}$/;
+		return this.optional(element)
+				|| (length == 11 && mobile.test(value));
+	}, "手机号码格式错误");
+
+	$("#driversForm").validate({
+		rules : {
+			atSite : {
+				required : true,
+				maxlength : 20
+			},
+			fromProvince : "required",
+			toProvince : "required",
+			vehicleType : "required",
+			standardLoad : "required",
+			vehicleTotal : {
+				required : true,
+				digits : true,
+				min : 1,
+				max : 99999
+			},
+			contactName : {
+				required : true,
+				maxlength : 20
+			},
+			contactType : {
+				required : true
+			},
+			vehicleProof : {
+				required : true,
+				maxlength : 50
+			},
+			verifyCode:"required"
+		},
+		messages : {
+			atSite : {
+				required : "请输入所在位置",
+				maxlength : "应小于{0}个字符"
+			},
+			fromProvince : "请选择出发省份",
+			toProvince : "请选择到达省份",
+			vehicleType : "请选择车辆类型",
+			standardLoad : "请输入额定载重",
+			vehicleTotal : {
+				required : "请输入车辆数",
+				digits : "请输入整数",
+				max : "最大值为{0}",
+				min : "最小值为{0}"
+			},
+			contactName : {
+				required : "请输入联系人",
+				maxlength : "应小于{0}个字符"
+			},
+			contactType : {
+				required : "请输入联系方式"
+			},
+			vehicleProof : {
+				required : "请输入车队资质",
+				maxlength : "应小于{0}个字符"
+			},
+			verifyCode:"验证码必填"
+		},
+		invalidHandler : function() {
+			return false;
+		},
+		submitHandler : function() {
+			sumberVehicles();
+			return false;
+		}
+	});
+	function sumberVehicles() {
+		
+		var atSite = $("#atSite").val();//所在地
+		var fromProvince = $("#fromProvince option:selected").text();//线路出发省
+		var fromCity = $("#fromCity option:selected").text();//出发市
+		var toProvince = $("#toProvince option:selected").text();//所到省份
+		var toCity = $("#toCity option:selected").text();//所到市
+		var vehicleType = $("#vehicleType option:selected").text();//车辆类型
+		var standardLoad = $("#standardLoad option:selected").text();//载重
+		var vehicleTotal = $("#vehicleTotal").val();//自有车辆数量
+		var contactName = $("#contactName").val();//联系人
+		var contactType = $("#contactType").val();//联系方式
+		var verifyCode = $("#verifyCode").val();
+		var data = {
+			"passageway.atSite" : atSite,
+			"passageway.fromProvince" : fromProvince,
+			"passageway.fromCity" : fromCity,
+			"passageway.toProvince" : toProvince,
+			"passageway.toCity" : toCity,
+			"passageway.vehicleType" : vehicleType,
+			"passageway.standardLoad" : standardLoad,
+			"passageway.vehicleTotal" : vehicleTotal,
+			"passageway.contactName" : contactName,
+			"passageway.contactType" : contactType,
+			"verifyCode":verifyCode
+		}
+		$.ajax({
+			type : "POST",
+			async : false,
+			contenttype : "application/json; charset=utf-8",
+			url : contextPath + 'front/passageway_passagewaySendMail.do',
+			data : data,
+			success : function(msg) {
+				alert(msg);
+				if(msg=="已提交"){
+					resetForm("driversForm");//清空表单
+				}
+				$("#verifyCodeImg").trigger("click");//重新获取验证码
+			},
+			error : function() {
+				
+			}
+		});
+	}
+	//初始化数据
+	jQuery(document).ready(function() {
+		getProvince();
+		getStandardLoad();
+		$("#uploadPicIframe").attr("src",LMIS_REQUEST_URL + "/pages/common/upload.jsp");
+		
+		//添加 车辆类型
+		appendVehicleType("vehicleType");
+	});
+
+	// 获得额定载重类型
+	function getStandardLoad() {
+		var url = "/lmis-portal/sysCode_getDataTypeJSON.do?parentId=290351B127BF4703BAF2023D32E2F5E8";
+		jQuery.getJSON(url, function(result) {
+			setStandardLoad(result);
+		});
+	}
+
+	// 设置额定载重
+	function setStandardLoad(result) {
+		var standardLoad = document.getElementById("standardLoad");
+		jQuery.each(result.data, function(i, code) {
+			var value = code.code;
+			var text = code.name;
+			var option = new Option(text, value);
+			standardLoad.options.add(option);
+		});
+	}
+
+	// 取所有省份
+	function getProvince() {
+		//&callback=?"注意这个是为了解决跨域访问的问题 
+		var url = "/lmis-portal/sysAreaInfo_getAreaJSON.do?areaId=999999";
+		jQuery.getJSON(url, function(result) {
+			setFromProvince(result);
+			setToProvince(result);
+		});
+	}
+
+	// 出发地
+	function setFromProvince(result) {
+		var province = document.getElementById("fromProvince");
+		jQuery.each(result.data, function(i, area) {
+			var value = area.areaCode;
+			var text = area.areaName;
+			var option = new Option(text, value);
+			province.options.add(option);
+		});
+	}
+
+	// 按上级ID取子地区
+	function getFromArea(name) {
+		if (name == 'city') {
+			clearSel(document.getElementById("fromCity")); //清空城市
+			var province = document.getElementById("fromProvince");
+			if (province.options[province.selectedIndex].value == "")
+				return;
+			var areaId = province.options[province.selectedIndex].value;
+			var url = "/lmis-portal/sysAreaInfo_getAreaJSON.do?areaId="
+					+ areaId;
+			jQuery.getJSON(url, null, function call(result) {
+				setFromCity(result);
+			});
+		} else if (name == 'county') {
+			clearSel(document.getElementById("fromCounty")); //清空城区
+			var city = document.getElementById("fromCity");
+			if (city.options[city.selectedIndex].value == "")
+				return;
+			var areaId = city.options[city.selectedIndex].value;
+			var url = "/lmis-portal/sysAreaInfo_getAreaJSON.do?areaId="
+					+ areaId;
+			jQuery.getJSON(url, null, function call(result) {
+				setFromCounty(result);
+			});
+		}
+	}
+
+	function setFromCounty(result) {
+		clearSel(document.getElementById("fromCounty")); //清空城区
+		var county = document.getElementById("fromCounty");
+		jQuery.each(result.data, function(i, area) {
+			var value = area.areaCode;
+			var text = area.areaName;
+			var option = new Option(text, value);
+			county.options.add(option);
+		});
+	}
+
+	// 当改变省份时设置城市
+	function setFromCity(result) {
+		var city = document.getElementById("fromCity");
+		jQuery.each(result.data, function(i, area) {
+			var value = area.areaCode;
+			var text = area.areaName;
+			var option = new Option(text, value);
+			city.options.add(option);
+		});
+	}
+
+	// 目的地
+	function setToProvince(result) {
+		var province = document.getElementById("toProvince");
+		jQuery.each(result.data, function(i, area) {
+			var value = area.areaCode;
+			var text = area.areaName;
+			var option = new Option(text, value);
+			province.options.add(option);
+		});
+	}
+
+	// 按上级ID取子地区
+	function getToArea(name) {
+		if (name == 'city') {
+			clearSel(document.getElementById("toCity")); //清空城市
+			var province = document.getElementById("toProvince");
+			if (province.options[province.selectedIndex].value == "")
+				return;
+			var areaId = province.options[province.selectedIndex].value;
+			var url = "/lmis-portal/sysAreaInfo_getAreaJSON.do?areaId="
+					+ areaId;
+			jQuery.getJSON(url, null, function call(result) {
+				setToCity(result);
+			});
+		} else if (name == 'county') {
+			clearSel(document.getElementById("toCounty")); //清空城区
+			var city = document.getElementById("toCity");
+			if (city.options[city.selectedIndex].value == "")
+				return;
+			var areaId = city.options[city.selectedIndex].value;
+			var url = "/lmis-portal/sysAreaInfo_getAreaJSON.do?areaId="
+					+ areaId;
+			jQuery.getJSON(url, null, function call(result) {
+				setToCounty(result);
+			});
+		}
+	}
+
+	function setToCounty(result) {
+		clearSel(document.getElementById("toCounty")); //清空城区
+		var county = document.getElementById("toCounty");
+		jQuery.each(result.data, function(i, area) {
+			var text = area.areaName;
+			var option = new Option(text, value);
+			county.options.add(option);
+		});
+	}
+
+	// 当改变省份时设置城市
+	function setToCity(result) {
+		var city = document.getElementById("toCity");
+		jQuery.each(result.data, function(i, area) {
+			var value = area.areaCode;
+			var text = area.areaName;
+			var option = new Option(text, value);
+			city.options.add(option);
+		});
+	}
+
+	// 清空下拉列表
+	function clearSel(oSelect) {
+		while (oSelect.childNodes.length > 0) {
+			oSelect.removeChild(oSelect.childNodes[0]);
+		}
+	}
+//-->
+</script>
+<div class="footer">
+	<div class="copyright">
+		<ul>
+			<li>免费服务热线400-096-6666　货车人QQ群:296722632 　
+				<a target="_blank" href="http://weibo.com/sinoiov">新浪微博@中交兴路车联网</a>
+			</li>
+			<li>版权所有 中交兴路车联网供应链中心　京ICP备12002390号-9</li>
+		</ul>
+	</div>
+</div>
+
+</body>
+</html>
+

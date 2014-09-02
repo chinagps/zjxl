@@ -1,0 +1,917 @@
+/*运营管理====线路管理-围栏管理 样式*/
+
+/*全局共用*/
+body {
+	margin:0;
+	padding:0;
+	font-size:12px;
+}
+
+/*去掉连接框虚线*/
+/* for IE 
+a,area { blr:expression(this.onFocus=this.blur()) }*/
+/* for Firefox */
+:focus { outline: none; }
+
+/*彻底清除浮动*/
+.Clear{clear:both; font-size:0; height:0; line-height:0;} 
+
+/*按钮样式*/
+a {
+	text-decoration:none;
+}
+
+.button_inquires {
+	width:80px;
+	height:26px;
+}
+
+.button_inquires a { 
+	height:26px;
+	display:block;
+	text-decoration:none;
+	background:url(../../images/area/button.png) 0 -150px no-repeat;
+}
+.button_inquires a:hover {
+	background:url(../../images/area/button.png) 0 -200px no-repeat;
+}
+.button_inquires a:active {
+	background:url(../../images/area/button.png) 0 -250px no-repeat;
+}
+
+
+.button_blue {
+	width:80px;
+	height:26px;
+}
+.button_blue a {
+	display:block;
+	color:#fff;
+	text-align:center;
+	height:26px;
+	line-height:26px;
+	background:url(images/button.png) no-repeat;
+}
+.button_blue a:hover {
+	background:url(images/button.png) 0 -50px no-repeat;
+}
+.button_blue a:active {
+	background:url(images/button.png) 0 -100px no-repeat;
+}
+
+.button_green {
+	width:80px;
+	height:26px;
+}
+.button_green a {
+	display:block;
+	color:#fff;
+	text-align:center;
+	height:26px;
+	line-height:26px;
+	background:url(images/button.png) -100px 0px no-repeat;
+}
+.button_green a:hover {
+	background:url(images/button.png) -100px -50px no-repeat;
+}
+.button_green a:active {
+	background:url(images/button.png) -100px -100px no-repeat;
+}
+
+.button_red {
+	width:80px;
+	height:26px;
+}
+.button_red a {
+	display:block;
+	color:#fff;
+	text-align:center;
+	height:26px;
+	line-height:26px;
+	background:url(images/button.png) -200px 0 no-repeat;
+}
+.button_red a:hover {
+	background:url(images/button.png) -200px -50px no-repeat;
+}
+.button_red a:active {
+	background:url(images/button.png) -200px -100px no-repeat;
+}
+
+.button_yellow {
+	width:80px;
+	height:26px;
+}
+.button_yellow a {
+	display:block;
+	color:#fff;
+	text-align:center;
+	height:26px;
+	line-height:26px;
+	background:url(images/button.png) -300px 0px no-repeat;
+}
+.button_yellow a:hover {
+	background:url(images/button.png) -300px -50px no-repeat;
+}
+.button_yellow a:active {
+	background:url(images/button.png) -300px -100px no-repeat;
+}
+
+
+
+
+
+/*线路管理*/
+.lineManagement {
+}
+
+.lineManagement_inquires {
+	height:68px;
+	background:url(images/lineManagement_inquires_1pxbg.png) repeat-x;
+	border:1px solid #69aac8;
+	margin-bottom:5px;
+}
+
+.lineManagement_inquires_1 {
+	padding-left:20px;
+	height:30px;
+	line-height:30px;
+}
+
+.lineManagement_inquires_line {
+	height:1px;
+	background:#d3d7d9;
+}
+
+.lineManagement_inquires_2 {
+	padding-left:20px;
+	height:38px;
+	line-height:38px;
+}
+
+.lineManagement_main {
+	height:151px;
+	overflow:auto;
+}
+
+.lineManagement_main_text_modify {
+	
+}
+.lineManagement_main_text_modify a {
+	float:left;
+	margin:0 5px;
+	margin-left:40px;
+	color:#236e00;
+	text-decoration:underline;
+}
+
+.lineManagement_main_text_del a {
+	float:left;
+	margin:0 5px;
+	color:#b60000;
+	text-decoration:underline;
+}
+
+.lineManagement_main_text_binding a {
+	float:left;
+	margin:0 5px;
+	color:#000;
+	text-decoration:underline;
+}
+
+.lineManagement_main_2 {
+}
+
+.lineManagement_main_2_top {
+	margin-top:10px;
+}
+
+.lineManagement_main_2_top ul {
+	margin:0;
+	padding:0;
+	height:26px;
+	list-style:none;
+}
+
+.lineManagement_main_2_top ul li {
+	float:left;
+	margin:0 3px;
+}
+
+.lineManagement_main_2_top ul li a {
+	height:26px;
+	display:block;
+}
+
+.lineManagement_main_2_top_bg_1 {
+	width:75px;
+	height:26px;
+	background:url(images/lineManagement_main_2_top_bg.png) no-repeat;
+}
+
+.lineManagement_main_2_top_bg_2 {
+	width:112px;
+	height:26px;
+	background:url(images/lineManagement_main_2_top_bg.png) -100px 0 no-repeat;
+}
+
+.lineManagement_main_2_inquires {
+	background:url(../../images/area/lineManagement_inquires_1pxbg.png) repeat-x;
+	border:1px solid #69aac8;
+	padding-left:20px;
+}
+
+
+/*线路修改样式*/
+.fenceManagement_modifyLines {
+	width:850px;
+}
+
+/*top 样式开始*/
+.fenceManagement_modifyLines_top {
+	height:30px;
+}
+
+.fenceManagement_modifyLines_top_left {
+	float:left;
+	width:30px;
+	height:30px;
+	background:url(../../images/area/topLeft.png) no-repeat;
+}
+
+.fenceManagement_modifyLines_top_right {
+	float:right;
+	width:34px;
+	height:30px;
+}
+.fenceManagement_modifyLines_top_right a {
+	display:block;
+	height:30px;
+	background:url(../../images/area/topRightClose.png) no-repeat;
+}
+.fenceManagement_modifyLines_top_right a:hover {
+	background:url(../../images/area/topRightCloseHover.png);
+}
+
+.fenceManagement_modifyLines_top_text {
+	color:#FFF;
+	font-weight:bold;
+	height:30px;
+	line-height:30px;
+	margin:0 34px 0 30px;
+	background:url(../../images/area/top1pxBg.png) repeat-x;
+}
+/*top 样式结束*/
+
+.fenceManagement_modifyLines_top_location a {
+	color:white;
+}
+
+/*main 样式*/
+.fenceManagement_modifyLines_main {
+	width:848px;
+	border:1px solid #146eb0;
+}
+
+.fenceManagement_modifyLines_main_map {
+	border-bottom:1px solid #c7d4ec;
+}
+
+.fenceManagement_modifyLines_main_content {
+	height:215px;
+	background:url(../../images/area/mainContentBg.png) repeat-x;
+}
+
+.fenceManagement_modifyLines_main_content_tab {
+	height:27px;
+	padding-top:5px;
+	border-bottom:1px solid #85b1c9;
+}
+
+.fenceManagement_modifyLines_main_content_tab ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.fenceManagement_modifyLines_main_content_tab ul li {
+	float:left;
+	text-align:center;
+	width:100px;
+	height:27px;
+	line-height:27px;
+	margin-left:1px;
+	background:url(../../images/area/tab_bg.png) no-repeat;
+}
+
+.fenceManagement_modifyLines_main_content_tab ul li a {
+	display:block;
+	height:27px;
+	color:#000;
+}
+.fenceManagement_modifyLines_main_content_tab ul li a:hover {
+	color:#09F;
+}
+
+.fenceManagement_modifyLines_main_content_tab_selected a {
+	color:#09F;
+	background:url(../../images/area/tab_selected_bg.png) no-repeat;
+}
+
+.fenceManagement_modifyLines_main_content_tabContedt {
+	height:140px;
+	border-bottom:#85b1c9 1px solid;
+}
+
+.fenceManagement_modifyLines_main_content_function {
+}
+
+.keyPoint_edit a {
+	width:40px;
+	color:#063;
+	text-decoration:underline;	
+}
+
+.keyPoint_del a {
+	color:#000;
+	text-decoration:underline;	
+}
+
+.fenceManagement_modifyLines_main_content_button {
+	width:67px;
+	height:24px;
+}
+.fenceManagement_modifyLines_main_content_button a {
+	display:block;
+	color:#fff;
+	text-align:center;
+	height:24px;
+	line-height:24px;
+	background:url(../../images/area/button.png) no-repeat;
+}
+.fenceManagement_modifyLines_main_content_button a:hover {
+	background:url(../../images/area/button.png) 0 -50px no-repeat;
+}
+.fenceManagement_modifyLines_main_content_button a:active {
+	background:url(../../images/area/button.png) 0 -100px no-repeat;
+}
+
+.fenceManagement_modifyLines_main_content_button_2 {
+	width:80px;
+	height:26px;
+}
+.fenceManagement_modifyLines_main_content_button_2 a {
+	display:block;
+	color:#fff;
+	text-align:center;
+	height:26px;
+	line-height:26px;
+	background:url(../../images/area/button2.png) no-repeat;
+}
+.fenceManagement_modifyLines_main_content_button_2 a:hover {
+	background:url(../../images/area/button2.png) 0 -50px no-repeat;
+}
+.fenceManagement_modifyLines_main_content_button_2 a:active {
+	background:url(../../images/area/button2.png) 0 -100px no-repeat;
+}
+
+.fenceManagement_modifyLines_main_content_button_3 {
+	width:80px;
+	height:26px;
+}
+.fenceManagement_modifyLines_main_content_button_3 a {
+	display:block;
+	color:#fff;
+	text-align:center;
+	height:26px;
+	line-height:26px;
+	background:url(images/button2.png) -200px 0 no-repeat;
+}
+.fenceManagement_modifyLines_main_content_button_3 a:hover {
+	background:url(images/button2.png) -200px -50px no-repeat;
+}
+.fenceManagement_modifyLines_main_content_button_3 a:active {
+	background:url(images/button2.png) -200px -100px no-repeat;
+}
+
+.fenceManagement_modifyLines_main_content_button_4 {
+	width:80px;
+	height:26px;
+}
+.fenceManagement_modifyLines_main_content_button_4 a {
+	display:block;
+	color:#fff;
+	text-align:center;
+	height:26px;
+	line-height:26px;
+	background:url(images/button2.png) 0px -150px no-repeat;
+}
+.fenceManagement_modifyLines_main_content_button_4 a:hover {
+	background:url(images/button2.png) 0px -200px no-repeat;
+}
+.fenceManagement_modifyLines_main_content_button_4 a:active {
+	background:url(images/button2.png) 0px -250px no-repeat;
+}
+
+.fenceManagement_vehicleBinding_bottom {
+	height:36px;
+	padding-top:5px;
+	background:#e0eef8;
+	border:1px #146eb0 solid;
+	border-top:none;
+}
+
+
+/*提示框 样式*/
+.lineFence_tip {
+}
+
+.lineFence_tip_top {
+	height:30px;
+	width:266px;
+}
+
+.lineFence_tip_top_left {
+	float:left;
+	width:30px;
+	height:30px;
+	background:url(images/topLeft.png) no-repeat;
+}
+
+.lineFence_tip_top_right {
+	float:right;
+	width:34px;
+	height:30px;
+}
+.lineFence_tip_top_right a {
+	display:block;
+	height:30px;
+	background:url(images/topRightClose.png) no-repeat;
+}
+.lineFence_tip_top_right a:hover {
+	background:url(images/topRightCloseHover.png);
+}
+
+.lineFence_tip_top_text {
+	color:#FFF;
+	font-weight:bold;
+	height:30px;
+	line-height:30px;
+	margin:0 34px 0 30px;
+	background:url(images/top1pxBg.png) repeat-x;
+}
+
+.lineFence_tip_main {
+	width:266px;
+	height:100px;
+	background:url(images/tip_main_bg.png) no-repeat;
+}
+
+.lineFence_tip_main_text {
+	color:#146fb2;
+	padding:25px 0 0 0;
+	text-align:center;
+}
+
+.lineFence_tip_button {
+	width:60px;
+	height:24px;
+}
+.lineFence_tip_button a {
+	display:block;
+	color:#000;
+	text-align:center;
+	height:24px;
+	line-height:24px;
+	background:url(images/tip_button.png) no-repeat;
+}
+.lineFence_tip_button a:hover {
+	background:url(images/tip_button.png) 0 -30px no-repeat;
+}
+.lineFence_tip_button a:active {
+	background:url(images/tip_button.png) 0 -60px no-repeat;
+}
+
+.lineFence_tip_button_2 {
+	width:100px;
+	height:24px;
+}
+.lineFence_tip_button_2 a {
+	display:block;
+	color:#000;
+	text-align:center;
+	height:24px;
+	line-height:24px;
+	background:url(images/tip_button.png) -100px 0 no-repeat;
+}
+.lineFence_tip_button_2 a:hover {
+	background:url(images/tip_button.png) -100px -30px no-repeat;
+}
+.lineFence_tip_button_2 a:active {
+	background:url(images/tip_button.png) -100px -60px no-repeat;
+}
+
+/*车辆绑定样式*/
+.fenceManagement_vehicleBinding {
+	width:950px;
+}
+
+.fenceManagement_vehicleBinding_top {
+	height:30px;
+}
+
+.fenceManagement_vehicleBinding_top_left {
+	float:left;
+	width:30px;
+	height:30px;
+	background:url(../../images/area/topLeft.png) no-repeat;
+}
+
+.fenceManagement_vehicleBinding_top_right {
+	float:right;
+	width:34px;
+	height:30px;
+}
+.fenceManagement_vehicleBinding_top_right a {
+	display:block;
+	height:30px;
+	background:url(../../images/area/topRightClose.png) no-repeat;
+}
+.fenceManagement_vehicleBinding_top_right a:hover {
+	background:url(../../images/area/topRightCloseHover.png);
+}
+
+.fenceManagement_vehicleBinding_top_text {
+	color:#FFF;
+	font-weight:bold;
+	height:30px;
+	line-height:30px;
+	margin:0 34px 0 30px;
+	background:url(../../images/area/top1pxBg.png) repeat-x;
+}
+
+.fenceManagement_vehicleBinding_main {
+	background:#e0eef8;
+	height:330px;
+	border:1px solid #146eb0;
+}
+
+.fenceManagement_vehicleBinding_main_left {
+	padding:15px 0 0 15px;
+	width:680px;
+	height:300px;
+}
+
+.fenceManagement_vehicleBinding_main_right {
+	margin-left:700px;
+	width:120px;
+	height:300px;
+}
+
+.fenceManagement_vehicleBinding_main_left_1 {
+	clear:both;
+	float:left;
+	width:300px;
+	height:300px;
+	background:url(../../images/area/left_1_bg.png) no-repeat;
+}
+
+.fenceManagement_vehicleBinding_main_left_1_top {
+	height:32px;
+	line-height:32px;
+	font-weight:bold;
+	padding-left:15px;
+}
+
+.fenceManagement_vehicleBinding_main_left_1_main_1 {
+	margin:10px auto;
+}
+
+.fenceManagement_vehicleBinding_main_left_1_main_2 {
+	padding-top:5px;
+}
+
+.fenceManagement_vehicleBinding_main_left_1_main_3 {
+	margin:0 auto;
+	padding-top:2px;
+	width:268px;
+	height:24px;
+	background:#d7f0fd;
+	border:1px solid #dbdbdb;
+}
+
+.fenceManagement_vehicleBinding_main_left_1_main_4 {
+	margin:0 auto;
+	padding-top:2px;
+	height:24px;
+	background:#d7f0fd;
+	border:1px solid #dbdbdb;
+}
+
+.fenceManagement_vehicleBinding_main_left_1_main_5 {
+	margin:0 auto;
+	padding-top:2px;
+	height:24px;
+	background:#d7f0fd;
+	border:1px solid #dbdbdb;
+}
+
+.fenceManagement_vehicleBinding_main_left_2 {
+	float:left;
+	margin:100px 10px 0 10px;
+	width:60px;
+}
+
+.fenceManagement_vehicleBinding_main_left_3 {
+	float:left;
+	width:300px;
+	height:300px;
+	background:url(../../images/area/left_1_bg.png) no-repeat;
+}
+
+.fenceManagement_vehicleBinding_main_left_2_add {
+	width:58px;
+	height:20px;
+}
+.fenceManagement_vehicleBinding_main_left_2_add a { 
+	height:20px;
+	display:block;
+	text-decoration:none;
+	background:url(../../images/area/left_2_img.png) 0px 0px no-repeat;
+}
+.fenceManagement_vehicleBinding_main_left_2_add a:hover {
+	background:url(../../images/area/left_2_img.png) 0px -30px no-repeat;
+}
+.fenceManagement_vehicleBinding_main_left_2_add a:active {
+	background:url(../../images/area/left_2_img.png) 0px -30px no-repeat;
+}
+
+.fenceManagement_vehicleBinding_main_left_2_del {
+	width:58px;
+	height:20px;
+	margin-top:10px;
+}
+.fenceManagement_vehicleBinding_main_left_2_del a { 
+	height:20px;
+	display:block;
+	text-decoration:none;
+	background:url(../../images/area/left_2_img.png) -100px 0px no-repeat;
+}
+.fenceManagement_vehicleBinding_main_left_2_del a:hover {
+	background:url(../../images/area/left_2_img.png) -100px -30px no-repeat;
+}
+.fenceManagement_vehicleBinding_main_left_2_del a:active {
+	background:url(../../images/area/left_2_img.png) -100px -30px no-repeat;
+}
+
+
+/*围栏管理 样式*/
+
+.fenceManagement {
+	width:476px;
+}
+
+.fenceManagement_top {
+	float:right;
+	padding:0 20px;
+	margin:5px 0;
+	width:915px;
+	height:38px;
+	line-height:38px;
+	border:1px solid #69aac8;
+	background:url(../../images/area/lineManagement_inquires_1pxbg.png) repeat-x;
+}
+
+.fenceManagement_inquires {
+	background:url(../../images/area/lineManagement_inquires_1pxbg.png) repeat-x;
+	border:1px solid #69aac8;
+	margin:5px 0;
+}
+
+.fenceManagement_inquires_1 {
+	height:30px;
+	line-height:30px;
+	text-align:center;
+}
+
+.fenceManagement_inquires_line {
+	height:1px;
+	background:#d3d7d9;
+}
+
+.fenceManagement_inquires_2 {
+	padding-left:20px;
+	height:38px;
+	line-height:38px;
+}
+
+
+/*多边型电子围栏 样式*/
+
+/*top 样式开始*/
+.fenceManagement_polygons_top {
+	height:30px;
+}
+
+.fenceManagement_polygons_top_left {
+	float:left;
+	width:30px;
+	height:30px;
+	background:url(../../images/area/topLeft.png) no-repeat;
+}
+
+.fenceManagement_polygons_top_right {
+	float:right;
+	width:34px;
+	height:30px;
+}
+.fenceManagement_polygons_top_right a {
+	display:block;
+	height:30px;
+	background:url(../../images/area/topRightClose.png) no-repeat;
+}
+.fenceManagement_polygons_top_right a:hover {
+	background:url(../../images/area/topRightCloseHover.png);
+}
+
+.fenceManagement_polygons_top_text {
+	color:#FFF;
+	font-weight:bold;
+	line-height:30px;
+	margin:0 34px 0 30px;
+	background:url(../../images/area/top1pxBg.png) repeat-x;
+}
+/*top 样式结束*/
+
+.fenceManagement_polygons {
+	width:300px;
+}
+
+.fenceManagement_polygons_main {
+	border:1px solid #156cae;
+	background:#e7f1fe;
+	padding-top:10px;
+}
+
+
+/*导入轨迹*/
+
+/*top 样式开始*/
+.fenceManagement_importTrack_top {
+	height:30px;
+}
+
+.fenceManagement_importTrack_top_left {
+	float:left;
+	width:30px;
+	height:30px;
+	background:url(images/topLeft.png) no-repeat;
+}
+
+.fenceManagement_importTrack_top_right {
+	float:right;
+	width:34px;
+	height:30px;
+}
+.fenceManagement_importTrack_top_right a {
+	display:block;
+	height:30px;
+	background:url(images/topRightClose.png) no-repeat;
+}
+.fenceManagement_importTrack_top_right a:hover {
+	background:url(images/topRightCloseHover.png);
+}
+
+.fenceManagement_importTrack_top_text {
+	color:#FFF;
+	font-weight:bold;
+	height:30px;
+	line-height:30px;
+	margin:0 34px 0 30px;
+	background:url(images/top1pxBg.png) repeat-x;
+}
+/*top 样式结束*/
+
+.fenceManagement_importTrack {
+	width:300px;
+}
+
+.fenceManagement_importTrack_2 {
+	width:500px;
+}
+
+.fenceManagement_importTrack_main {
+	border:1px solid #156cae;
+	background:#e7f1fe;
+}
+
+.fenceManagement_importTrack_main_list {
+	height:200px;
+	overflow:auto;
+}
+
+.dataSelect {
+	height:26px;
+	text-align:center;
+	margin:10px auto;
+}
+
+
+/*多边形测试围栏*/
+.text_a a {
+	color:#000;
+}
+
+.text_a img {
+	border:0;
+}
+
+.fenceManagement_vehicleBinding_main_1 {
+}
+
+.fenceManagement_vehicleBinding_main_2 {
+	background:url(../../images/area/lineManagement_inquires_1pxbg.png) #f8f8f8 repeat-x;
+	border:1px solid #69aac8;
+	margin:3px 0;
+	padding-top:5px;
+	padding-left:10px;
+	padding-right:10px;
+	height: 230px;
+}
+
+.fenceManagement_vehicleBinding_main_2 ul {
+	margin:0;
+	padding:0;
+	width:450px;
+	list-style:none;
+}
+
+.fenceManagement_vehicleBinding_main_2 ul li {
+	float:left;
+	width:225px;
+	height:30px;
+}
+
+.fenceManagement_vehicleBinding_main_3 {
+	background:url(../../images/area/lineManagement_inquires_1pxbg.png) #f8f8f8 repeat-x;
+	border:1px solid #69aac8;
+	margin:5px 0;
+	padding:10px;
+	padding-bottom:none;
+	height: 139px;
+}
+
+.btn_inquires {
+	width:80px;
+	height:26px;
+	line-height:26px;
+	border:0px;
+	cursor: pointer;
+	background:url(../../images/area/button.png) 0 -150px no-repeat;
+}
+
+.btn_blue {
+	color:#fff;
+	width:80px;
+	height:26px;
+	line-height:26px;
+	border:0;
+	cursor:pointer;
+	background:url(../../images/area/button.png) 0 0 no-repeat;
+}
+/*
+.btn_green {
+	color:#fff;
+	width:80px;
+	height:26px;
+	line-height:26px;
+	border:0;
+	cursor:pointer;
+	background:url(../../images/area/button.png) -100px 0px no-repeat;
+}
+*/
+/*
+.btn_red {
+	color:#fff;
+	width:80px;
+	height:26px;
+	line-height:26px;
+	border:0;
+	cursor:pointer;
+	background:url(images/btn_new.png) -200px 0 no-repeat;
+}
+*/
+/*
+.btn_yellow {
+	color:#fff;
+	width:80px;
+	height:26px;
+	line-height:26px;
+	border:0;
+	cursor:pointer;
+	background:url(images/btn_new.png) -300px 0px no-repeat;
+}
+*/
+.btn_blue a ,.btn_green a,.btn_red a,.btn_yellow a ,.btn_gray a{
+	color:#fff;
+}
+

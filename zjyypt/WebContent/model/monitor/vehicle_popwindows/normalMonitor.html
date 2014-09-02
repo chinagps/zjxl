@@ -1,0 +1,71 @@
+<div class="vehicle_details_main_7">
+        <div class="vehicle_details_main_7_1">
+        	<table>
+        	<tr>
+        	<td>
+            <div class="vehicle_details_main_7_left">
+                <div class="vehicle_details_main_7_left_select">
+                    <label style="color:#b11506;">
+                        <input name="vehicle_details_main_7_left_radio" type="radio" class="checkbox" value="0" checked="checked" />监听
+                    </label>
+                </div>
+                <div class="vehicle_details_main_7_left_select">
+                    <label>
+                        <input name="vehicle_details_main_7_left_radio" type="radio" class="checkbox" value="1" />录音
+                    </label>
+                </div>
+            </div>
+            </td>
+            <td>
+            <div class="vehicle_details_main_7_right">
+                <div class="vehicle_details_main_7_listen_1">
+                    车辆监听
+                </div>
+                <div class="vehicle_details_main_7_listen_2">
+                    监听方式：
+                    <label style="margin:0 15px" for="converseType">
+                        <input type="radio" class="checkbox" name="converseType" value="1" checked />单车监听
+                    </label>
+                    <label for="converseType">
+                        <input type="radio" class="checkbox" name="converseType" value="2" />双向通话
+                    </label>
+                </div>
+                <div class="vehicle_details_main_7_listen_3">
+                 回拨手机号码：&nbsp;&nbsp;&nbsp;&nbsp;<input name="monitorNumber" type="text" size="20" />
+                </div>
+                <div style="float:right; margin-right:114px; margin-left:0;" class="vehicle_details_main_tip hidden">
+                </div>
+                <div style="margin-left: 30px;"  class="vehicle_details_main_button sendMonitorCommand">
+                    <a href="javascript:void(0);" onfocus="javascript:this.blur();">开始监听</a>
+                </div>
+            </div>
+			
+            <div class="vehicle_details_main_7_right hidden">
+                <div class="vehicle_details_main_7_record_1">
+                    录音
+                </div>
+                <div class="vehicle_details_main_7_record_2">
+                    录音时长：
+                    <label for="tapeTime"></label>
+                    <select name="tapeTime" style="width:240px;">
+						<option value=10>10秒</option>
+						<option value=20>20秒</option>
+						<option value=30>30秒</option>
+					</select>
+					<span class="countdown"></span>
+                </div>
+                <div class="vehicle_details_main_button_2 startTaping" style="display:block">
+                    <a href="javascript:void(0);" onfocus="javascript:this.blur();">&nbsp;</a>
+                </div>
+                <div class="vehicle_details_main_button_3 stopTaping" style="margin-left: 30px;display:none">
+                    <a href="javascript:void(0);" onfocus="javascript:this.blur();">&nbsp;</a>
+                </div>
+                <div style="margin-left:20px;" class="vehicle_details_main_record_tip hidden">
+                </div>
+                <div class="tapeTimeRecord L" style="margin: 6px 0 0 20px;"></div>
+            </div>
+            </td>
+            </tr>
+            </table>
+        </div>
+</div>
